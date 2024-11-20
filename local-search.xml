@@ -11,6 +11,20 @@
     <content type="html"><![CDATA[<h1 id="安装msf"><a href="#安装msf" class="headerlink" title="安装msf"></a>安装msf</h1><h2 id="安装wget"><a href="#安装wget" class="headerlink" title="安装wget"></a>安装wget</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">pkg <span class="hljs-keyword">install</span> wget<br></code></pre></td></tr></table></figure><h2 id="下载构建脚本"><a href="#下载构建脚本" class="headerlink" title="下载构建脚本"></a>下载构建脚本</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">wget https:<span class="hljs-regexp">//gi</span>tee.com<span class="hljs-regexp">/computerqwq/m</span>etasploit_in_termux<span class="hljs-regexp">/releases/</span>download<span class="hljs-regexp">/jb/m</span>sf_install.sh<br></code></pre></td></tr></table></figure><h2 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x metasploit.sh<br></code></pre></td></tr></table></figure><h2 id="运行构建脚本"><a href="#运行构建脚本" class="headerlink" title="运行构建脚本"></a>运行构建脚本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./metasploit.sh<br></code></pre></td></tr></table></figure>]]></content>
     
     
+    <categories>
+      
+      <category>termux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>termux</tag>
+      
+      <tag>msf</tag>
+      
+    </tags>
     
   </entry>
   
@@ -24,6 +38,20 @@
     <content type="html"><![CDATA[<p><a href="https://www.python.org/ftp">下载Python源代码</a></p><h1 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h1><ul><li><p><a href="https://en.cppreference.com/w/c/11">C11</a> 编译器。 <a href="https://en.wikipedia.org/wiki/C11_(C_standard_revision)#Optional_features">可选的 C11 特性</a> 不是必须的。</p></li><li><p>对 <a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a> 浮点数和 <a href="https://en.wikipedia.org/wiki/NaN#Floating_point">浮点 Not-a-Number (NaN)</a> 的支持。</p></li><li><p>对线程的支持。</p></li><li><p>用于 <a href="https://docs.python.org/zh-cn/3.12/library/ssl.html#module-ssl" title="ssl: TLS/SSL wrapper for socket objects"><code>ssl</code></a> 和 <a href="https://docs.python.org/zh-cn/3.12/library/hashlib.html#module-hashlib" title="hashlib: Secure hash and message digest algorithms."><code>hashlib</code></a> 模块的 OpenSSL 1.1.1 或更新版本。</p></li><li><p>在 Windows 上，需要 Microsoft Visual Studio 2017 或更新版本。</p></li></ul><p>进入仓库文件夹</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./configure<br></code></pre></td></tr></table></figure><p>可指定: –prefix&#x3D;</p><p>设置安装目录</p>]]></content>
     
     
+    <categories>
+      
+      <category>python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>python</tag>
+      
+      <tag>build</tag>
+      
+    </tags>
     
   </entry>
   
@@ -34,22 +62,21 @@
     <link href="/2024/11/19/kodi/"/>
     <url>/2024/11/19/kodi/</url>
     
-    <content type="html"><![CDATA[<p>#适用于kodiv21</p><p>进入setting→interface settings→skin将fonts由skin default 改为arial based<br><img src="https://upload-images.jianshu.io/upload_images/7424864-69655cf4548c76fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700/format/webp" alt="tmd"></p><p>&#x3D;&#x3D;修改渲染字体否则改成中文全是括号&#x3D;&#x3D;</p><p>进入regional-language选项，选择简体中文</p><p><img src="https://upload-images.jianshu.io/upload_images/7424864-d5bed2c039537fa0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700/format/webp" alt="giao"></p>]]></content>
+    <content type="html"><![CDATA[<p>#适用于kodiv21</p><p>进入setting→interface settings→skin将fonts由skin default 改为arial based<br><img src="/tupian/kodi/kodi1.png" alt="设置1"></p><p>&#x3D;&#x3D;必须修改渲染字体否则改成中文全是括号&#x3D;&#x3D;</p><p>进入regional-language选项，选择简体中文</p><p><img src="/tupian/kodi/kodi2.png" alt="设置2"></p>]]></content>
     
     
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="/2024/11/18/hello-world/"/>
-    <url>/2024/11/18/hello-world/</url>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <categories>
+      
+      <category>kodi</category>
+      
+    </categories>
     
     
+    <tags>
+      
+      <tag>kodi</tag>
+      
+    </tags>
     
   </entry>
   
