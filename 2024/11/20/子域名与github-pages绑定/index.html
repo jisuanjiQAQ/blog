@@ -19,25 +19,25 @@
   <meta name="author" content="计算机qwq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="下载Python源代码 依赖 C11 编译器。 可选的 C11 特性 不是必须的。  对 IEEE 754 浮点数和 浮点 Not-a-Number (NaN) 的支持。  对线程的支持。  用于 ssl 和 hashlib 模块的 OpenSSL 1.1.1 或更新版本。  在 Windows 上，需要 Microsoft Visual Studio 2017 或更新版本。   进入仓库文件夹">
+    <meta name="description" content="将子域名解析到GitHub进入域名管理后台 新建一个dns解析→类型为CNAME→记录值为用户名.github.io→名称为你想解析的子域名 仓库绑定在仓库的Setting-&gt;Pages里，在自定义域名里输入 DNS 配置好的域名，点击保存，GitHub 会自动进行 DNS 校验，这个过程需要一点时间 当校验通过以后，就可以勾选下面的强制开启 HTTPS ，是不需要申请 SSL 证书的，Gi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux编译安装Python">
-<meta property="og:url" content="http://hexo.computerqwq.top/2024/11/19/Python/index.html">
+<meta property="og:title" content="子域名与github-pages绑定">
+<meta property="og:url" content="http://hexo.computerqwq.top/2024/11/20/%E5%AD%90%E5%9F%9F%E5%90%8D%E4%B8%8Egithub-pages%E7%BB%91%E5%AE%9A/index.html">
 <meta property="og:site_name" content="计算机">
-<meta property="og:description" content="下载Python源代码 依赖 C11 编译器。 可选的 C11 特性 不是必须的。  对 IEEE 754 浮点数和 浮点 Not-a-Number (NaN) 的支持。  对线程的支持。  用于 ssl 和 hashlib 模块的 OpenSSL 1.1.1 或更新版本。  在 Windows 上，需要 Microsoft Visual Studio 2017 或更新版本。   进入仓库文件夹">
+<meta property="og:description" content="将子域名解析到GitHub进入域名管理后台 新建一个dns解析→类型为CNAME→记录值为用户名.github.io→名称为你想解析的子域名 仓库绑定在仓库的Setting-&gt;Pages里，在自定义域名里输入 DNS 配置好的域名，点击保存，GitHub 会自动进行 DNS 校验，这个过程需要一点时间 当校验通过以后，就可以勾选下面的强制开启 HTTPS ，是不需要申请 SSL 证书的，Gi">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-19T10:21:06.000Z">
-<meta property="article:modified_time" content="2024-11-20T13:03:04.226Z">
+<meta property="article:published_time" content="2024-11-20T13:34:55.000Z">
+<meta property="article:modified_time" content="2024-11-20T13:36:00.006Z">
 <meta property="article:author" content="计算机qwq">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="build">
+<meta property="article:tag" content="github">
+<meta property="article:tag" content="域名">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Linux编译安装Python - 计算机</title>
+  <title>子域名与github-pages绑定 - 计算机</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -214,7 +214,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Linux编译安装Python"></span>
+            <span id="subtitle" data-typed-text="子域名与github-pages绑定"></span>
           
         </div>
 
@@ -230,8 +230,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-11-19 18:21" pubdate>
-          2024年11月19日 晚上
+        <time datetime="2024-11-20 21:34" pubdate>
+          2024年11月20日 晚上
         </time>
       </span>
     
@@ -242,7 +242,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          87 字
+          216 字
         
       </span>
     
@@ -253,7 +253,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -299,29 +299,21 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Linux编译安装Python</h1>
+            <h1 id="seo-header">子域名与github-pages绑定</h1>
             
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="https://www.python.org/ftp">下载Python源代码</a></p>
-<h1 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h1><ul>
-<li><p><a target="_blank" rel="noopener" href="https://en.cppreference.com/w/c/11">C11</a> 编译器。 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/C11_(C_standard_revision)#Optional_features">可选的 C11 特性</a> 不是必须的。</p>
-</li>
-<li><p>对 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a> 浮点数和 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/NaN#Floating_point">浮点 Not-a-Number (NaN)</a> 的支持。</p>
-</li>
-<li><p>对线程的支持。</p>
-</li>
-<li><p>用于 <a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3.12/library/ssl.html#module-ssl" title="ssl: TLS/SSL wrapper for socket objects"><code>ssl</code></a> 和 <a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3.12/library/hashlib.html#module-hashlib" title="hashlib: Secure hash and message digest algorithms."><code>hashlib</code></a> 模块的 OpenSSL 1.1.1 或更新版本。</p>
-</li>
-<li><p>在 Windows 上，需要 Microsoft Visual Studio 2017 或更新版本。</p>
-</li>
-</ul>
-<p>进入仓库文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./configure<br></code></pre></td></tr></table></figure>
-
-<p>可指定: –prefix&#x3D;</p>
-<p>设置安装目录</p>
+                <h1 id="将子域名解析到GitHub"><a href="#将子域名解析到GitHub" class="headerlink" title="将子域名解析到GitHub"></a>将子域名解析到GitHub</h1><p>进入域名管理后台</p>
+<p>新建一个dns解析→类型为CNAME→记录值为用户名.github.io→名称为你想解析的子域名</p>
+<h1 id="仓库绑定"><a href="#仓库绑定" class="headerlink" title="仓库绑定"></a>仓库绑定</h1><p>在仓库的Setting-&gt;Pages里，在自定义域名里输入 DNS 配置好的域名，点击保存，GitHub 会自动进行 DNS 校验，这个过程需要一点时间</p>
+<p>当校验通过以后，就可以勾选下面的强制开启 HTTPS ，是不需要申请 SSL 证书的，GitHub 会自动帮申请。<del>免费万岁</del></p>
+<p>＼＼\٩( ‘ω’ )و &#x2F;&#x2F;／／</p>
+<p><strong>这下你的仓库已经绑定上你的子域名了</strong></p>
+<p><em>你依然需要注意，hexo等一部分在上传文件时，会修改pages设置！</em></p>
+<p><em>为什么不出顶级域名教程？</em></p>
+<p><em>因为我觉得个人不会这么有钱吧，给一个仓库顶级域名</em></p>
+<p>Σ( ° △ °|||)︴</p>
 
                 
               </div>
@@ -330,34 +322,13 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/python/" class="category-chain-item">python</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/python/" class="print-no-link">#python</a>
+        <a href="/tags/github/" class="print-no-link">#github</a>
       
-        <a href="/tags/build/" class="print-no-link">#build</a>
+        <a href="/tags/%E5%9F%9F%E5%90%8D/" class="print-no-link">#域名</a>
       
     </div>
   
@@ -369,8 +340,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Linux编译安装Python</div>
-      <div>http://hexo.computerqwq.top/2024/11/19/Python/</div>
+      <div>子域名与github-pages绑定</div>
+      <div>http://hexo.computerqwq.top/2024/11/20/子域名与github-pages绑定/</div>
     </div>
     <div class="license-meta">
       
@@ -382,7 +353,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年11月19日</div>
+          <div>2024年11月20日</div>
         </div>
       
       
@@ -414,18 +385,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/11/19/termux/" title="termux安装msf">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">termux安装msf</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/11/19/kodi/" title="kodi修改成中文">
-                        <span class="hidden-mobile">kodi修改成中文</span>
+                      <a href="/2024/11/19/termux/" title="termux安装msf">
+                        <span class="hidden-mobile">termux安装msf</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
