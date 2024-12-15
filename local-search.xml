@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>thunderbird</title>
+    <link href="/2024/12/15/thunderbird/"/>
+    <url>/2024/12/15/thunderbird/</url>
+    
+    <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p><strong>Mozilla Thunderbird</strong>是一个开源电子邮箱，是和火狐浏览器同一个开发组织，它就是大名鼎鼎的<strong>Mozilla</strong></p><p><del>傻x吧名字不就包含有吗？</del></p><h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><p><img src="/tupian/email/about.jpg" alt="主页面"></p><p><img src="/tupian/email/about1.jpg" alt="关于"></p><h1 id="整体体验"><a href="#整体体验" class="headerlink" title="整体体验"></a>整体体验</h1><ol><li><p>非常好，动画也是比较完整。</p></li><li><p>占用低至80-100mb(两个邮箱)</p></li></ol><h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><ol><li><p>对国内邮箱支持不太行，比如QQ无法识别垃圾和草稿箱等</p></li><li><p>如果没有设置这种文件夹，邮件会直接消失!</p></li></ol><h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p><a href="https://www.thunderbird.net/zh-CN/thunderbird/all/">官网</a></p><p>8.2版本<a href="https://github.com/thunderbird/thunderbird-android/releases/download/THUNDERBIRD_8_2/thunderbird-8.2.apk">GitHub</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>邮箱</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>手机免root修改housts(代理)</title>
     <link href="/2024/11/26/v-housts/"/>
     <url>/2024/11/26/v-housts/</url>
@@ -39,8 +58,8 @@
   
   <entry>
     <title>termux安装msf</title>
-    <link href="/2024/11/19/termux/"/>
-    <url>/2024/11/19/termux/</url>
+    <link href="/2024/11/19/msf_termux/"/>
+    <url>/2024/11/19/msf_termux/</url>
     
     <content type="html"><![CDATA[<h1 id="安装msf"><a href="#安装msf" class="headerlink" title="安装msf"></a>安装msf</h1><h2 id="安装wget"><a href="#安装wget" class="headerlink" title="安装wget"></a>安装wget</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">pkg <span class="hljs-keyword">install</span> wget<br></code></pre></td></tr></table></figure><h2 id="下载构建脚本"><a href="#下载构建脚本" class="headerlink" title="下载构建脚本"></a>下载构建脚本</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">wget https:<span class="hljs-regexp">//gi</span>tee.com<span class="hljs-regexp">/computerqwq/m</span>etasploit_in_termux<span class="hljs-regexp">/releases/</span>download<span class="hljs-regexp">/jb/m</span>sf_install.sh<br></code></pre></td></tr></table></figure><h2 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x metasploit.sh<br></code></pre></td></tr></table></figure><h2 id="运行构建脚本"><a href="#运行构建脚本" class="headerlink" title="运行构建脚本"></a>运行构建脚本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./metasploit.sh<br></code></pre></td></tr></table></figure>]]></content>
     
