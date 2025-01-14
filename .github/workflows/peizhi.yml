@@ -1,0 +1,55 @@
+name: 部署
+
+on:
+  workflow_dispatch: # 手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 检出当前仓库的代码
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # If your repository depends on submodule, please see: https://github.com/actions/checkout
+          submodules: recursive
+      # 使用 Node.js 22
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
+          # Ref: https://github.com/actions/setup-node#supported-version-syntax
+          node-version: "22"
+      # 缓存 NPM 依赖
+      - name: Cache NPM dependencies
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache
+      # 安装依赖
+      - name: Install Dependencies
+        run: npm install
+      # 构建项目
+      - name: Build
+        run: npm run build
+      # 上传构建产物
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

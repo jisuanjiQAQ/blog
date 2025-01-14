@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>thunderbird</title>
+    <link href="/2024/12/15/thunderbird/"/>
+    <url>/2024/12/15/thunderbird/</url>
+    
+    <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p><strong>Mozilla Thunderbird</strong>是一个开源电子邮箱，是和火狐浏览器同一个开发组织，它就是大名鼎鼎的<strong>Mozilla</strong></p><p><del>傻x吧名字不就包含有吗？</del></p><h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><p><img src="/tupian/email/about.jpg" alt="主页面"></p><p><img src="/tupian/email/about1.jpg" alt="关于"></p><h1 id="整体体验"><a href="#整体体验" class="headerlink" title="整体体验"></a>整体体验</h1><ol><li><p>非常好，动画也是比较完整。</p></li><li><p>占用低至80-100mb(两个邮箱)</p></li></ol><h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><ol><li><p>对国内邮箱支持不太行，比如QQ无法识别垃圾和草稿箱等</p></li><li><p>如果没有设置这种文件夹，邮件会直接消失!</p></li></ol><h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p><a href="https://www.thunderbird.net/zh-CN/thunderbird/all/">官网</a></p><p>8.2版本<a href="https://github.com/thunderbird/thunderbird-android/releases/download/THUNDERBIRD_8_2/thunderbird-8.2.apk">GitHub</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>邮箱</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>手机免root修改housts(代理)</title>
+    <link href="/2024/11/26/v-housts/"/>
+    <url>/2024/11/26/v-housts/</url>
+    
+    <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Virtual Hosts 是一个开源项目，专为 Android 设备设计，旨在帮助开发者自定义主机文件（&#x2F;system&#x2F;etc&#x2F;hosts），支持通配符 DNS 记录。该项目通过 VPN 模式实现，不需要设备具有 root 权限。</p><h2 id="功能特点"><a href="#功能特点" class="headerlink" title="功能特点"></a>功能特点</h2><p>• 自定义主机配置：用户可以创建自定义的主机配置文件，将主机名和 IP 地址进行映射，实现自定义域名解析。</p><p>• 支持通配符 DNS 记录：可以使用通配符符号匹配多个主机名，方便批量配置和管理。</p><p>• VPN 模式实现：通过虚拟的 VPN 接口拦截和处理网络流量，实现自定义主机名解析。</p><p>• 无需 Root 权限：兼容大多数 Android 设备和系统版本，无需 Root 权限即可运行。</p><p><a href="https://github.com/x-falcon/Virtual-Hosts">项目地址</a></p><h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><p><img src="/tupian/v-housts/%E4%B8%BB%E9%A1%B5.jpg" alt="主页"></p><p><img src="/tupian/v-housts/%E8%AE%BE%E7%BD%AE.jpg" alt="设置"></p><h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>你需要一个空白文件，然后按housts的语法写入。</p><p>例如:</p><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs accesslog"><span class="hljs-number">127.0.0.1</span> www.baidu.com<br></code></pre></td></tr></table></figure><p>然后保存，接着导入进去。</p><p>最后开启即可！</p><h1 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h1><p>蓝奏云<a href="https://wwya.lanzoue.com/iwVuZ2gd3y2b">走你</a><br>密码:50yc</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>子域名与github-pages绑定</title>
+    <link href="/2024/11/20/%E5%AD%90%E5%9F%9F%E5%90%8D%E4%B8%8Egithub-pages%E7%BB%91%E5%AE%9A/"/>
+    <url>/2024/11/20/%E5%AD%90%E5%9F%9F%E5%90%8D%E4%B8%8Egithub-pages%E7%BB%91%E5%AE%9A/</url>
+    
+    <content type="html"><![CDATA[<h1 id="将子域名解析到GitHub"><a href="#将子域名解析到GitHub" class="headerlink" title="将子域名解析到GitHub"></a>将子域名解析到GitHub</h1><p>进入域名管理后台</p><p>新建一个dns解析→类型为CNAME→记录值为用户名.github.io→名称为你想解析的子域名</p><h1 id="仓库绑定"><a href="#仓库绑定" class="headerlink" title="仓库绑定"></a>仓库绑定</h1><p>在仓库的Setting-&gt;Pages里，在自定义域名里输入 DNS 配置好的域名，点击保存，GitHub 会自动进行 DNS 校验，这个过程需要一点时间</p><p>当校验通过以后，就可以勾选下面的强制开启 HTTPS ，是不需要申请 SSL 证书的，GitHub 会自动帮申请。<del>免费万岁</del></p><p>＼＼\٩( ‘ω’ )و &#x2F;&#x2F;／／</p><p><strong>这下你的仓库已经绑定上你的子域名了</strong></p><p><em>你依然需要注意，hexo等一部分在上传文件时，会修改pages设置！</em></p><p><em>为什么不出顶级域名教程？</em></p><p><em>因为我觉得个人不会这么有钱吧，给一个仓库顶级域名</em></p><p>Σ( ° △ °|||)︴</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>github</tag>
+      
+      <tag>域名</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>termux安装msf</title>
+    <link href="/2024/11/19/msf_termux/"/>
+    <url>/2024/11/19/msf_termux/</url>
+    
+    <content type="html"><![CDATA[<h1 id="安装msf"><a href="#安装msf" class="headerlink" title="安装msf"></a>安装msf</h1><h2 id="安装wget"><a href="#安装wget" class="headerlink" title="安装wget"></a>安装wget</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">pkg <span class="hljs-keyword">install</span> wget<br></code></pre></td></tr></table></figure><h2 id="下载构建脚本"><a href="#下载构建脚本" class="headerlink" title="下载构建脚本"></a>下载构建脚本</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">wget https:<span class="hljs-regexp">//gi</span>tee.com<span class="hljs-regexp">/computerqwq/m</span>etasploit_in_termux<span class="hljs-regexp">/releases/</span>download<span class="hljs-regexp">/jb/m</span>sf_install.sh<br></code></pre></td></tr></table></figure><h2 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x metasploit.sh<br></code></pre></td></tr></table></figure><h2 id="运行构建脚本"><a href="#运行构建脚本" class="headerlink" title="运行构建脚本"></a>运行构建脚本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./metasploit.sh<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>termux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>termux</tag>
+      
+      <tag>msf</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Linux编译安装Python</title>
+    <link href="/2024/11/19/Python/"/>
+    <url>/2024/11/19/Python/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.python.org/ftp">下载Python源代码</a></p><h1 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h1><ul><li><p><a href="https://en.cppreference.com/w/c/11">C11</a> 编译器。 <a href="https://en.wikipedia.org/wiki/C11_(C_standard_revision)#Optional_features">可选的 C11 特性</a> 不是必须的。</p></li><li><p>对 <a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a> 浮点数和 <a href="https://en.wikipedia.org/wiki/NaN#Floating_point">浮点 Not-a-Number (NaN)</a> 的支持。</p></li><li><p>对线程的支持。</p></li><li><p>用于 <a href="https://docs.python.org/zh-cn/3.12/library/ssl.html#module-ssl" title="ssl: TLS/SSL wrapper for socket objects"><code>ssl</code></a> 和 <a href="https://docs.python.org/zh-cn/3.12/library/hashlib.html#module-hashlib" title="hashlib: Secure hash and message digest algorithms."><code>hashlib</code></a> 模块的 OpenSSL 1.1.1 或更新版本。</p></li><li><p>在 Windows 上，需要 Microsoft Visual Studio 2017 或更新版本。</p></li></ul><p>进入仓库文件夹</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./configure<br></code></pre></td></tr></table></figure><p>可指定: –prefix&#x3D;</p><p>设置安装目录</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>python</tag>
+      
+      <tag>build</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>kodi修改成中文</title>
+    <link href="/2024/11/19/kodi/"/>
+    <url>/2024/11/19/kodi/</url>
+    
+    <content type="html"><![CDATA[<p>#适用于kodiv21</p><p>进入setting→interface settings→skin将fonts由skin default 改为arial based<br><img src="/tupian/kodi/kodi1.png" alt="设置1"></p><p>&#x3D;&#x3D;必须修改渲染字体否则改成中文全是括号&#x3D;&#x3D;</p><p>进入regional-language选项，选择简体中文</p><p><img src="/tupian/kodi/kodi2.png" alt="设置2"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>kodi</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>kodi</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
