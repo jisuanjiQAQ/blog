@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>aseprite汉化</title>
+    <link href="/2025/02/07/aseprite-han-hua/"/>
+    <url>/2025/02/07/aseprite-han-hua/</url>
+    
+    <content type="html"><![CDATA[<h2 id="汉化插件仓库"><a href="#汉化插件仓库" class="headerlink" title="汉化插件仓库"></a><a href="https://github.com/J-11/Aseprite-Simplified-Chinese">汉化插件仓库</a></h2><p><a href="https://gitee.com/J-11/Aseprite-Simplified-Chinese/raw/master/Formal/hanhua-1.2.23.aseprite-extension">插件下载</a><br>我们还需要下载主题，不然字体会模糊不清。<br><a href="https://gitee.com/J-11/Aseprite-Simplified-Chinese/raw/master/Formal/%E4%B8%BB%E9%A2%98-%E5%83%8F%E7%B4%A0%E5%AD%97%E4%BD%93.aseprite-extension">主题下载</a><br>一定要全部安装！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>aseprite</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>aseprite云构建</title>
+    <link href="/2025/02/07/aseprite-yun-gou-jian/"/>
+    <url>/2025/02/07/aseprite-yun-gou-jian/</url>
+    
+    <content type="html"><![CDATA[<h1 id="利用GitHub-actions构建"><a href="#利用GitHub-actions构建" class="headerlink" title="利用GitHub actions构建"></a>利用GitHub actions构建</h1><p><a href="https://github.com/a1393323447/aseprite-builder">GitHub仓库</a></p><h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>随便往<code>BuildLog.md</code>里面写点啥或者删一点什么就可以触发了<br>构建的是最新版（包括bate版）</p><h1 id="libcrypto-1-1-x64-dll-not-found"><a href="#libcrypto-1-1-x64-dll-not-found" class="headerlink" title="libcrypto-1_1-x64.dll not found"></a>libcrypto-1_1-x64.dll not found</h1><p><a href="https://github.com/a1393323447/aseprite-builder/issues/33">Windows: libcrypto-1_1-x64.dll not found</a><br>请看这个问题</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>asprite</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>博客加速cdn</title>
+    <link href="/2025/02/02/cdnblog/"/>
+    <url>/2025/02/02/cdnblog/</url>
+    
+    <content type="html"><![CDATA[<h1 id="终于有了专属的加速cdn了"><a href="#终于有了专属的加速cdn了" class="headerlink" title="终于有了专属的加速cdn了"></a>终于有了专属的加速cdn了</h1><p>可以不用这么慢了哈哈哈<br>稳定的加速？<a href="https://www.computerqwq.top/">加速1</a><br>不久就会失效TAT<a href="https://cnblog.computerqwq.top/">加速2</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>公告</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>github部署的网页cdn404</title>
+    <link href="/2025/02/02/github-bu-shu-de-wang-ye-cdn404/"/>
+    <url>/2025/02/02/github-bu-shu-de-wang-ye-cdn404/</url>
+    
+    <content type="html"><![CDATA[<h1 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h1><p>具体是为什么我也不知道我只是跟随了源跳转就成功了！<br>不喜勿喷谢谢</p><h1 id="成功的配置"><a href="#成功的配置" class="headerlink" title="成功的配置"></a>成功的配置</h1><p><img src="/tupian/github-wangzhan/txyun.png" alt="腾讯云"><br><img src="/tupian/github-wangzhan/lightcdn.png" alt="lghtcdn"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>GitHub</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>github</tag>
+      
+      <tag>网站</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>answer编译</title>
+    <link href="/2025/01/20/answer-bian-yi/"/>
+    <url>/2025/01/20/answer-bian-yi/</url>
+    
+    <content type="html"><![CDATA[<h1 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h1><ul><li>Golang &gt;&#x3D; 1.22</li><li>Node.js &gt;&#x3D; 16.17</li><li>pnpm &gt;&#x3D; 8</li><li><a href="https://github.com/uber-go/mock?tab=readme-ov-file#installation">mockgen</a> &gt;&#x3D; 1.6.0</li><li><a href="https://github.com/google/wire/">wire</a> &gt;&#x3D; 0.5.0</li></ul><p><strong>你可能需要关闭npm的ssl验证</strong><br><strong>在安装mockgen和wire时，如果你的系统提示找不到他们。</strong><br><strong>你可能需要在你的go的主目录中去寻找他们的踪迹！</strong><br><del>如果你pnpm的依赖安装不成功可能需要手动到ui文件夹进行pnpm的依赖安装操作</del></p><h1 id="开始编译"><a href="#开始编译" class="headerlink" title="开始编译"></a>开始编译</h1><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs crystal"><span class="hljs-comment"># Install wire and mockgen for building. You can run `make check` to check if they are installed.</span><br><span class="hljs-variable">$ </span>make generate<br><span class="hljs-comment"># Install frontend dependencies and build</span><br><span class="hljs-variable">$ </span>make ui<br><span class="hljs-comment"># Install backend dependencies and build</span><br><span class="hljs-variable">$ </span>make build<br></code></pre></td></tr></table></figure><p><em>构建出来的产物就是answer了</em></p><p><strong>在编译过程中，你可能会遇到一个依赖过旧的情况。你需要cd到ui文件夹内去进行更新！</strong></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>安装gvm</title>
+    <link href="/2025/01/19/an-zhuang-gvm/"/>
+    <url>/2025/01/19/an-zhuang-gvm/</url>
+    
+    <content type="html"><![CDATA[<h1 id="下载安装脚本并安装"><a href="#下载安装脚本并安装" class="headerlink" title="下载安装脚本并安装"></a>下载安装脚本并安装</h1><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">wget https:<span class="hljs-regexp">//gi</span>tee.com<span class="hljs-regexp">/computerqwq/g</span>vm_xiazai<span class="hljs-regexp">/releases/</span>download<span class="hljs-regexp">/xiazia/g</span>vm-installer<br></code></pre></td></tr></table></figure><p>运行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">bash ./gvm-installer<br></code></pre></td></tr></table></figure><h1 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h1><p>常用命令</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># 查看可安装版本</span><br><span class="hljs-attribute">gvm</span> listall<br><span class="hljs-comment"># 查看已安装版本</span><br><span class="hljs-attribute">gvm</span> list<br><span class="hljs-comment"># 安装 Go 版本（1.4&gt;版本，需要加上-B）</span><br><span class="hljs-attribute">gvm</span> install go1.<span class="hljs-number">21</span>.<span class="hljs-number">2</span> -B<br><span class="hljs-comment"># 使用指定版本</span><br><span class="hljs-attribute">gvm</span> use go1.<span class="hljs-number">21</span>.<span class="hljs-number">2</span><br><span class="hljs-comment"># 设置默认版本</span><br><span class="hljs-attribute">gvm</span> use go1.<span class="hljs-number">21</span>.<span class="hljs-number">2</span> --default<br><span class="hljs-comment"># 卸载 Go 版本</span><br><span class="hljs-attribute">gvm</span> uninstall go1.<span class="hljs-number">21</span>.<span class="hljs-number">2</span><br><span class="hljs-comment"># 要完全删除 gvm 以及所有已安装的 Go 版本和软件包</span><br><span class="hljs-attribute">gvm</span> implode<br></code></pre></td></tr></table></figure><h2 id="配置gvm镜像源"><a href="#配置gvm镜像源" class="headerlink" title="配置gvm镜像源"></a>配置gvm镜像源</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-built_in">export</span> <span class="hljs-attribute">GO_BINARY_BASE_URL</span>=https://mirrors.aliyun.com/golang/<br></code></pre></td></tr></table></figure><p>官方国内镜像：<a href="https://golang.google.cn/dl/">https://golang.google.cn/dl/</a><br>阿里云镜像：<a href="https://mirrors.aliyun.com/golang/">https://mirrors.aliyun.com/golang/</a><br>中科大镜像：<a href="http://mirrors.ustc.edu.cn/golang/">http://mirrors.ustc.edu.cn/golang/</a></p><h2 id="报错1"><a href="#报错1" class="headerlink" title="报错1"></a>报错1</h2><p><em><strong>在使用use的时候会报错</strong></em></p><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><span class="hljs-keyword">ERROR: </span>Unrecognized command line argument: &#x27;use&#x27;<br></code></pre></td></tr></table></figure><p>说实话真tm离谱了这bug现在还不修！！</p><h3 id="错误1解决方法"><a href="#错误1解决方法" class="headerlink" title="错误1解决方法"></a>错误1解决方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#将use文件复制到上一级目录，并赋予执行权限即可</span><br><span class="hljs-built_in">cp</span> -rp .gvm/scripts/env/use  .gvm/scripts/use<br><span class="hljs-built_in">chmod</span> 775  .gvm/scripts/use<br></code></pre></td></tr></table></figure><h2 id="go换镜像源"><a href="#go换镜像源" class="headerlink" title="go换镜像源"></a>go换镜像源</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># 启用 Go Modules 功能</span><br>go env -w <span class="hljs-attribute">GO111MODULE</span>=on<br> <br><span class="hljs-comment"># 配置 GOPROXY 环境变量，以下三选一</span><br> <br><span class="hljs-comment"># 1. 七牛 CDN</span><br> <br>go env -w  <span class="hljs-attribute">GOPROXY</span>=https://goproxy.cn,direct<br> <br><span class="hljs-comment"># 2. 阿里云</span><br> <br>go env -w <span class="hljs-attribute">GOPROXY</span>=https://mirrors.aliyun.com/goproxy/,direct<br> <br><span class="hljs-comment"># 3. 官方</span><br> <br>go env -w  <span class="hljs-attribute">GOPROXY</span>=https://goproxy.io,direct<br> <br><span class="hljs-comment"># 确认一下：</span><br>$ go env | grep GOPROXY<br><span class="hljs-attribute">GOPROXY</span>=<span class="hljs-string">&quot;[https://goproxy.cn](https://goproxy.cn/)&quot;</span><br></code></pre></td></tr></table></figure><h3 id="Windows上"><a href="#Windows上" class="headerlink" title="Windows上"></a>Windows上</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-comment"># 启用 Go Modules 功能</span><br><span class="hljs-variable">$env</span><span class="hljs-symbol">:GO111MODULE=<span class="hljs-string">&quot;on&quot;</span></span><br> <br><span class="hljs-comment"># 配置 GOPROXY 环境变量，以下三选一</span><br> <br><span class="hljs-comment"># 1. 七牛 CDN</span><br><span class="hljs-variable">$env</span><span class="hljs-symbol">:GOPROXY=<span class="hljs-string">&quot;https://goproxy.cn,direct&quot;</span></span><br> <br><span class="hljs-comment"># 2. 阿里云</span><br><span class="hljs-variable">$env</span><span class="hljs-symbol">:GOPROXY=<span class="hljs-string">&quot;https://mirrors.aliyun.com/goproxy/,direct&quot;</span></span><br> <br><span class="hljs-comment"># 3. 官方</span><br><span class="hljs-variable">$env</span><span class="hljs-symbol">:GOPROXY=<span class="hljs-string">&quot;https://goproxy.io,direct&quot;</span></span><br> <br><span class="hljs-comment"># 确认一下：</span><br><span class="hljs-variable">$ </span>go env | grep <span class="hljs-title class_">GOPROXY</span><br><span class="hljs-title class_">GOPROXY</span>=<span class="hljs-string">&quot;[https://goproxy.cn](https://goproxy.cn/)&quot;</span><br></code></pre></td></tr></table></figure><h2 id="安装go"><a href="#安装go" class="headerlink" title="安装go"></a>安装go</h2><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># 版本号&gt;1.4需要加-B，表示只安装二进制文件。</span><br><span class="hljs-attribute">gvm</span> install go1.<span class="hljs-number">4</span> -B<br><span class="hljs-attribute">gvm</span> use go1.<span class="hljs-number">4</span><br><span class="hljs-comment"># export GOROOT_BOOTSTRAP=$GOROOT</span><br><span class="hljs-comment"># 安装1.7+版本需要先安装1.4</span><br><span class="hljs-attribute">gvm</span> install go1.<span class="hljs-number">17</span>.<span class="hljs-number">13</span> -B<br><span class="hljs-attribute">gvm</span> use go1.<span class="hljs-number">17</span>.<span class="hljs-number">13</span><br><span class="hljs-comment"># export GOROOT_BOOTSTRAP=$GOROOT</span><br><span class="hljs-comment"># 安装1.20+版本需要先安装1.17</span><br><span class="hljs-attribute">gvm</span> install go1.<span class="hljs-number">21</span>.<span class="hljs-number">2</span> -B<br><span class="hljs-attribute">gvm</span> use go1.<span class="hljs-number">21</span>.<span class="hljs-number">2</span><br><span class="hljs-comment"># 设置为默认版本</span><br><span class="hljs-attribute">gvm</span> use go1.<span class="hljs-number">21</span>.<span class="hljs-number">2</span> --default<br></code></pre></td></tr></table></figure><p>为什么要加-b？<br>因为谷歌在1.5版本使用了go编译go的逻辑，如果原本电脑上没有go就无法编译。</p><h2 id="踏马的离谱问题"><a href="#踏马的离谱问题" class="headerlink" title="踏马的离谱问题"></a>踏马的离谱问题</h2><p>在安装并且使用use切换go版本后无效！老子就xxxxxx本来安装就麻烦死了，你给我搞这出老子就xxxxx。<br>说一下解决方法<br>把下载好的go添加进变量内就开始使用了。</p><h1 id="设置变量方法"><a href="#设置变量方法" class="headerlink" title="设置变量方法"></a>设置变量方法</h1><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-built_in">export</span> <span class="hljs-attribute">PATH</span>=<span class="hljs-variable">$PATH</span>:/用户目录/.gvm/gos/go版本号/bin<br></code></pre></td></tr></table></figure><p>以下是实例</p><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir">export <span class="hljs-title class_">PATH</span>=\<span class="hljs-variable">$PATH</span><span class="hljs-symbol">:/home/uusama/mysql/bin</span><br></code></pre></td></tr></table></figure><p>具体可以去看<a href="https://www.cnblogs.com/youyoui/p/10680329.html">这篇文章</a></p><h1 id="写后感想"><a href="#写后感想" class="headerlink" title="写后感想"></a>写后感想</h1><p><em><strong>真是太tm烦了！！！！！！！</strong></em><br>爷要爆炸！！！！<br><img src="/tupian/gvm/1737272549475.png" alt="1737272549475"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>gvm</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>请勿随意更新项目基层</title>
+    <link href="/2025/01/16/qing-wu-sui-yi-geng-xin-xiang-mu-ji-ceng/"/>
+    <url>/2025/01/16/qing-wu-sui-yi-geng-xin-xiang-mu-ji-ceng/</url>
+    
+    <content type="html"><![CDATA[<h1 id="更新基层一定要备份！"><a href="#更新基层一定要备份！" class="headerlink" title="更新基层一定要备份！"></a>更新基层一定要备份！</h1><p>在使用hexo时，我不想把文件存储在本地了，上传到了GitHub上面自动部署。<br>可是tmd，GitHub貌似有主题限制，主题无法识别，无法构建。<br>然后GitHub上机器人自动给我更新软件包，我就合并了。<br>没想到，结果下载回本地时，无法安装模块依赖了！<br>这是nodejs的版本问题，可是我就想使用目前的版本。<br>服了，还好git有版本管理不然就死了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>网站相关</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>警告</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>thunderbird</title>
+    <link href="/2024/12/15/thunderbird/"/>
+    <url>/2024/12/15/thunderbird/</url>
+    
+    <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p><strong>Mozilla Thunderbird</strong>是一个开源电子邮箱，是和火狐浏览器同一个开发组织，它就是大名鼎鼎的<strong>Mozilla</strong></p><p><del>傻x吧名字不就包含有吗？</del></p><h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><p><img src="/tupian/email/about.jpg" alt="主页面"></p><p><img src="/tupian/email/about1.jpg" alt="关于"></p><h1 id="整体体验"><a href="#整体体验" class="headerlink" title="整体体验"></a>整体体验</h1><ol><li><p>非常好，动画也是比较完整。</p></li><li><p>占用低至80-100mb(两个邮箱)</p></li></ol><h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><ol><li><p>对国内邮箱支持不太行，比如QQ无法识别垃圾和草稿箱等</p></li><li><p>如果没有设置这种文件夹，邮件会直接消失!</p></li></ol><h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p><a href="https://www.thunderbird.net/zh-CN/thunderbird/all/">官网</a></p><p>8.2版本<a href="https://github.com/thunderbird/thunderbird-android/releases/download/THUNDERBIRD_8_2/thunderbird-8.2.apk">GitHub</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>邮箱</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>手机免root修改housts(代理)</title>
+    <link href="/2024/11/26/v-housts/"/>
+    <url>/2024/11/26/v-housts/</url>
+    
+    <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Virtual Hosts 是一个开源项目，专为 Android 设备设计，旨在帮助开发者自定义主机文件（&#x2F;system&#x2F;etc&#x2F;hosts），支持通配符 DNS 记录。该项目通过 VPN 模式实现，不需要设备具有 root 权限。</p><h2 id="功能特点"><a href="#功能特点" class="headerlink" title="功能特点"></a>功能特点</h2><p>• 自定义主机配置：用户可以创建自定义的主机配置文件，将主机名和 IP 地址进行映射，实现自定义域名解析。</p><p>• 支持通配符 DNS 记录：可以使用通配符符号匹配多个主机名，方便批量配置和管理。</p><p>• VPN 模式实现：通过虚拟的 VPN 接口拦截和处理网络流量，实现自定义主机名解析。</p><p>• 无需 Root 权限：兼容大多数 Android 设备和系统版本，无需 Root 权限即可运行。</p><p><a href="https://github.com/x-falcon/Virtual-Hosts">项目地址</a></p><h1 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h1><p><img src="/tupian/v-housts/%E4%B8%BB%E9%A1%B5.jpg" alt="主页"></p><p><img src="/tupian/v-housts/%E8%AE%BE%E7%BD%AE.jpg" alt="设置"></p><h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>你需要一个空白文件，然后按housts的语法写入。</p><p>例如:</p><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs accesslog"><span class="hljs-number">127.0.0.1</span> www.baidu.com<br></code></pre></td></tr></table></figure><p>然后保存，接着导入进去。</p><p>最后开启即可！</p><h1 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h1><p>蓝奏云<a href="https://wwya.lanzoue.com/iwVuZ2gd3y2b">走你</a><br>密码:50yc</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>软件推荐</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>子域名与github-pages绑定</title>
+    <link href="/2024/11/20/zi-yu-ming-yu-github-pages-bang-ding/"/>
+    <url>/2024/11/20/zi-yu-ming-yu-github-pages-bang-ding/</url>
+    
+    <content type="html"><![CDATA[<h1 id="将子域名解析到GitHub"><a href="#将子域名解析到GitHub" class="headerlink" title="将子域名解析到GitHub"></a>将子域名解析到GitHub</h1><p>进入域名管理后台</p><p>新建一个dns解析→类型为CNAME→记录值为用户名.github.io→名称为你想解析的子域名</p><h1 id="仓库绑定"><a href="#仓库绑定" class="headerlink" title="仓库绑定"></a>仓库绑定</h1><p>在仓库的Setting-&gt;Pages里，在自定义域名里输入 DNS 配置好的域名，点击保存，GitHub 会自动进行 DNS 校验，这个过程需要一点时间</p><p>当校验通过以后，就可以勾选下面的强制开启 HTTPS ，是不需要申请 SSL 证书的，GitHub 会自动帮申请。<del>免费万岁</del></p><p>＼＼\٩( ‘ω’ )و &#x2F;&#x2F;／／</p><p><strong>这下你的仓库已经绑定上你的子域名了</strong></p><p><em>你依然需要注意，hexo等一部分在上传文件时，会修改pages设置！</em></p><p><em>为什么不出顶级域名教程？</em></p><p><em>因为我觉得个人不会这么有钱吧，给一个仓库顶级域名</em></p><p>Σ( ° △ °|||)︴</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>github</tag>
+      
+      <tag>域名</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>termux安装msf</title>
+    <link href="/2024/11/19/msf-termux/"/>
+    <url>/2024/11/19/msf-termux/</url>
+    
+    <content type="html"><![CDATA[<h1 id="安装msf"><a href="#安装msf" class="headerlink" title="安装msf"></a>安装msf</h1><h2 id="安装wget"><a href="#安装wget" class="headerlink" title="安装wget"></a>安装wget</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">pkg <span class="hljs-keyword">install</span> wget<br></code></pre></td></tr></table></figure><h2 id="下载构建脚本"><a href="#下载构建脚本" class="headerlink" title="下载构建脚本"></a>下载构建脚本</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">wget https:<span class="hljs-regexp">//gi</span>tee.com<span class="hljs-regexp">/computerqwq/m</span>etasploit_in_termux<span class="hljs-regexp">/releases/</span>download<span class="hljs-regexp">/jb/m</span>sf_install.sh<br></code></pre></td></tr></table></figure><h2 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x metasploit.sh<br></code></pre></td></tr></table></figure><h2 id="运行构建脚本"><a href="#运行构建脚本" class="headerlink" title="运行构建脚本"></a>运行构建脚本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./metasploit.sh<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>termux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>termux</tag>
+      
+      <tag>msf</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Linux编译安装Python</title>
+    <link href="/2024/11/19/python/"/>
+    <url>/2024/11/19/python/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.python.org/ftp">下载Python源代码</a></p><h1 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h1><ul><li><p><a href="https://en.cppreference.com/w/c/11">C11</a> 编译器。 <a href="https://en.wikipedia.org/wiki/C11_(C_standard_revision)#Optional_features">可选的 C11 特性</a> 不是必须的。</p></li><li><p>对 <a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a> 浮点数和 <a href="https://en.wikipedia.org/wiki/NaN#Floating_point">浮点 Not-a-Number (NaN)</a> 的支持。</p></li><li><p>对线程的支持。</p></li><li><p>用于 <a href="https://docs.python.org/zh-cn/3.12/library/ssl.html#module-ssl" title="ssl: TLS/SSL wrapper for socket objects"><code>ssl</code></a> 和 <a href="https://docs.python.org/zh-cn/3.12/library/hashlib.html#module-hashlib" title="hashlib: Secure hash and message digest algorithms."><code>hashlib</code></a> 模块的 OpenSSL 1.1.1 或更新版本。</p></li><li><p>在 Windows 上，需要 Microsoft Visual Studio 2017 或更新版本。</p></li></ul><p>进入仓库文件夹</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./configure<br></code></pre></td></tr></table></figure><p>可指定: –prefix&#x3D;</p><p>设置安装目录</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>python</tag>
+      
+      <tag>build</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>kodi修改成中文</title>
+    <link href="/2024/11/19/kodi/"/>
+    <url>/2024/11/19/kodi/</url>
+    
+    <content type="html"><![CDATA[<p>#适用于kodiv21</p><p>进入setting→interface settings→skin将fonts由skin default 改为arial based<br><img src="/tupian/kodi/kodi1.png" alt="设置1"></p><p>&#x3D;&#x3D;必须修改渲染字体否则改成中文全是括号&#x3D;&#x3D;</p><p>进入regional-language选项，选择简体中文</p><p><img src="/tupian/kodi/kodi2.png" alt="设置2"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>kodi</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>kodi</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
