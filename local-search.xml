@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>openwrt换源</title>
+    <link href="/2025/02/09/openwrt-huan-yuan/"/>
+    <url>/2025/02/09/openwrt-huan-yuan/</url>
+    
+    <content type="html"><![CDATA[<h1 id="源仓库"><a href="#源仓库" class="headerlink" title="源仓库"></a>源仓库</h1><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs awk">src<span class="hljs-regexp">/gz openwrt_core https:/</span><span class="hljs-regexp">/mirrors.aliyun.com/</span>openwrt<span class="hljs-regexp">/releases/</span>packages-<span class="hljs-number">24.10</span><span class="hljs-regexp">/arm_cortex-a5_vfpv4/</span>packages<br>src<span class="hljs-regexp">/gz openwrt_base https:/</span><span class="hljs-regexp">/mirrors.aliyun.com/</span>openwrt<span class="hljs-regexp">/releases/</span>packages-<span class="hljs-number">24.10</span><span class="hljs-regexp">/arm_cortex-a5_vfpv4/</span>base<br>src<span class="hljs-regexp">/gz openwrt_luci https:/</span><span class="hljs-regexp">/mirrors.aliyun.com/</span>openwrt<span class="hljs-regexp">/releases/</span>packages-<span class="hljs-number">24.10</span><span class="hljs-regexp">/arm_cortex-a5_vfpv4/</span>luci<br>src<span class="hljs-regexp">/gz openwrt_packages https:/</span><span class="hljs-regexp">/mirrors.aliyun.com/</span>openwrt<span class="hljs-regexp">/releases/</span>packages-<span class="hljs-number">24.10</span><span class="hljs-regexp">/arm_cortex-a5_vfpv4/</span>packages<br>src<span class="hljs-regexp">/gz openwrt_routing https:/</span><span class="hljs-regexp">/mirrors.aliyun.com/</span>openwrt<span class="hljs-regexp">/releases/</span>packages-<span class="hljs-number">24.10</span><span class="hljs-regexp">/arm_cortex-a5_vfpv4/</span>routing<br>src<span class="hljs-regexp">/gz openwrt_telephony https:/</span><span class="hljs-regexp">/mirrors.aliyun.com/</span>openwrt<span class="hljs-regexp">/releases/</span>packages-<span class="hljs-number">24.10</span><span class="hljs-regexp">/arm_cortex-a5_vfpv4/</span>telephony<br></code></pre></td></tr></table></figure><p>其中24.10是你的openwrt版本，arm_cortex-a5_vfpv4是你的处理器架构，你可以去源仓库里找属于你的架构的目录。你不一定能够使用我的源，因为这只适配我的处理器架构和openwrt版本。</p><h1 id="怎么更换源？"><a href="#怎么更换源？" class="headerlink" title="怎么更换源？"></a>怎么更换源？</h1><p>把修改好的源写入<code>/etc/opkg/distfeeds.conf</code>即可</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>openwrt</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>aseprite汉化</title>
     <link href="/2025/02/07/aseprite-han-hua/"/>
     <url>/2025/02/07/aseprite-han-hua/</url>

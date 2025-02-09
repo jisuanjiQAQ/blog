@@ -1,3 +1,4 @@
+https://blog.computerqwq.top/2025/02/09/openwrt-huan-yuan/
 https://blog.computerqwq.top/2025/02/07/aseprite-yun-gou-jian/
 https://blog.computerqwq.top/2025/02/07/aseprite-han-hua/
 https://blog.computerqwq.top/2025/02/02/github-bu-shu-de-wang-ye-cdn404/
@@ -34,3 +35,4 @@ https://blog.computerqwq.top/categories/kodi/
 https://blog.computerqwq.top/categories/termux/
 https://blog.computerqwq.top/categories/python/
 https://blog.computerqwq.top/categories/%E7%BD%91%E7%AB%99%E7%9B%B8%E5%85%B3/
+https://blog.computerqwq.top/categories/openwrt/
