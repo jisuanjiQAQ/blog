@@ -4,6 +4,44 @@
   
   
   <entry>
+    <title>微软商店解析下载</title>
+    <link href="/2025/02/15/wei-ruan-shang-dian-jie-xi-xia-zai/"/>
+    <url>/2025/02/15/wei-ruan-shang-dian-jie-xi-xia-zai/</url>
+    
+    <content type="html"><![CDATA[<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><p><a href="https://store.rg-adguard.net/">点我跳转</a></p><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>粘贴微软商店的下载链接即可网页的</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>软件推荐</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Windows终端下载</title>
+    <link href="/2025/02/15/windows-zhong-duan-xia-zai/"/>
+    <url>/2025/02/15/windows-zhong-duan-xia-zai/</url>
+    
+    <content type="html"><![CDATA[<h1 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h1><p>请确保你的系统是</p><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs dns">版本Windows <span class="hljs-number">10</span> 专业工作站版<br>版本号<span class="hljs-number">22</span>H2<br>安装日期‎<span class="hljs-number">2024</span>/‎<span class="hljs-number">12</span>/‎<span class="hljs-number">28</span><br>操作系统内部版本<span class="hljs-number">19045.5371</span><br>体验Windows Feature Experience Pack <span class="hljs-number">1000.19060</span>.<span class="hljs-number">1000</span>.<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure><p>及以上版本，即可安装。<br>咳咳咳，也就是22H2以上的版本</p><h2 id="小提示"><a href="#小提示" class="headerlink" title="小提示"></a>小提示</h2><p>需要开启开发者模式的<br>你还可以在开发者选项里选择默认终端。</p><h2 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h2><p><a href="https://www.123684.com/s/wVYRVv-sfjav">123盘</a></p><h2 id="用后感"><a href="#用后感" class="headerlink" title="用后感"></a>用后感</h2><p>比tm的cmd和git以及shell好用多了！（仅限于Windows环境）</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>软件推荐</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>openwrt换源</title>
     <link href="/2025/02/09/openwrt-huan-yuan/"/>
     <url>/2025/02/09/openwrt-huan-yuan/</url>
