@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.computerqwq.top/2025/02/23/linux-an-zhuang-chrome/</loc>
+    
+    <lastmod>2025-02-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.computerqwq.top/2025/02/18/hexon-hexo-de-hou-tai-guan-li-cha-jian/</loc>
     
     <lastmod>2025-02-18</lastmod>
@@ -166,7 +175,7 @@
 
   <url>
     <loc>https://blog.computerqwq.top/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -174,91 +183,98 @@
   
   <url>
     <loc>https://blog.computerqwq.top/tags/%E5%85%AC%E5%91%8A/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/tags/github/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/tags/%E7%BD%91%E7%AB%99/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/tags/kodi/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/tags/termux/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/tags/msf/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/tags/python/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/tags/build/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/tags/%E9%82%AE%E7%AE%B1/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/tags/%E5%9F%9F%E5%90%8D/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/tags/gvm/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/tags/%E8%AD%A6%E5%91%8A/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.computerqwq.top/tags/linux/</loc>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -267,56 +283,56 @@
   
   <url>
     <loc>https://blog.computerqwq.top/categories/aseprite/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/categories/%E5%85%AC%E5%91%8A/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/categories/GitHub/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/categories/kodi/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/categories/termux/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/categories/python/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/categories/%E7%BD%91%E7%AB%99%E7%9B%B8%E5%85%B3/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.computerqwq.top/categories/openwrt/</loc>
-    <lastmod>2025-02-18</lastmod>
+    <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

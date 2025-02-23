@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>linux安装chrome</title>
+    <link href="/2025/02/23/linux-an-zhuang-chrome/"/>
+    <url>/2025/02/23/linux-an-zhuang-chrome/</url>
+    
+    <content type="html"><![CDATA[<h1 id="通过apt源"><a href="#通过apt源" class="headerlink" title="通过apt源"></a>通过apt源</h1><h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install -y wget gnup<br></code></pre></td></tr></table></figure><h2 id="下载并添加Google-Chrome的公钥"><a href="#下载并添加Google-Chrome的公钥" class="headerlink" title="下载并添加Google Chrome的公钥"></a>下载并添加Google Chrome的公钥</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">wget -q -O - https://<span class="hljs-keyword">dl</span>.google.<span class="hljs-keyword">com</span>/linux/linux_signing_key.pub | sudoapt-key <span class="hljs-built_in">add</span> -<br></code></pre></td></tr></table></figure><h2 id="添加软件源"><a href="#添加软件源" class="headerlink" title="添加软件源"></a>添加软件源</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stablemain&quot;</span> | <span class="hljs-built_in">sudo</span> <span class="hljs-built_in">tee</span> /etc/apt/sources.list.d/google-chrome.list<br></code></pre></td></tr></table></figure><h2 id="更新包列表"><a href="#更新包列表" class="headerlink" title="更新包列表"></a>更新包列表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> update<br></code></pre></td></tr></table></figure><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install -y google-chrome-stable<br></code></pre></td></tr></table></figure><h1 id="通过下载-deb文件安装"><a href="#通过下载-deb文件安装" class="headerlink" title="通过下载.deb文件安装"></a>通过下载.deb文件安装</h1><p>首先去<a href="https://www.google.cn/chrome/">chrome官网</a></p><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>在你的下载目录打开终端然后</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> dpkg -i google-chrome-stable_current_amd64.deb<br></code></pre></td></tr></table></figure><p>其中的安装包名需要按实际修改</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>hexon-hexo的后台管理插件</title>
     <link href="/2025/02/18/hexon-hexo-de-hou-tai-guan-li-cha-jian/"/>
     <url>/2025/02/18/hexon-hexo-de-hou-tai-guan-li-cha-jian/</url>
