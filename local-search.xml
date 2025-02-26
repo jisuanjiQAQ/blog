@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Linux安装zsh终端</title>
+    <link href="/2025/02/26/zsh-zhong-duan-an-zhuang/"/>
+    <url>/2025/02/26/zsh-zhong-duan-an-zhuang/</url>
+    
+    <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Zsh（Z Shell）是一个功能强大的 Unix shell，它在 Bash 的基础上进行了许多改进和增强，提供了更灵活、更高效的命令行体验。以下是关于 Zsh 终端的详细介绍</p><ul><li><p>强大的自动补全功能：Zsh 不仅可以自动补全命令，还可以补全命令选项、参数和文件名。对于命令参数，Zsh 甚至可以显示简短的帮助信息，这使得探索新命令变得更加容易。</p></li><li><p>丰富的插件和主题支持：Zsh 有一个强大的社区，提供了大量的插件和主题，如 Oh My Zsh 这个流行的 Zsh 框架，允许用户轻松添加、更新插件和主题。</p></li><li><p>高度可定制的提示符：Zsh 允许用户对命令行提示符进行高度定制，包括颜色、内容和格式。用户可以非常容易地调整提示符来显示 Git 分支、Python 虚拟环境等信息。</p></li><li><p>改进的脚本编写能力：Zsh 提供了许多改进的脚本编写功能，如更灵活的条件语句、循环语句等，使得编写复杂的脚本更加方便。</p></li><li><p>更好的命令历史管理：Zsh 提供了更强大的命令历史管理功能，用户可以使用 ↑ 和 ↓ 键浏览命令历史，按 Ctrl+R 进行命令搜索。</p></li></ul><p><del>由kimi提供</del></p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>首先确保你有wget或者curl或者其它下载器。</p><p>国内下载:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(wget -O- https://gitee.com/pocmon/ohmyzsh/raw/master/tools/install.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure><p>如果你已经越过长城可以：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(wget -O- https://install.ohmyz.sh/)</span>&quot;</span><br></code></pre></td></tr></table></figure><p>文中的wegt可以修改成其它下载器<br>弹出了英文的安装提示可以输入y哦~</p><h1 id="变量迁移（可选）"><a href="#变量迁移（可选）" class="headerlink" title="变量迁移（可选）"></a>变量迁移（可选）</h1><p>zsh不会自己迁移你在bash终端下设置的所有环境变量  </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看bash配置文件，并手动复制自定义配置</span><br><span class="hljs-built_in">cat</span> ~/.bashrc<br><span class="hljs-comment"># 编辑zsh配置文件，并粘贴自定义配置</span><br>nano ~/.zshrc<br><span class="hljs-comment"># 启动新的zsh配置</span><br><span class="hljs-built_in">source</span> ~/.zshrc<br></code></pre></td></tr></table></figure><h1 id="让我们自定义主题"><a href="#让我们自定义主题" class="headerlink" title="让我们自定义主题!"></a>让我们自定义主题!</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> wget -O <span class="hljs-variable">$ZSH_CUSTOM</span>/themes/haoomz.zsh-theme https://cdn.haoyep.com/gh/leegical/Blog_img/zsh/haoomz.zsh-theme<br></code></pre></td></tr></table></figure><p>这是内置主题下载<del>如果我没猜错</del><br>编辑 ~&#x2F;.zshrc 文件，将 ZSH_THEME 设为 你想要的主题,然后重启终端。<br>你可以在<a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">内置主题样式截图</a>中查看所有 zsh 内置的主题样式和对应的主题名。这些内置主题已经放在 ～&#x2F;.oh-my-zsh&#x2F;themes 目录下，不需要再下载。</p><h1 id="让我们安装-powerlevel10k"><a href="#让我们安装-powerlevel10k" class="headerlink" title="让我们安装 powerlevel10k"></a>让我们安装 powerlevel10k</h1><p>目前为止我觉得最漂亮的主题<a href="https://github.com/romkatv/powerlevel10k">powerlevel10k</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> --depth=1 https://github.com/romkatv/powerlevel10k.git <span class="hljs-variable">$&#123;ZSH_CUSTOM:-<span class="hljs-variable">$HOME</span>/.oh-my-zsh/custom&#125;</span>/themes/powerlevel10k<br><br><span class="hljs-comment"># 中国用户可以使用 gitee.com 上的官方镜像加速下载</span><br>git <span class="hljs-built_in">clone</span> --depth=1 https://gitee.com/romkatv/powerlevel10k.git <span class="hljs-variable">$&#123;ZSH_CUSTOM:-<span class="hljs-variable">$HOME</span>/.oh-my-zsh/custom&#125;</span>/themes/powerlevel10k<br></code></pre></td></tr></table></figure><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>zsh还有一个插件功能不过不想写了，大冬天手都冻麻了。</p><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.haoyep.com/posts/zsh-config-oh-my-zsh/">https://www.haoyep.com/posts/zsh-config-oh-my-zsh/</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>linux安装chrome</title>
     <link href="/2025/02/23/linux-an-zhuang-chrome/"/>
     <url>/2025/02/23/linux-an-zhuang-chrome/</url>

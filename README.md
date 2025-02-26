@@ -1,5 +1,6 @@
 # 我的文章  
-### **2025-02** (9)  
+### **2025-02** (10)  
+- 2025-02-26 [Linux安装zsh终端](https://blog.computerqwq.top/2025/02/26/zsh-zhong-duan-an-zhuang/)  
 - 2025-02-23 [linux安装chrome](https://blog.computerqwq.top/2025/02/23/linux-an-zhuang-chrome/)  
 - 2025-02-18 [hexon-hexo的后台管理插件](https://blog.computerqwq.top/2025/02/18/hexon-hexo-de-hou-tai-guan-li-cha-jian/)  
 - 2025-02-15 [微软商店解析下载](https://blog.computerqwq.top/2025/02/15/wei-ruan-shang-dian-jie-xi-xia-zai/)  
