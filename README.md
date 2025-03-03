@@ -1,4 +1,8 @@
 # 我的文章  
+### **2025-03** (1)  
+- 2025-03-03 [HUAWEI-AX2-Pro](https://blog.computerqwq.top/2025/03/03/huawei-ax2-pro/)  
+  
+  
 ### **2025-02** (10)  
 - 2025-02-26 [Linux安装zsh终端](https://blog.computerqwq.top/2025/02/26/zsh-zhong-duan-an-zhuang/)  
 - 2025-02-23 [linux安装chrome](https://blog.computerqwq.top/2025/02/23/linux-an-zhuang-chrome/)  

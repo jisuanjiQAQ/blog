@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>HUAWEI-AX2-Pro</title>
+    <link href="/2025/03/03/huawei-ax2-pro/"/>
+    <url>/2025/03/03/huawei-ax2-pro/</url>
+    
+    <content type="html"><![CDATA[<h1 id="参数介绍"><a href="#参数介绍" class="headerlink" title="参数介绍"></a>参数介绍</h1><p>华为AX2 Pro 是一个路由器代号是ws7000吧。<br><a href="https://consumer.huawei.com/cn/routers/ax2-pro/specs/">官网参数规格</a><br>支持WiFi6协议挺好，可惜我的手机不支持。电脑网线也扯不上来。<br>配置感觉挺好，就是挺烫的。<br>目前能升级到的软件版本是4.2.0.10(V3R1)<br>HarmonyOS 版本4.2.0  </p><h1 id="路由器支持功能"><a href="#路由器支持功能" class="headerlink" title="路由器支持功能"></a>路由器支持功能</h1><p>VPN，IPTV设置，智联，upnp，WiFi中继，客人WiFi，ddns，nat设置，dmz</p><h1 id="路由器后台设置界面"><a href="#路由器后台设置界面" class="headerlink" title="路由器后台设置界面"></a>路由器后台设置界面</h1><p><img src="/tupian/lyq/AX2_wifi.png" alt="路由器主界面"></p><h1 id="设置桥接？"><a href="#设置桥接？" class="headerlink" title="设置桥接？"></a>设置桥接？</h1><p>我文章发布时，我尝试过联系工作人员。工作人员告诉我，为了防止改桥接刷pcdn。目前禁止了改桥接操作，我的是移动的。不知道你们的是不是这样。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>路由器</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Linux安装zsh终端</title>
     <link href="/2025/02/26/zsh-zhong-duan-an-zhuang/"/>
     <url>/2025/02/26/zsh-zhong-duan-an-zhuang/</url>
