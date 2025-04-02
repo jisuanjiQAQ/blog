@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Typora破解安装</title>
+    <link href="/2025/04/02/typora-po-jie/"/>
+    <url>/2025/04/02/typora-po-jie/</url>
+    
+    <content type="html"><![CDATA[<p>注入式激活码激活方式</p><p>支持到<code>1.7.6</code></p><p><a href="https://github.com/AWDSCAN/Typora/tree/main/code">GitHub项目</a></p><p><img src="/tupian/typora/msedge_v6SVPZfreJ.png" alt="仓库截图"></p><p>把截图中的两个文件下载下来，再把仓库内的typora给下载下来安装了（1.7.6版本）</p><p>然后将那两个小文件复制到typora的目录下</p><p><img src="/tupian/typora/explorer_1CpjPdYea0.png" alt="资源管理器截图"></p><p>我们再在这个目录打开cmd或者power shell都可以，再依次运行 <code>node_inject.exe</code>-<code>license-gen.exe</code></p><p>这样就完成了！</p><p><img src="/tupian/typora/WindowsTerminal_RJMZdh9zgN.png" alt="终端"></p><p>就像这样激活码就显示出来了，然后输入进去。邮箱可以随便填！</p><p>但如果之前你没有成功但是修改了激活服务器，你就需要重新安装！</p><h2 id="后言"><a href="#后言" class="headerlink" title="后言"></a>后言</h2><p>tnnd，我下载完rust编译注入程序成功了，但是查询的玩意就死活编译不动。</p><p>还好预编译了</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>软件推荐</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>16进制编辑器软件推荐-wxMEdit</title>
     <link href="/2025/03/19/16-jin-zhi-bian-ji-qi-ruan-jian-tui-jian-wxmedit/"/>
     <url>/2025/03/19/16-jin-zhi-bian-ji-qi-ruan-jian-tui-jian-wxmedit/</url>
