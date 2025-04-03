@@ -1,5 +1,6 @@
 # 我的文章  
-### **2025-04** (1)  
+### **2025-04** (2)  
+- 2025-04-03 [qt高速下载](https://blog.computerqwq.top/2025/04/03/qt-gao-su-xia-zai/)  
 - 2025-04-02 [Typora破解安装](https://blog.computerqwq.top/2025/04/02/typora-po-jie/)  
   
   
