@@ -1,5 +1,7 @@
 # 我的文章  
-### **2025-04** (3)  
+### **2025-04** (5)  
+- 2025-04-10 [windows和linux系统时间不同步](https://blog.computerqwq.top/2025/04/10/windows-he-linux-xi-tong-shi-jian-bu-tong-bu/)  
+- 2025-04-10 [Debian12切换显示管理器GDM](https://blog.computerqwq.top/2025/04/10/debian12-qie-huan-xian-shi-guan-li-qi-gdm/)  
 - 2025-04-06 [Sealos Cloud](https://blog.computerqwq.top/2025/04/06/sealos-cloud/)  
 - 2025-04-03 [qt高速下载](https://blog.computerqwq.top/2025/04/03/qt-gao-su-xia-zai/)  
 - 2025-04-02 [Typora破解安装](https://blog.computerqwq.top/2025/04/02/typora-po-jie/)  

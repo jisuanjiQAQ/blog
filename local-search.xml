@@ -4,6 +4,38 @@
   
   
   <entry>
+    <title>windows和linux系统时间不同步</title>
+    <link href="/2025/04/10/windows-he-linux-xi-tong-shi-jian-bu-tong-bu/"/>
+    <url>/2025/04/10/windows-he-linux-xi-tong-shi-jian-bu-tong-bu/</url>
+    
+    <content type="html"><![CDATA[<h1 id="windows和linux系统时间不同步"><a href="#windows和linux系统时间不同步" class="headerlink" title="windows和linux系统时间不同步"></a>windows和linux系统时间不同步</h1><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>这是由于Windows和Linux对系统时间的处理方式不同造成的。Windows默认将系统时间设置为本地时间，而Linux通常将系统时间视为UTC（协调世界时）。因此，当你在一个系统中调整时间后，另一个系统可能会误解这个时间设置。</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>修改其中一个系统的时间策略即可<br>linux：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">timedatectl set-local-rtc 1 --adjust-system-clock<br></code></pre></td></tr></table></figure><p>windows：<br>通过修改Windows的注册表，你可以使Windows使用UTC时间。步骤如下：</p><ul><li>打开注册表编辑器（按<code>Win + R</code>，输入<code>regedit</code>然后按回车）。</li><li>导航到以下路径：<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation<br></code></pre></td></tr></table></figure></li><li>在右侧窗口右键，选择<strong>新建</strong> -&gt; <strong>DWORD（32位）值</strong>。</li><li>将新建值命名为<code>RealTimeIsUniversal</code>。</li><li>双击<code>RealTimeIsUniversal</code>，将其值设置为<code>1</code>。</li></ul>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Debian12切换显示管理器GDM</title>
+    <link href="/2025/04/10/debian12-qie-huan-xian-shi-guan-li-qi-gdm/"/>
+    <url>/2025/04/10/debian12-qie-huan-xian-shi-guan-li-qi-gdm/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Debian12切换显示管理器GDM"><a href="#Debian12切换显示管理器GDM" class="headerlink" title="Debian12切换显示管理器GDM"></a>Debian12切换显示管理器GDM</h1><h2 id="切换原因"><a href="#切换原因" class="headerlink" title="切换原因"></a>切换原因</h2><p>哎呀，这debian12挺好的，占用内存和最新的windows10和11没什么两样。<br>也能装上fcitx5,但就是有一点很蛋疼。<br>特喵的啊，这登录系统的时候居然不记住用户名，我的天啊这是最不能忍的！</p><h2 id="环境查看（可有可无）"><a href="#环境查看（可有可无）" class="headerlink" title="环境查看（可有可无）"></a>环境查看（可有可无）</h2><p>使用<code>systemctl</code>检查服务：  </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl status display-manager<br></code></pre></td></tr></table></figure><p>因为为使用的是xfce所以我的是<code>LightDM</code></p><h2 id="安装GDM"><a href="#安装GDM" class="headerlink" title="安装GDM"></a>安装GDM</h2><p><del>GDM长什么样？那ubuntu那样（只是登录界面）</del></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install gdm3<br></code></pre></td></tr></table></figure><p>然后在弹出的界面中选择默认的显示管理器然后重启就行</p><h1 id="后言"><a href="#后言" class="headerlink" title="后言"></a>后言</h1><p>在安装了GDM后资源占用会变高，开机时间会变长。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Sealos Cloud</title>
     <link href="/2025/04/06/sealos-cloud/"/>
     <url>/2025/04/06/sealos-cloud/</url>
