@@ -19,23 +19,25 @@
   <meta name="author" content="计算机qwq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="windows和linux系统时间不同步原因这是由于Windows和Linux对系统时间的处理方式不同造成的。Windows默认将系统时间设置为本地时间，而Linux通常将系统时间视为UTC（协调世界时）。因此，当你在一个系统中调整时间后，另一个系统可能会误解这个时间设置。 解决方法修改其中一个系统的时间策略即可linux： 1timedatectl set-local-rtc 1 --adjus">
+    <meta name="description" content="ubuntu20.04更新glibc原理很简单，整体原理就是用其他系统的软件源安装上去。不建议长期使用，可能会出现不兼容现象 添加软件源1deb http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; noble main restricted universe multiverse  打开软件和更新&gt;其它软件&gt;添加 即可通过这个软件源可以更新到2.39">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windows和linux系统时间不同步">
-<meta property="og:url" content="https://blog.computerqwq.top/2025/04/10/windows-he-linux-xi-tong-shi-jian-bu-tong-bu/index.html">
+<meta property="og:title" content="ubuntu20.04更新glibc">
+<meta property="og:url" content="https://blog.computerqwq.top/2025/04/19/ubuntu20-04-geng-xin-glibc/index.html">
 <meta property="og:site_name" content="计算机">
-<meta property="og:description" content="windows和linux系统时间不同步原因这是由于Windows和Linux对系统时间的处理方式不同造成的。Windows默认将系统时间设置为本地时间，而Linux通常将系统时间视为UTC（协调世界时）。因此，当你在一个系统中调整时间后，另一个系统可能会误解这个时间设置。 解决方法修改其中一个系统的时间策略即可linux： 1timedatectl set-local-rtc 1 --adjus">
+<meta property="og:description" content="ubuntu20.04更新glibc原理很简单，整体原理就是用其他系统的软件源安装上去。不建议长期使用，可能会出现不兼容现象 添加软件源1deb http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;ubuntu&#x2F; noble main restricted universe multiverse  打开软件和更新&gt;其它软件&gt;添加 即可通过这个软件源可以更新到2.39">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-04-10T13:09:07.000Z">
-<meta property="article:modified_time" content="2025-04-10T13:09:15.663Z">
+<meta property="og:image" content="https://blog.computerqwq.top/tupian/ubuntu/updata.png">
+<meta property="article:published_time" content="2025-04-19T13:35:14.000Z">
+<meta property="article:modified_time" content="2025-04-19T13:42:40.879Z">
 <meta property="article:author" content="计算机qwq">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog.computerqwq.top/tupian/ubuntu/updata.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>windows和linux系统时间不同步 - 计算机</title>
+  <title>ubuntu20.04更新glibc - 计算机</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +214,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="windows和linux系统时间不同步"></span>
+            <span id="subtitle" data-typed-text="ubuntu20.04更新glibc"></span>
           
         </div>
 
@@ -228,8 +230,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-10 21:09" pubdate>
-          2025年4月10日 晚上
+        <time datetime="2025-04-19 21:35" pubdate>
+          2025年4月19日 晚上
         </time>
       </span>
     
@@ -240,7 +242,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          206 字
+          91 字
         
       </span>
     
@@ -251,7 +253,7 @@
         
         
         
-          2 分钟
+          1 分钟
         
       </span>
     
@@ -297,22 +299,15 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">windows和linux系统时间不同步</h1>
+            <h1 id="seo-header">ubuntu20.04更新glibc</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="windows和linux系统时间不同步"><a href="#windows和linux系统时间不同步" class="headerlink" title="windows和linux系统时间不同步"></a>windows和linux系统时间不同步</h1><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>这是由于Windows和Linux对系统时间的处理方式不同造成的。Windows默认将系统时间设置为本地时间，而Linux通常将系统时间视为UTC（协调世界时）。因此，当你在一个系统中调整时间后，另一个系统可能会误解这个时间设置。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>修改其中一个系统的时间策略即可<br>linux：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">timedatectl set-local-rtc 1 --adjust-system-clock<br></code></pre></td></tr></table></figure>
-<p>windows：<br>通过修改Windows的注册表，你可以使Windows使用UTC时间。步骤如下：</p>
-<ul>
-<li>打开注册表编辑器（按<code>Win + R</code>，输入<code>regedit</code>然后按回车）。</li>
-<li>导航到以下路径：<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation<br></code></pre></td></tr></table></figure></li>
-<li>在右侧窗口右键，选择<strong>新建</strong> -&gt; <strong>DWORD（32位）值</strong>。</li>
-<li>将新建值命名为<code>RealTimeIsUniversal</code>。</li>
-<li>双击<code>RealTimeIsUniversal</code>，将其值设置为<code>1</code>。</li>
-</ul>
+                <h1 id="ubuntu20-04更新glibc"><a href="#ubuntu20-04更新glibc" class="headerlink" title="ubuntu20.04更新glibc"></a>ubuntu20.04更新glibc</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>很简单，整体原理就是用其他系统的软件源安装上去。<br><del>不建议长期使用，可能会出现不兼容现象</del></p>
+<h2 id="添加软件源"><a href="#添加软件源" class="headerlink" title="添加软件源"></a>添加软件源</h2><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">deb http<span class="hljs-punctuation">:</span><span class="hljs-comment">//mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse</span><br></code></pre></td></tr></table></figure>
+<p><img src="/tupian/ubuntu/updata.png" srcset="/img/loading.gif" lazyload alt="添加软件源"></p>
+<p>打开软件和更新&gt;其它软件&gt;添加 即可<br>通过这个软件源可以更新到2.39版本</p>
 
                 
               </div>
@@ -330,8 +325,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>windows和linux系统时间不同步</div>
-      <div>https://blog.computerqwq.top/2025/04/10/windows-he-linux-xi-tong-shi-jian-bu-tong-bu/</div>
+      <div>ubuntu20.04更新glibc</div>
+      <div>https://blog.computerqwq.top/2025/04/19/ubuntu20-04-geng-xin-glibc/</div>
     </div>
     <div class="license-meta">
       
@@ -343,13 +338,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月10日</div>
+          <div>2025年4月19日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年4月10日</div>
+          <div>2025年4月19日</div>
         </div>
       
       
@@ -380,9 +375,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/04/19/ubuntu20-04-geng-xin-glibc/" title="ubuntu20.04更新glibc">
+                      <a href="/2025/04/19/text-han-hua/" title="sublime text汉化">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">ubuntu20.04更新glibc</span>
+                        <span class="hidden-mobile">sublime text汉化</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -390,8 +385,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/04/10/debian12-qie-huan-xian-shi-guan-li-qi-gdm/" title="Debian12切换显示管理器GDM">
-                        <span class="hidden-mobile">Debian12切换显示管理器GDM</span>
+                      <a href="/2025/04/10/windows-he-linux-xi-tong-shi-jian-bu-tong-bu/" title="windows和linux系统时间不同步">
+                        <span class="hidden-mobile">windows和linux系统时间不同步</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
