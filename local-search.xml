@@ -4,24 +4,30 @@
   
   
   <entry>
-    <title>sublime text汉化</title>
-    <link href="/2025/04/19/text-han-hua/"/>
-    <url>/2025/04/19/text-han-hua/</url>
+    <title>ubuntu20.04更新glibc</title>
+    <link href="/2025/04/20/ubuntu20-04-geng-xin-glibc/"/>
+    <url>/2025/04/20/ubuntu20-04-geng-xin-glibc/</url>
     
-    <content type="html"><![CDATA[<h1 id="sublime-text汉化"><a href="#sublime-text汉化" class="headerlink" title="sublime text汉化"></a>sublime text汉化</h1><p>打开Sublime Text,使用快捷键<strong>Shift+Ctrl+P</strong>,弹出查找栏<br>在搜索框中输入关键字 <strong>install</strong> ,出现下拉选项，点击选择其中的：<strong>Package Control: Install Package</strong><br>不会立刻有反应，需要等待拉取插件列表（使用梯子可能会更快）<br>在搜索框中输入<strong>chinese</strong>，选择下拉框中的<strong>ChineseLocalizations</strong></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="ubuntu20-04更新glibc"><a href="#ubuntu20-04更新glibc" class="headerlink" title="ubuntu20.04更新glibc"></a>ubuntu20.04更新glibc</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>很简单，整体原理就是用其他系统的软件源安装上去。<br><del>不建议长期使用，可能会出现不兼容现象</del></p><h2 id="添加软件源"><a href="#添加软件源" class="headerlink" title="添加软件源"></a>添加软件源</h2><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">deb http<span class="hljs-punctuation">:</span><span class="hljs-comment">//mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse</span><br></code></pre></td></tr></table></figure><p><img src="/tupian/ubuntu/updata.png" alt="添加软件源"></p><p>打开软件和更新&gt;其它软件&gt;添加 即可<br>通过这个软件源可以更新到2.39版本</p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
     
   </entry>
   
   
   
   <entry>
-    <title>ubuntu20.04更新glibc</title>
-    <link href="/2025/04/19/ubuntu20-04-geng-xin-glibc/"/>
-    <url>/2025/04/19/ubuntu20-04-geng-xin-glibc/</url>
+    <title>sublime text汉化</title>
+    <link href="/2025/04/19/text-han-hua/"/>
+    <url>/2025/04/19/text-han-hua/</url>
     
-    <content type="html"><![CDATA[<h1 id="ubuntu20-04更新glibc"><a href="#ubuntu20-04更新glibc" class="headerlink" title="ubuntu20.04更新glibc"></a>ubuntu20.04更新glibc</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>很简单，整体原理就是用其他系统的软件源安装上去。<br><del>不建议长期使用，可能会出现不兼容现象</del></p><h2 id="添加软件源"><a href="#添加软件源" class="headerlink" title="添加软件源"></a>添加软件源</h2><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">deb http<span class="hljs-punctuation">:</span><span class="hljs-comment">//mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse</span><br></code></pre></td></tr></table></figure><p><img src="/tupian/ubuntu/updata.png" alt="添加软件源"></p><p>打开软件和更新&gt;其它软件&gt;添加 即可<br>通过这个软件源可以更新到2.39版本</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="sublime-text汉化"><a href="#sublime-text汉化" class="headerlink" title="sublime text汉化"></a>sublime text汉化</h1><p>打开Sublime Text,使用快捷键<strong>Shift+Ctrl+P</strong>,弹出查找栏<br>在搜索框中输入关键字 <strong>install</strong> ,出现下拉选项，点击选择其中的：<strong>Package Control: Install Package</strong><br>不会立刻有反应，需要等待拉取插件列表（使用梯子可能会更快）<br>在搜索框中输入<strong>chinese</strong>，选择下拉框中的<strong>ChineseLocalizations</strong></p>]]></content>
     
     
     
@@ -37,6 +43,12 @@
     <content type="html"><![CDATA[<h1 id="windows和linux系统时间不同步"><a href="#windows和linux系统时间不同步" class="headerlink" title="windows和linux系统时间不同步"></a>windows和linux系统时间不同步</h1><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>这是由于Windows和Linux对系统时间的处理方式不同造成的。Windows默认将系统时间设置为本地时间，而Linux通常将系统时间视为UTC（协调世界时）。因此，当你在一个系统中调整时间后，另一个系统可能会误解这个时间设置。</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>修改其中一个系统的时间策略即可<br>linux：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">timedatectl set-local-rtc 1 --adjust-system-clock<br></code></pre></td></tr></table></figure><p>windows：<br>通过修改Windows的注册表，你可以使Windows使用UTC时间。步骤如下：</p><ul><li>打开注册表编辑器（按<code>Win + R</code>，输入<code>regedit</code>然后按回车）。</li><li>导航到以下路径：<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation<br></code></pre></td></tr></table></figure></li><li>在右侧窗口右键，选择<strong>新建</strong> -&gt; <strong>DWORD（32位）值</strong>。</li><li>将新建值命名为<code>RealTimeIsUniversal</code>。</li><li>双击<code>RealTimeIsUniversal</code>，将其值设置为<code>1</code>。</li></ul>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
     
   </entry>
   
