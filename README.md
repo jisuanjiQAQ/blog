@@ -1,5 +1,6 @@
 # 我的文章  
-### **2025-04** (7)  
+### **2025-04** (8)  
+- 2025-04-21 [论我的人生](https://blog.computerqwq.top/2025/04/21/lun-wo-de-ren-sheng/)  
 - 2025-04-20 [ubuntu20.04更新glibc](https://blog.computerqwq.top/2025/04/20/ubuntu20-04-geng-xin-glibc/)  
 - 2025-04-19 [sublime text汉化](https://blog.computerqwq.top/2025/04/19/text-han-hua/)  
 - 2025-04-10 [windows和linux系统时间不同步](https://blog.computerqwq.top/2025/04/10/windows-he-linux-xi-tong-shi-jian-bu-tong-bu/)  
