@@ -1,5 +1,8 @@
 # 我的文章  
-### **2025-04** (8)  
+### **2025-04** (11)  
+- 2025-04-27 [llama.cpp编译](https://blog.computerqwq.top/2025/04/27/llama-cpp-bian-yi/)  
+- 2025-04-27 [git指令](https://blog.computerqwq.top/2025/04/27/git-zhi-ling/)  
+- 2025-04-27 [git的LFS](https://blog.computerqwq.top/2025/04/27/git-de-lfs/)  
 - 2025-04-21 [论我的人生](https://blog.computerqwq.top/2025/04/21/lun-wo-de-ren-sheng/)  
 - 2025-04-20 [ubuntu20.04更新glibc](https://blog.computerqwq.top/2025/04/20/ubuntu20-04-geng-xin-glibc/)  
 - 2025-04-19 [sublime text汉化](https://blog.computerqwq.top/2025/04/19/text-han-hua/)  
