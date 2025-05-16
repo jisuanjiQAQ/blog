@@ -1,4 +1,8 @@
 # 我的文章  
+### **2025-05** (1)  
+- 2025-05-16 [nvm使用](https://blog.computerqwq.top/2025/05/16/nvm-shi-yong/)  
+  
+  
 ### **2025-04** (11)  
 - 2025-04-27 [llama.cpp编译](https://blog.computerqwq.top/2025/04/27/llama-cpp-bian-yi/)  
 - 2025-04-27 [git指令](https://blog.computerqwq.top/2025/04/27/git-zhi-ling/)  
