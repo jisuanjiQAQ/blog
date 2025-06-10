@@ -4,6 +4,38 @@
   
   
   <entry>
+    <title>npm镜像站</title>
+    <link href="/2025/06/10/npm-jing-xiang-zhan/"/>
+    <url>/2025/06/10/npm-jing-xiang-zhan/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://npmmirror.com/">https://npmmirror.com/</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>网站相关</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>AppData文件夹转移</title>
+    <link href="/2025/06/10/appdata-wen-jian-jia-zhuan-yi/"/>
+    <url>/2025/06/10/appdata-wen-jian-jia-zhuan-yi/</url>
+    
+    <content type="html"><![CDATA[<h1 id="AppData文件夹转移"><a href="#AppData文件夹转移" class="headerlink" title="AppData文件夹转移"></a>AppData文件夹转移</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我是真的讨厌软件安装到这个位置，你说你tmd微软原来给你的位置你不去那里装，非要来appdata来有毛病吧？最可气的是什么？微软tmd自己也不遵守这个规则，vscode装到那里面去了。</p><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>打开注册表，定位到</p><figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">计算机\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders<br></code></pre></td></tr></table></figure><p>然后就慢慢修改相关的路径</p><h2 id="危险"><a href="#危险" class="headerlink" title="危险"></a>危险</h2><p>这种方法存在不稳定性，且一些软件很有可能会不遵守注册表，强制写入到当前用户的数据目录。这就得使用软连接了。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>nvm使用</title>
     <link href="/2025/05/16/nvm-shi-yong/"/>
     <url>/2025/05/16/nvm-shi-yong/</url>
