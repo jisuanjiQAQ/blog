@@ -1,5 +1,6 @@
 # 我的文章  
-### **2025-06** (2)  
+### **2025-06** (3)  
+- 2025-06-16 [WizTree-高效的清理工具](https://blog.computerqwq.top/2025/06/16/wiztree-gao-xiao-de-qing-li-gong-ju/)  
 - 2025-06-10 [npm镜像站](https://blog.computerqwq.top/2025/06/10/npm-jing-xiang-zhan/)  
 - 2025-06-10 [AppData文件夹转移](https://blog.computerqwq.top/2025/06/10/appdata-wen-jian-jia-zhuan-yi/)  
   
