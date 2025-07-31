@@ -35,7 +35,7 @@
 - 2025-03-03 [HUAWEI-AX2-Pro](https://blog.computerqwq.top/2025/03/03/huawei-ax2-pro/)  
   
   
-### **2025-02** (10)  
+### **2025-02** (9)  
 - 2025-02-26 [Linux安装zsh终端](https://blog.computerqwq.top/2025/02/26/zsh-zhong-duan-an-zhuang/)  
 - 2025-02-23 [linux安装chrome](https://blog.computerqwq.top/2025/02/23/linux-an-zhuang-chrome/)  
 - 2025-02-18 [hexon-hexo的后台管理插件](https://blog.computerqwq.top/2025/02/18/hexon-hexo-de-hou-tai-guan-li-cha-jian/)  
@@ -44,7 +44,6 @@
 - 2025-02-09 [openwrt换源](https://blog.computerqwq.top/2025/02/09/openwrt-huan-yuan/)  
 - 2025-02-07 [aseprite汉化](https://blog.computerqwq.top/2025/02/07/aseprite-han-hua/)  
 - 2025-02-07 [aseprite云构建](https://blog.computerqwq.top/2025/02/07/aseprite-yun-gou-jian/)  
-- 2025-02-02 [博客加速cdn](https://blog.computerqwq.top/2025/02/02/cdnblog/)  
 - 2025-02-02 [github部署的网页cdn404](https://blog.computerqwq.top/2025/02/02/github-bu-shu-de-wang-ye-cdn404/)  
   
   

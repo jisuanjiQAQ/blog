@@ -11,6 +11,12 @@
     <content type="html"><![CDATA[<h3 id="需要的软件"><a href="#需要的软件" class="headerlink" title="需要的软件"></a>需要的软件</h3><ul><li><p>米客</p></li><li><p>hperceiler</p></li><li><p>核心破解</p></li><li><p>改版桌面</p></li><li><p>lsp</p></li><li><p>面积</p></li><li><p>澎湃反阉割模块</p><h3 id="指定版本"><a href="#指定版本" class="headerlink" title="指定版本"></a>指定版本</h3><p>米客 23.12.30<br>hyperceiler 2.5.15<br>超过以上版本可能（一定会）无法安装或者使用</p></li></ul>]]></content>
     
     
+    <categories>
+      
+      <category>冷知识</category>
+      
+    </categories>
+    
     
   </entry>
   
@@ -24,6 +30,18 @@
     <content type="html"><![CDATA[<h3 id="tree-简介"><a href="#tree-简介" class="headerlink" title="tree 简介"></a>tree 简介</h3><p>tree 是一个用于在终端中以树形结构显示目录内容的命令，可以直观清晰地展示文件和文件夹的层级关系。</p><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p>tree [选项] [目录]</p><h3 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a>常用选项</h3><ul><li><code>-a</code> ：显示所有文件和目录，包括以 “.” 开头的隐藏文件。</li><li><code>-d</code> ：只列出目录，不包括文件。</li><li><code>-L</code> [层数]：限制树形结构显示的深度，例如 <code>-L 2</code> 只显示两级目录。</li><li><code>-f</code> ：在文件和目录名称前添加完整的相对路径。</li><li><code>-h</code> ：以易读的格式（如 KB、MB）显示文件大小。</li><li><code>-i</code> ：不使用缩进，以纯文本方式显示树形结构。</li><li><code>-r</code> ：以倒序方式显示树形结构。</li><li><code>-s</code> ：显示文件大小。</li></ul><h3 id="实际应用示例"><a href="#实际应用示例" class="headerlink" title="实际应用示例"></a>实际应用示例</h3><ol><li><strong>显示当前目录下的所有文件和子目录</strong> ：在终端中输入 <code>tree</code>，即可在终端中看到当前目录下文件和文件夹的树形结构。</li><li><strong>显示指定目录下的所有内容</strong> ：输入 <code>tree /path/to/directory</code>，将 <code>/path/to/directory</code> 替换为实际目录路径，可查看该目录内容。</li><li><strong>显示隐藏文件</strong> ：使用 <code>tree -a</code> 命令，能查看包括隐藏文件在内的所有内容。</li><li><strong>限制显示深度</strong> ：如只查看两级目录内的内容，可输入 <code>tree -L 2</code>。</li><li><strong>显示文件大小</strong> ：用 <code>tree -h</code> 命令，能同时查看文件及其大小，方便了解文件占用空间情况。</li></ol>]]></content>
     
     
+    <categories>
+      
+      <category>冷知识</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
     
   </entry>
   
@@ -75,6 +93,12 @@
     <content type="html"><![CDATA[<h1 id="AppData文件夹转移"><a href="#AppData文件夹转移" class="headerlink" title="AppData文件夹转移"></a>AppData文件夹转移</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我是真的讨厌软件安装到这个位置，你说你tmd微软原来给你的位置你不去那里装，非要来appdata来有毛病吧？最可气的是什么？微软tmd自己也不遵守这个规则，vscode装到那里面去了。</p><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>打开注册表，定位到</p><figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">计算机\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders<br></code></pre></td></tr></table></figure><p>然后就慢慢修改相关的路径</p><h2 id="危险"><a href="#危险" class="headerlink" title="危险"></a>危险</h2><p>这种方法存在不稳定性，且一些软件很有可能会不遵守注册表，强制写入到当前用户的数据目录。这就得使用软连接了。</p>]]></content>
     
     
+    <categories>
+      
+      <category>冷知识</category>
+      
+    </categories>
+    
     
   </entry>
   
@@ -108,6 +132,12 @@
     
     
     
+    <tags>
+      
+      <tag>build</tag>
+      
+    </tags>
+    
   </entry>
   
   
@@ -119,6 +149,12 @@
     
     <content type="html"><![CDATA[<p>以下是 Git 常用指令的整理与解释（按功能分类），覆盖日常开发 90% 的使用场景：</p><hr><h3 id="​一、仓库初始化与克隆​"><a href="#​一、仓库初始化与克隆​" class="headerlink" title="​一、仓库初始化与克隆​"></a>​<strong>一、仓库初始化与克隆</strong>​</h3><table><thead><tr><th>指令</th><th>作用</th><th>示例</th></tr></thead><tbody><tr><td><code>git init</code></td><td>初始化新仓库</td><td><code>git init</code></td></tr><tr><td><code>git clone</code></td><td>克隆远程仓库</td><td><code>git clone https://github.com/user/repo.git</code></td></tr></tbody></table><hr><h3 id="​二、提交管理​"><a href="#​二、提交管理​" class="headerlink" title="​二、提交管理​"></a>​<strong>二、提交管理</strong>​</h3><table><thead><tr><th>指令</th><th>作用</th><th>扩展说明</th></tr></thead><tbody><tr><td><code>git add</code></td><td>添加文件到暂存区</td><td><code>git add .</code>（所有文件）<br><code>git add *.txt</code>（通配符)</td></tr><tr><td><code>git commit</code></td><td>提交到本地仓库</td><td><code>git commit -m &quot;提交说明&quot;</code></td></tr><tr><td><code>git status</code></td><td>查看工作区和暂存区状态</td><td><code>git status -s</code>（简洁模式）</td></tr><tr><td><code>git diff</code></td><td>查看未暂存的修改</td><td><code>git diff --staged</code>（查看已暂存内容）</td></tr></tbody></table><hr><h3 id="​三、分支管理​"><a href="#​三、分支管理​" class="headerlink" title="​三、分支管理​"></a>​<strong>三、分支管理</strong>​</h3><table><thead><tr><th>指令</th><th>作用</th><th>典型场景</th></tr></thead><tbody><tr><td><code>git branch</code></td><td>分支操作</td><td><code>git branch -a</code>（查看所有分支）</td></tr><tr><td><code>git checkout</code></td><td>切换分支</td><td><code>git checkout -b new-branch</code>（创建并切换）</td></tr><tr><td><code>git merge</code></td><td>合并分支</td><td>合并时可能产生冲突需手动解决</td></tr><tr><td><code>git rebase</code></td><td>变基操作</td><td>线性化提交历史（替代合并）</td></tr></tbody></table><hr><h3 id="​四、远程协作​"><a href="#​四、远程协作​" class="headerlink" title="​四、远程协作​"></a>​<strong>四、远程协作</strong>​</h3><table><thead><tr><th>指令</th><th>作用</th><th>注意事项</th></tr></thead><tbody><tr><td><code>git remote</code></td><td>管理远程仓库</td><td><code>git remote add origin &lt;url&gt;</code>（关联仓库）</td></tr><tr><td><code>git push</code></td><td>推送本地提交</td><td><code>git push -u origin main</code>（设置默认上游）</td></tr><tr><td><code>git pull</code></td><td>拉取远程更新</td><td>等价于 <code>git fetch + git merge</code></td></tr><tr><td><code>git fetch</code></td><td>仅获取远程更新</td><td>不自动合并修改</td></tr></tbody></table><hr><h3 id="​五、撤销与回退​"><a href="#​五、撤销与回退​" class="headerlink" title="​五、撤销与回退​"></a>​<strong>五、撤销与回退</strong>​</h3><table><thead><tr><th>指令</th><th>作用</th><th>参数说明</th></tr></thead><tbody><tr><td><code>git reset</code></td><td>版本回退</td><td><code>--soft</code>（保留修改到暂存区）<br><code>--hard</code>（彻底丢弃修改）</td></tr><tr><td><code>git revert</code></td><td>安全撤销提交</td><td>生成反向提交记录</td></tr><tr><td><code>git restore</code></td><td>丢弃工作区修改</td><td><code>git restore file.txt</code>（Git 2.23+）</td></tr><tr><td><code>git checkout -- &lt;file&gt;</code></td><td>恢复文件到上次提交状态</td><td>危险操作（覆盖本地修改）</td></tr></tbody></table><hr><h3 id="​六、高级工具​"><a href="#​六、高级工具​" class="headerlink" title="​六、高级工具​"></a>​<strong>六、高级工具</strong>​</h3><table><thead><tr><th>指令</th><th>作用</th><th>使用场景</th></tr></thead><tbody><tr><td><code>git stash</code></td><td>暂存未完成的工作</td><td><code>git stash pop</code>（恢复暂存内容）</td></tr><tr><td><code>git reflog</code></td><td>查看操作历史</td><td>找回误删的提交记录</td></tr><tr><td><code>git bisect</code></td><td>二分法查错</td><td>定位问题提交</td></tr><tr><td><code>git cherry-pick</code></td><td>复制特定提交</td><td>将某次提交应用到当前分支</td></tr></tbody></table><hr><h3 id="​七、信息查看​"><a href="#​七、信息查看​" class="headerlink" title="​七、信息查看​"></a>​<strong>七、信息查看</strong>​</h3><table><thead><tr><th>指令</th><th>作用</th><th>常用参数</th></tr></thead><tbody><tr><td><code>git log</code></td><td>查看提交历史</td><td><code>--oneline</code>（简洁模式）<br><code>--graph</code>（图形化分支）</td></tr><tr><td><code>git show</code></td><td>显示提交详情</td><td><code>git show HEAD~1</code></td></tr><tr><td><code>git blame</code></td><td>逐行查看修改记录</td><td><code>git blame file.txt</code></td></tr></tbody></table><hr><blockquote><p>提示：以上指令覆盖 Git 90% 的日常使用场景。如需完整命令手册，可通过 <code>git help -a</code> 查看所有指令，或访问 <a href="https://git-scm.com/docs">Git 官方文档</a>。</p></blockquote>]]></content>
     
+    
+    <categories>
+      
+      <category>冷知识</category>
+      
+    </categories>
     
     
   </entry>
@@ -132,6 +168,12 @@
     
     <content type="html"><![CDATA[<p>git的lfs功能是什么？</p><p>Git LFS（Large File Storage）是 Git 的扩展功能，用于高效管理大文件（如图像、视频、数据集等），解决 Git 原生对大文件处理效率低下的问题。</p><hr><h3 id="核心原理"><a href="#核心原理" class="headerlink" title="核心原理"></a>核心原理</h3><ol><li><p>​<strong>问题</strong>​<br>Git 默认存储文件的每个版本差异，但对二进制大文件（如视频、模型）无法有效压缩，导致仓库臃肿、操作缓慢。</p></li><li><p>​<strong>解决方案</strong>​<br>将大文件替换为轻量级<strong>指针文件</strong>​（约百字节），实际文件存储在远程 LFS 服务器（如 GitHub LFS）。操作仓库时，仅按需下载当前所需的大文件版本。</p></li></ol><hr><h3 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h3><ol><li><p>​<strong>安装</strong>​  </p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 安装 Git LFS</span><br>git lfs <span class="hljs-keyword">install</span>  <span class="hljs-comment"># 初始化（每个仓库只需一次）</span><br></code></pre></td></tr></table></figure></li><li><p>​<strong>跟踪文件</strong>​  </p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">git lfs track <span class="hljs-string">&quot;*.psd&quot;</span>  <span class="hljs-meta"># 指定文件类型（规则写入 .gitattributes）</span><br>git <span class="hljs-keyword">add</span> .gitattributes  <span class="hljs-meta"># 提交跟踪规则</span><br></code></pre></td></tr></table></figure></li><li><p>​<strong>提交与推送</strong>​  </p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">git <span class="hljs-keyword">add</span> design.psd      <span class="hljs-meta"># 大文件自动转为指针</span><br>git commit -m <span class="hljs-string">&quot;Add PSD&quot;</span><br>git <span class="hljs-keyword">push</span> origin main    <span class="hljs-meta"># 推送指针和 LFS 文件</span><br></code></pre></td></tr></table></figure></li><li><p>​<strong>克隆与拉取</strong>​  </p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">&lt;repo-url</span>&gt;    <span class="hljs-comment"># 自动下载指针关联的 LFS 文件</span><br>git lfs pull            <span class="hljs-comment"># 手动拉取最新 LFS 文件</span><br></code></pre></td></tr></table></figure></li></ol><hr><h3 id="关键特性"><a href="#关键特性" class="headerlink" title="关键特性"></a>关键特性</h3><ul><li><p>​<strong>存储优化</strong>​<br>仅保留指针文件在 Git 仓库，实际大文件由 LFS 服务器管理，避免历史冗余。</p></li><li><p>​<strong>透明操作</strong>​<br>用户使用常规 Git 命令（<code>add</code>, <code>commit</code>, <code>push</code>），LFS 自动处理大文件传输。</p></li><li><p>​<strong>版本控制</strong>​<br>LFS 支持大文件版本管理，但需注意服务器可能限制存储空间（如 GitHub 免费配额 1GB）。</p></li></ul><hr><h3 id="典型场景"><a href="#典型场景" class="headerlink" title="典型场景"></a>典型场景</h3><ul><li><p>​<strong>游戏开发</strong>​<br>管理 Unity 资源包（<code>.asset</code>）、3D 模型（<code>.fbx</code>）等。</p></li><li><p>​<strong>数据工程</strong>​<br>版本化大型 CSV&#x2F;Parquet 数据集（避免 Git 仓库爆炸）。</p></li><li><p>​<strong>设计协作</strong>​<br>跟踪 Adobe Photoshop（<code>.psd</code>）、Figma 导出文件。</p></li></ul><hr><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul><li><p>​<strong>迁移历史文件</strong>​<br>已有仓库需用 <code>git lfs migrate</code> 重写提交历史，否则旧版本大文件仍存于 Git 中。</p></li><li><p>​<strong>服务器依赖</strong>​<br>必须配置 LFS 服务器（自建或使用 GitHub&#x2F;GitLab 等托管服务）。</p></li><li><p>​<strong>命令行工具</strong>​<br>常用操作：</p> <figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs x86asm">git <span class="hljs-keyword">lfs</span> ls-files    # 查看 <span class="hljs-keyword">LFS</span> 跟踪文件<br>git <span class="hljs-keyword">lfs</span> prune       # 清理本地缓存<br>git <span class="hljs-keyword">lfs</span> fetch --all # 下载所有 <span class="hljs-keyword">LFS</span> 文件版本<br></code></pre></td></tr></table></figure><p>混元大模型生成</p></li></ul>]]></content>
     
+    
+    <categories>
+      
+      <category>冷知识</category>
+      
+    </categories>
     
     
   </entry>
@@ -177,6 +219,12 @@
     
     <content type="html"><![CDATA[<h1 id="sublime-text汉化"><a href="#sublime-text汉化" class="headerlink" title="sublime text汉化"></a>sublime text汉化</h1><p>打开Sublime Text,使用快捷键<strong>Shift+Ctrl+P</strong>,弹出查找栏<br>在搜索框中输入关键字 <strong>install</strong> ,出现下拉选项，点击选择其中的：<strong>Package Control: Install Package</strong><br>不会立刻有反应，需要等待拉取插件列表（使用梯子可能会更快）<br>在搜索框中输入<strong>chinese</strong>，选择下拉框中的<strong>ChineseLocalizations</strong></p>]]></content>
     
+    
+    <categories>
+      
+      <category>冷知识</category>
+      
+    </categories>
     
     
   </entry>
@@ -556,31 +604,6 @@
     <tags>
       
       <tag>build</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>博客加速cdn</title>
-    <link href="/2025/02/02/cdnblog/"/>
-    <url>/2025/02/02/cdnblog/</url>
-    
-    <content type="html"><![CDATA[<h1 id="终于有了专属的加速cdn了"><a href="#终于有了专属的加速cdn了" class="headerlink" title="终于有了专属的加速cdn了"></a>终于有了专属的加速cdn了</h1><p>可以不用这么慢了哈哈哈<br>稳定的加速？<a href="https://www.computerqwq.top/">加速1</a></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>公告</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>公告</tag>
       
     </tags>
     
