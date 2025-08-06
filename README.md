@@ -1,4 +1,8 @@
 # 我的文章  
+### **2025-08** (1)  
+- 2025-08-06 [Windows注册应用程序](https://blog.computerqwq.top/2025/08/06/windows-zhu-ce-ying-yong-cheng-xu/)  
+  
+  
 ### **2025-06** (5)  
 - 2025-06-27 [澎湃os1.0解除系统分级](https://blog.computerqwq.top/2025/06/27/peng-pai-os1-0-jie-chu-xi-tong-fen-ji/)  
 - 2025-06-27 [Linux系统tree指令](https://blog.computerqwq.top/2025/06/27/linux-xi-tong-tree-zhi-ling/)  

@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Windows注册应用程序</title>
+    <link href="/2025/08/06/windows-zhu-ce-ying-yong-cheng-xu/"/>
+    <url>/2025/08/06/windows-zhu-ce-ying-yong-cheng-xu/</url>
+    
+    <content type="html"><![CDATA[<ol><li><p>在注册表里新建主键<br>位置（64 位系统写 64 位节点即可）：<br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\MyApp</code><br>（<code>MyApp</code> 可换成你的 GUID 或任意唯一字符串）</p></li><li><p>在该主键下新建下列 <strong>字符串值 (REG_SZ)</strong> 和 <strong>DWORD 值 (REG_DWORD)</strong></p></li></ol><table><thead><tr><th>名称</th><th>类型</th><th>示例值</th><th>说明</th></tr></thead><tbody><tr><td>DisplayName</td><td>REG_SZ</td><td>MyApp 1.2.3</td><td>列表里显示的程序名</td></tr><tr><td>DisplayVersion</td><td>REG_SZ</td><td>1.2.3</td><td>版本号</td></tr><tr><td>Publisher</td><td>REG_SZ</td><td>ACME Corp.</td><td>发布者</td></tr><tr><td>InstallDate</td><td>REG_SZ</td><td>20250806</td><td>安装日期，8 位 yyyymmdd</td></tr><tr><td>InstallLocation</td><td>REG_SZ</td><td>C:\Program Files\MyApp</td><td>安装目录（可选）</td></tr><tr><td>UninstallString</td><td>REG_SZ</td><td>“C:\Program Files\MyApp\uninstall.exe”</td><td>卸载命令</td></tr><tr><td>ModifyPath</td><td>REG_SZ</td><td>“C:\Program Files\MyApp\uninstall.exe” &#x2F;modify</td><td>“修改”按钮（可选）</td></tr><tr><td>HelpLink</td><td>REG_SZ</td><td><a href="https://example.com/help">https://example.com/help</a></td><td>帮助链接（可选）</td></tr><tr><td>URLInfoAbout</td><td>REG_SZ</td><td><a href="https://example.com/">https://example.com</a></td><td>发布者主页（可选）</td></tr><tr><td>Comments</td><td>REG_SZ</td><td>我的超好用小工具</td><td>注释（可选）</td></tr><tr><td>EstimatedSize</td><td>REG_DWORD</td><td>0x00000064</td><td>占用空间 KB（十六进制），100&#x3D;0x64</td></tr><tr><td>NoModify</td><td>REG_DWORD</td><td>0x00000000</td><td>0&#x3D;允许“修改”按钮；1&#x3D;禁用</td></tr><tr><td>NoRepair</td><td>REG_DWORD</td><td>0x00000001</td><td>0&#x3D;允许“修复”按钮；1&#x3D;禁用</td></tr><tr><td>SystemComponent</td><td>REG_DWORD</td><td>0x00000000</td><td>设为 1 则隐藏（一般不写）</td></tr></tbody></table><ol start="3"><li><p>图标（可选）<br>想让列表里显示图标，再建：<br><code>DisplayIcon</code> &#x3D; <code>&quot;C:\Program Files\MyApp\MyApp.exe,0&quot;</code><br>（0 表示取 exe 的第 1 个图标资源）</p></li><li><p>卸载程序<br>上面 <code>UninstallString</code> 指向的 <code>uninstall.exe</code> 可以是：</p></li></ol><ul><li>你自己写的小程序&#x2F;脚本；  </li><li>或者把 Inno Setup 生成的卸载程序复制过去；  </li><li>甚至直接指向 msiexec：<br><code>&quot;MsiExec.exe /I&#123;PRODUCT-GUID&#125;&quot;</code> 或<br><code>&quot;MsiExec.exe /X&#123;PRODUCT-GUID&#125;&quot;</code></li></ul><ol start="5"><li>一键导入示例<br>把下面内容保存为 <code>add_myapp.reg</code>，改完路径&#x2F;名字后双击即可：</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs reg">Windows Registry Editor Version 5.00<br><br>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\MyApp]<br>&quot;DisplayName&quot;=&quot;MyApp 1.2.3&quot;<br>&quot;DisplayVersion&quot;=&quot;1.2.3&quot;<br>&quot;Publisher&quot;=&quot;ACME Corp.&quot;<br>&quot;InstallDate&quot;=&quot;20250806&quot;<br>&quot;InstallLocation&quot;=&quot;C:\\Program Files\\MyApp&quot;<br>&quot;UninstallString&quot;=&quot;\&quot;C:\\Program Files\\MyApp\\uninstall.exe\&quot;&quot;<br>&quot;ModifyPath&quot;=&quot;\&quot;C:\\Program Files\\MyApp\\uninstall.exe\&quot; /modify&quot;<br>&quot;HelpLink&quot;=&quot;https://example.com/help&quot;<br>&quot;URLInfoAbout&quot;=&quot;https://example.com&quot;<br>&quot;Comments&quot;=&quot;我的超好用小工具&quot;<br>&quot;EstimatedSize&quot;=dword:00000064<br>&quot;NoModify&quot;=dword:00000000<br>&quot;NoRepair&quot;=dword:00000001<br>&quot;DisplayIcon&quot;=&quot;\&quot;C:\\Program Files\\MyApp\\MyApp.exe\&quot;,0&quot;<br></code></pre></td></tr></table></figure><ol start="6"><li>刷新<br>导入后无需重启，直接打开“设置 → 应用 → 已安装应用”即可看到“MyApp 1.2.3”。<br>卸载按钮会调用你指定的 <code>uninstall.exe</code>，确保该文件真实存在且能自删除即可。</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>冷知识</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>澎湃os1.0解除系统分级</title>
     <link href="/2025/06/27/peng-pai-os1-0-jie-chu-xi-tong-fen-ji/"/>
     <url>/2025/06/27/peng-pai-os1-0-jie-chu-xi-tong-fen-ji/</url>
