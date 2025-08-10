@@ -19,23 +19,24 @@
   <meta name="author" content="计算机qwq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="在注册表里新建主键位置（64 位系统写 64 位节点即可）：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\MyApp（MyApp 可换成你的 GUID 或任意唯一字符串）  在该主键下新建下列 字符串值 (REG_SZ) 和 DWORD 值 (REG_DWORD)      名称 类型 示例值 说明">
+    <meta name="description" content="Streamlink 超详细使用手册（2025-08 更新）目录    安装与环境准备   第一次跑起来：5 行命令学会   配置文件：一次设置，永久生效   画质、代理、认证、录制——所有常用参数   典型场景脚本（定时录制、多主播同时观看）   插件管理与自定义   Windows GUI 与 OBS 插件补充   故障排查 FAQ    安装与环境准备      系统 推荐方法 一行命令 &amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Windows注册应用程序">
-<meta property="og:url" content="https://blog.computerqwq.top/2025/08/06/windows-zhu-ce-ying-yong-cheng-xu/index.html">
+<meta property="og:title" content="Streamlink 使用手册">
+<meta property="og:url" content="https://blog.computerqwq.top/2025/08/10/streamlink-shi-yong-shou-ce/index.html">
 <meta property="og:site_name" content="计算机">
-<meta property="og:description" content="在注册表里新建主键位置（64 位系统写 64 位节点即可）：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\MyApp（MyApp 可换成你的 GUID 或任意唯一字符串）  在该主键下新建下列 字符串值 (REG_SZ) 和 DWORD 值 (REG_DWORD)      名称 类型 示例值 说明">
+<meta property="og:description" content="Streamlink 超详细使用手册（2025-08 更新）目录    安装与环境准备   第一次跑起来：5 行命令学会   配置文件：一次设置，永久生效   画质、代理、认证、录制——所有常用参数   典型场景脚本（定时录制、多主播同时观看）   插件管理与自定义   Windows GUI 与 OBS 插件补充   故障排查 FAQ    安装与环境准备      系统 推荐方法 一行命令 &amp;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-08-06T09:33:27.000Z">
-<meta property="article:modified_time" content="2025-08-06T09:33:29.919Z">
+<meta property="article:published_time" content="2025-08-10T05:39:10.000Z">
+<meta property="article:modified_time" content="2025-08-10T05:39:16.602Z">
 <meta property="article:author" content="计算机qwq">
+<meta property="article:tag" content="软件推荐">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Windows注册应用程序 - 计算机</title>
+  <title>Streamlink 使用手册 - 计算机</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Windows注册应用程序"></span>
+            <span id="subtitle" data-typed-text="Streamlink 使用手册"></span>
           
         </div>
 
@@ -228,8 +229,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-06 17:33" pubdate>
-          2025年8月6日 下午
+        <time datetime="2025-08-10 13:39" pubdate>
+          2025年8月10日 下午
         </time>
       </span>
     
@@ -240,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          522 字
+          944 字
         
       </span>
     
@@ -251,7 +252,7 @@
         
         
         
-          5 分钟
+          8 分钟
         
       </span>
     
@@ -297,130 +298,252 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Windows注册应用程序</h1>
+            <h1 id="seo-header">Streamlink 使用手册</h1>
             
             
               <div class="markdown-body">
                 
-                <ol>
-<li><p>在注册表里新建主键<br>位置（64 位系统写 64 位节点即可）：<br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\MyApp</code><br>（<code>MyApp</code> 可换成你的 GUID 或任意唯一字符串）</p>
-</li>
-<li><p>在该主键下新建下列 <strong>字符串值 (REG_SZ)</strong> 和 <strong>DWORD 值 (REG_DWORD)</strong></p>
-</li>
+                <h1 id="Streamlink-超详细使用手册（2025-08-更新）"><a href="#Streamlink-超详细使用手册（2025-08-更新）" class="headerlink" title="Streamlink 超详细使用手册（2025-08 更新）"></a>Streamlink 超详细使用手册（2025-08 更新）</h1><p>目录  </p>
+<ol>
+<li>安装与环境准备  </li>
+<li>第一次跑起来：5 行命令学会  </li>
+<li>配置文件：一次设置，永久生效  </li>
+<li>画质、代理、认证、录制——所有常用参数  </li>
+<li>典型场景脚本（定时录制、多主播同时观看）  </li>
+<li>插件管理与自定义  </li>
+<li>Windows GUI 与 OBS 插件补充  </li>
+<li>故障排查 FAQ</li>
 </ol>
+<hr>
+<ol>
+<li>安装与环境准备</li>
+</ol>
+<hr>
 <table>
 <thead>
 <tr>
-<th>名称</th>
-<th>类型</th>
-<th>示例值</th>
-<th>说明</th>
+<th>系统</th>
+<th>推荐方法</th>
+<th>一行命令 &#x2F; 步骤</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>DisplayName</td>
-<td>REG_SZ</td>
-<td>MyApp 1.2.3</td>
-<td>列表里显示的程序名</td>
+<td>Windows 10&#x2F;11</td>
+<td>① 官方 MSI ② Chocolatey ③ Scoop</td>
+<td>① 下载 <a target="_blank" rel="noopener" href="https://github.com/streamlink/windows-builds/releases">streamlink-windows-builds</a> 直接安装<br>② <code>choco install streamlink</code> <br>③ <code>scoop install streamlink</code></td>
 </tr>
 <tr>
-<td>DisplayVersion</td>
-<td>REG_SZ</td>
-<td>1.2.3</td>
-<td>版本号</td>
+<td>macOS</td>
+<td>Homebrew</td>
+<td><code>brew install streamlink</code></td>
 </tr>
 <tr>
-<td>Publisher</td>
-<td>REG_SZ</td>
-<td>ACME Corp.</td>
-<td>发布者</td>
+<td>Linux Debian&#x2F;Ubuntu</td>
+<td>APT</td>
+<td><code>sudo apt update &amp;&amp; sudo apt install streamlink</code></td>
 </tr>
 <tr>
-<td>InstallDate</td>
-<td>REG_SZ</td>
-<td>20250806</td>
-<td>安装日期，8 位 yyyymmdd</td>
+<td>通用</td>
+<td>PyPI</td>
+<td><code>pip install -U streamlink</code>（需 Python ≥ 3.8）</td>
 </tr>
 <tr>
-<td>InstallLocation</td>
-<td>REG_SZ</td>
-<td>C:\Program Files\MyApp</td>
-<td>安装目录（可选）</td>
-</tr>
-<tr>
-<td>UninstallString</td>
-<td>REG_SZ</td>
-<td>“C:\Program Files\MyApp\uninstall.exe”</td>
-<td>卸载命令</td>
-</tr>
-<tr>
-<td>ModifyPath</td>
-<td>REG_SZ</td>
-<td>“C:\Program Files\MyApp\uninstall.exe” &#x2F;modify</td>
-<td>“修改”按钮（可选）</td>
-</tr>
-<tr>
-<td>HelpLink</td>
-<td>REG_SZ</td>
-<td><a target="_blank" rel="noopener" href="https://example.com/help">https://example.com/help</a></td>
-<td>帮助链接（可选）</td>
-</tr>
-<tr>
-<td>URLInfoAbout</td>
-<td>REG_SZ</td>
-<td><a target="_blank" rel="noopener" href="https://example.com/">https://example.com</a></td>
-<td>发布者主页（可选）</td>
-</tr>
-<tr>
-<td>Comments</td>
-<td>REG_SZ</td>
-<td>我的超好用小工具</td>
-<td>注释（可选）</td>
-</tr>
-<tr>
-<td>EstimatedSize</td>
-<td>REG_DWORD</td>
-<td>0x00000064</td>
-<td>占用空间 KB（十六进制），100&#x3D;0x64</td>
-</tr>
-<tr>
-<td>NoModify</td>
-<td>REG_DWORD</td>
-<td>0x00000000</td>
-<td>0&#x3D;允许“修改”按钮；1&#x3D;禁用</td>
-</tr>
-<tr>
-<td>NoRepair</td>
-<td>REG_DWORD</td>
-<td>0x00000001</td>
-<td>0&#x3D;允许“修复”按钮；1&#x3D;禁用</td>
-</tr>
-<tr>
-<td>SystemComponent</td>
-<td>REG_DWORD</td>
-<td>0x00000000</td>
-<td>设为 1 则隐藏（一般不写）</td>
+<td>开发版</td>
+<td>Git</td>
+<td><code>git clone https://github.com/streamlink/streamlink.git &amp;&amp; cd streamlink &amp;&amp; pip install -e .</code></td>
 </tr>
 </tbody></table>
+<p>验证：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">streamlink --version<br></code></pre></td></tr></table></figure>
+<p>返回 <code>streamlink 6.x.x</code> 即成功。</p>
+<hr>
+<ol start="2">
+<li>第一次跑起来：5 行命令学会</li>
+</ol>
+<hr>
+<ol>
+<li><p>打开终端 &#x2F; CMD  </p>
+</li>
+<li><p>查看可用清晰度  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">streamlink https://www.twitch.tv/shroud<br></code></pre></td></tr></table></figure>
+<p>终端会回显：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-attr">[cli]</span><span class="hljs-selector-attr">[info]</span> Found streams: audio_only, <span class="hljs-number">160</span>p, <span class="hljs-number">360</span>p, <span class="hljs-number">480</span>p, <span class="hljs-number">720</span>p60, <span class="hljs-number">1080</span>p60 (best)<br></code></pre></td></tr></table></figure></li>
+<li><p>直接观看最佳画质  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">streamlink https://www.twitch.tv/shroud best<br></code></pre></td></tr></table></figure>
+<p>默认启动 VLC（已安装即可）。</p>
+</li>
+<li><p>指定播放器  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">streamlink -p <span class="hljs-string">&quot;mpv&quot;</span> --player-args <span class="hljs-string">&quot;--fs --cache=yes&quot;</span> https://www.twitch.tv/shroud 1080p60<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>保存为本地文件  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">streamlink -o ~/shroud_$(<span class="hljs-built_in">date</span> +%F_%H-%M).ts https://www.twitch.tv/shroud best<br></code></pre></td></tr></table></figure>
+<p>按 <code>Ctrl+C</code> 停止即自动完成 TS 文件。</p>
+</li>
+</ol>
+<hr>
 <ol start="3">
-<li><p>图标（可选）<br>想让列表里显示图标，再建：<br><code>DisplayIcon</code> &#x3D; <code>&quot;C:\Program Files\MyApp\MyApp.exe,0&quot;</code><br>（0 表示取 exe 的第 1 个图标资源）</p>
-</li>
-<li><p>卸载程序<br>上面 <code>UninstallString</code> 指向的 <code>uninstall.exe</code> 可以是：</p>
-</li>
+<li>配置文件：一次设置，永久生效</li>
 </ol>
+<hr>
+<p>Streamlink 启动时会按顺序读取：  </p>
 <ul>
-<li>你自己写的小程序&#x2F;脚本；  </li>
-<li>或者把 Inno Setup 生成的卸载程序复制过去；  </li>
-<li>甚至直接指向 msiexec：<br><code>&quot;MsiExec.exe /I&#123;PRODUCT-GUID&#125;&quot;</code> 或<br><code>&quot;MsiExec.exe /X&#123;PRODUCT-GUID&#125;&quot;</code></li>
+<li><code>%APPDATA%\streamlink\config</code>（Windows）  </li>
+<li><code>~/.streamlinkrc</code>（Linux&#x2F;macOS）  </li>
+<li>当前工作目录下的 <code>streamlinkrc</code></li>
 </ul>
-<ol start="5">
-<li>一键导入示例<br>把下面内容保存为 <code>add_myapp.reg</code>，改完路径&#x2F;名字后双击即可：</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs reg">Windows Registry Editor Version 5.00<br><br>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\MyApp]<br>&quot;DisplayName&quot;=&quot;MyApp 1.2.3&quot;<br>&quot;DisplayVersion&quot;=&quot;1.2.3&quot;<br>&quot;Publisher&quot;=&quot;ACME Corp.&quot;<br>&quot;InstallDate&quot;=&quot;20250806&quot;<br>&quot;InstallLocation&quot;=&quot;C:\\Program Files\\MyApp&quot;<br>&quot;UninstallString&quot;=&quot;\&quot;C:\\Program Files\\MyApp\\uninstall.exe\&quot;&quot;<br>&quot;ModifyPath&quot;=&quot;\&quot;C:\\Program Files\\MyApp\\uninstall.exe\&quot; /modify&quot;<br>&quot;HelpLink&quot;=&quot;https://example.com/help&quot;<br>&quot;URLInfoAbout&quot;=&quot;https://example.com&quot;<br>&quot;Comments&quot;=&quot;我的超好用小工具&quot;<br>&quot;EstimatedSize&quot;=dword:00000064<br>&quot;NoModify&quot;=dword:00000000<br>&quot;NoRepair&quot;=dword:00000001<br>&quot;DisplayIcon&quot;=&quot;\&quot;C:\\Program Files\\MyApp\\MyApp.exe\&quot;,0&quot;<br></code></pre></td></tr></table></figure>
+<p>示例 <code>streamlinkrc</code>（ini 风格）：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-comment"># 默认播放器</span><br><span class="hljs-attr">player</span>=vlc<br><span class="hljs-comment"># 默认画质</span><br><span class="hljs-attr">default-stream</span>=best<br><span class="hljs-comment"># 播放器额外参数</span><br><span class="hljs-attr">player-args</span>=--file-caching=<span class="hljs-number">5000</span><br><span class="hljs-comment"># 代理</span><br><span class="hljs-attr">http-proxy</span>=socks5://<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">1080</span><br><span class="hljs-comment"># Twitch 免广告令牌（可选）</span><br><span class="hljs-attr">twitch-oauth-token</span>=你的token<br></code></pre></td></tr></table></figure>
+<p>以后只需：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">streamlink https://www.twitch.tv/shroud<br></code></pre></td></tr></table></figure>
 
-<ol start="6">
-<li>刷新<br>导入后无需重启，直接打开“设置 → 应用 → 已安装应用”即可看到“MyApp 1.2.3”。<br>卸载按钮会调用你指定的 <code>uninstall.exe</code>，确保该文件真实存在且能自删除即可。</li>
+<hr>
+<ol start="4">
+<li>画质、代理、认证、录制——所有常用参数</li>
 </ol>
+<hr>
+<table>
+<thead>
+<tr>
+<th>需求</th>
+<th>参数示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>列出画质</td>
+<td><code>streamlink URL</code></td>
+</tr>
+<tr>
+<td>指定画质</td>
+<td><code>streamlink URL 720p,best</code></td>
+</tr>
+<tr>
+<td>录制</td>
+<td><code>-o 文件名.ts</code></td>
+</tr>
+<tr>
+<td>仅提取地址</td>
+<td><code>--stream-url</code>（输出可直接喂给 ffmpeg）</td>
+</tr>
+<tr>
+<td>代理</td>
+<td><code>--http-proxy &quot;http://user:pass@ip:port&quot;</code></td>
+</tr>
+<tr>
+<td>自定义 Header</td>
+<td><code>--http-header &quot;User-Agent=Mozilla/5.0&quot;</code></td>
+</tr>
+<tr>
+<td>设置缓冲</td>
+<td><code>--hls-live-edge 1 --hls-segment-threads 4</code></td>
+</tr>
+<tr>
+<td>Twitch 低延迟</td>
+<td><code>--twitch-low-latency</code></td>
+</tr>
+<tr>
+<td>YouTube 会员限定</td>
+<td><code>--youtube-cookie &quot;cookie字符串&quot;</code></td>
+</tr>
+<tr>
+<td>B 站登录</td>
+<td><code>--bilibili-cookie &quot;SESSDATA=xxx&quot;</code></td>
+</tr>
+<tr>
+<td>斗鱼（需第三方插件）</td>
+<td>见第 6 节</td>
+</tr>
+</tbody></table>
+<p>完整列表：<code>streamlink --help</code></p>
+<hr>
+<ol start="5">
+<li>典型场景脚本</li>
+</ol>
+<hr>
+<p>A. Linux&#x2F;macOS 定时录播</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br>ROOM=<span class="hljs-variable">$1</span><br>streamlink \<br>  --loglevel error \<br>  --retry-streams 30 \<br>  --retry-open 5 \<br>  -o <span class="hljs-string">&quot;/mnt/nas/<span class="hljs-variable">$&#123;ROOM&#125;</span>_<span class="hljs-subst">$(date +%F_%H-%M)</span>.ts&quot;</span> \<br>  <span class="hljs-string">&quot;https://www.twitch.tv/<span class="hljs-variable">$&#123;ROOM&#125;</span>&quot;</span> best<br></code></pre></td></tr></table></figure>
+<p>放到 <code>cron</code> 每天 20:00 执行：</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-symbol">0 </span><span class="hljs-number">20</span> * * * /path/record.sh shroud<br></code></pre></td></tr></table></figure>
+
+<p>B. Windows 批处理同时多主播</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bat">@<span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">start</span> <span class="hljs-built_in">cmd</span> /k streamlink -o D:\Rec\shroud.ts https://www.twitch.tv/shroud best<br><span class="hljs-built_in">start</span> <span class="hljs-built_in">cmd</span> /k streamlink -o D:\Rec\xqc.ts   https://www.twitch.tv/xqc   best<br></code></pre></td></tr></table></figure>
+
+<p>C. OBS 转播</p>
+<ol>
+<li>安装 <a target="_blank" rel="noopener" href="https://github.com/obs-streamlink/obs-streamlink">OBS-StreamLink 插件</a>  </li>
+<li>OBS → 来源 → + → Streamlink 源  </li>
+<li>填 URL、选择画质 → 完成，OBS 即可直接拉流。</li>
+</ol>
+<hr>
+<ol start="6">
+<li>插件管理与自定义</li>
+</ol>
+<hr>
+<ul>
+<li>官方插件目录（随版本更新）：<code>streamlink/plugins/</code>  </li>
+<li>用户自定义目录：  <ul>
+<li>Win: <code>%APPDATA%\streamlink\plugins\</code>  </li>
+<li>macOS&#x2F;Linux: <code>~/.local/share/streamlink/plugins/</code></li>
+</ul>
+</li>
+</ul>
+<p>示例：手动修复斗鱼  </p>
+<ol>
+<li>下载社区维护的 <code>douyu.py</code> 插件  </li>
+<li>放入上述用户目录  </li>
+<li>执行 <code>streamlink https://www.douyu.com/123456</code> 即可。</li>
+</ol>
+<p>查看所有已加载插件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">streamlink --plugins<br></code></pre></td></tr></table></figure>
+
+<hr>
+<ol start="7">
+<li>Windows GUI 与 OBS 插件补充</li>
+</ol>
+<hr>
+<ul>
+<li><p><strong>Streamlink Twitch GUI</strong>（已归档，仍可用）<br>提供图形界面选择主播&#x2F;画质，底层仍调用 CLI。<br>GitHub 下载 <code>streamlink-twitch-gui.exe</code>，首次运行自动关联本地 Streamlink。</p>
+</li>
+<li><p><strong>OBS-StreamLink</strong><br>适用于 OBS 29+，支持直接添加 Streamlink 源，无需命令行，适合转播、绿幕抠像等场景。</p>
+</li>
+</ul>
+<hr>
+<ol start="8">
+<li>故障排查 FAQ</li>
+</ol>
+<hr>
+<table>
+<thead>
+<tr>
+<th>错误信息</th>
+<th>原因 &amp; 解决</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>No plugin can handle URL</code></td>
+<td>URL 拼写错误或平台尚未支持；更新 Streamlink 或手动放插件。</td>
+</tr>
+<tr>
+<td><code>403 Client Error</code></td>
+<td>需要登录或 IP 被限制；加 Cookie、代理或 VPN。</td>
+</tr>
+<tr>
+<td>VLC 打不开</td>
+<td>路径含空格未加引号；在配置里写完整 <code>&quot;C:\Program Files\VideoLAN\VLC\vlc.exe&quot;</code>。</td>
+</tr>
+<tr>
+<td>录制 ts 文件音画不同步</td>
+<td>使用 <code>-f mp4 --ffmpeg-copyts</code> 或后期 ffmpeg <code>-c copy</code> 再封装。</td>
+</tr>
+<tr>
+<td>高 CPU</td>
+<td>降低分辨率、用 <code>--player-passthrough=hls</code> 直接让播放器解码。</td>
+</tr>
+<tr>
+<td>斗鱼&#x2F;虎牙提示 <code>Unable to open URL</code></td>
+<td>官方插件已失效，等待社区更新或换第三方插件。</td>
+</tr>
+</tbody></table>
+<hr>
 
                 
               </div>
@@ -429,27 +552,13 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
       
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%86%B7%E7%9F%A5%E8%AF%86/" class="category-chain-item">冷知识</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
+        <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" class="print-no-link">#软件推荐</a>
+      
     </div>
-  
   
 </div>
 
@@ -459,8 +568,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Windows注册应用程序</div>
-      <div>https://blog.computerqwq.top/2025/08/06/windows-zhu-ce-ying-yong-cheng-xu/</div>
+      <div>Streamlink 使用手册</div>
+      <div>https://blog.computerqwq.top/2025/08/10/streamlink-shi-yong-shou-ce/</div>
     </div>
     <div class="license-meta">
       
@@ -472,13 +581,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月6日</div>
+          <div>2025年8月10日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年8月6日</div>
+          <div>2025年8月10日</div>
         </div>
       
       
@@ -509,9 +618,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/10/streamlink-shi-yong-shou-ce/" title="Streamlink 使用手册">
+                      <a href="/2025/08/10/nohup/" title="nohup">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Streamlink 使用手册</span>
+                        <span class="hidden-mobile">nohup</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -519,8 +628,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/27/peng-pai-os1-0-jie-chu-xi-tong-fen-ji/" title="澎湃os1.0解除系统分级">
-                        <span class="hidden-mobile">澎湃os1.0解除系统分级</span>
+                      <a href="/2025/08/06/windows-zhu-ce-ying-yong-cheng-xu/" title="Windows注册应用程序">
+                        <span class="hidden-mobile">Windows注册应用程序</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
