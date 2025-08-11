@@ -19,23 +19,24 @@
   <meta name="author" content="计算机qwq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="下面给出一份“从入门到进阶”的 nohup 使用指南。它既适合第一次听说这个命令的新手，也适合需要排查疑难问题的老手。你可以直接复制到博客或笔记中发布，全部原创、无版权问题。 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&amp;#x3">
+    <meta name="description" content="Vaultwarden 服务器部署指南一、部署前准备系统要求： Linux 服务器（推荐 Ubuntu&#x2F;Debian） 至少 512MB RAM（轻量级，但需考虑用户量） Docker 环境（推荐方案）或 Rust 编译环境 二、推荐部署方案：Docker 创建持久化数据目录 mkdir -p &#x2F;vw-data&#x2F;{data,logs}拉取官方镜像（原名为 bitwar">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nohup">
-<meta property="og:url" content="https://blog.computerqwq.top/2025/08/10/nohup/index.html">
+<meta property="og:title" content="vaultwarden">
+<meta property="og:url" content="https://blog.computerqwq.top/2025/08/11/vaultwarden/index.html">
 <meta property="og:site_name" content="计算机">
-<meta property="og:description" content="下面给出一份“从入门到进阶”的 nohup 使用指南。它既适合第一次听说这个命令的新手，也适合需要排查疑难问题的老手。你可以直接复制到博客或笔记中发布，全部原创、无版权问题。 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&amp;#x3">
+<meta property="og:description" content="Vaultwarden 服务器部署指南一、部署前准备系统要求： Linux 服务器（推荐 Ubuntu&#x2F;Debian） 至少 512MB RAM（轻量级，但需考虑用户量） Docker 环境（推荐方案）或 Rust 编译环境 二、推荐部署方案：Docker 创建持久化数据目录 mkdir -p &#x2F;vw-data&#x2F;{data,logs}拉取官方镜像（原名为 bitwar">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-08-10T05:40:49.000Z">
-<meta property="article:modified_time" content="2025-08-10T05:41:30.988Z">
+<meta property="article:published_time" content="2025-08-11T09:35:56.000Z">
+<meta property="article:modified_time" content="2025-08-11T09:50:15.429Z">
 <meta property="article:author" content="计算机qwq">
+<meta property="article:tag" content="软件推荐">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>nohup - 计算机</title>
+  <title>vaultwarden - 计算机</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="nohup"></span>
+            <span id="subtitle" data-typed-text="vaultwarden"></span>
           
         </div>
 
@@ -228,8 +229,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-10 13:40" pubdate>
-          2025年8月10日 下午
+        <time datetime="2025-08-11 17:35" pubdate>
+          2025年8月11日 下午
         </time>
       </span>
     
@@ -240,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          366 字
         
       </span>
     
@@ -251,7 +252,7 @@
         
         
         
-          9 分钟
+          4 分钟
         
       </span>
     
@@ -297,53 +298,37 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">nohup</h1>
+            <h1 id="seo-header">vaultwarden</h1>
             
             
               <div class="markdown-body">
                 
-                <p>下面给出一份“从入门到进阶”的 nohup 使用指南。它既适合第一次听说这个命令的新手，也适合需要排查疑难问题的老手。你可以直接复制到博客或笔记中发布，全部原创、无版权问题。</p>
-<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>nohup 使用详解：让进程真正脱离终端</p>
-<p>一、nohup 是什么  </p>
-<ol>
-<li>名称由来<br>nohup &#x3D; “no hang up”，意为“不要挂断”。早期 Unix 通过调制解调器拨号登录，挂断电话线（hang up）会触发 SIGHUP 信号，导致所有子进程被杀死。nohup 的使命就是屏蔽 SIGHUP，使进程在会话结束后继续运行。  </li>
-<li>核心价值<br>• 让耗时任务（备份、训练模型、日志分析）不受 SSH 断开影响<br>• 作为守护进程&#x2F;服务的最简单雏形<br>• 与 &amp;、setsid、disown、tmux&#x2F;screen 等工具对比，nohup 无需额外软件，单条命令即可生效</li>
-</ol>
-<p>二、基本语法<br>nohup COMMAND [ARG]… [&amp;] [&gt;out.log 2&gt;&amp;1]</p>
-<p>三、快速上手 3 步曲  </p>
-<ol>
-<li>登录服务器<br>ssh user@host  </li>
-<li>启动任务<br>nohup python3 long_job.py –epochs 100 &gt;train.log 2&gt;&amp;1 &amp;<br>解释：<br>• &amp; 表示后台运行<br>• &gt;train.log 将标准输出重定向到文件<br>• 2&gt;&amp;1 把标准错误也合并进去  </li>
-<li>安全退出<br>exit 或 Ctrl-D。任务仍在后台跑，日志持续增长。</li>
-</ol>
-<p>四、深入理解信号与文件描述符  </p>
-<ol>
-<li>信号处理<br>nohup 默认屏蔽 SIGHUP，但其他信号（SIGTERM、SIGKILL）依旧可以终止进程。<br>• kill PID      → 发送 SIGTERM，进程可捕获并优雅退出<br>• kill -9 PID   → 发送 SIGKILL，立即杀死，无法捕获  </li>
-<li>日志文件<br>• 如果未手动重定向，nohup 会把输出写入“nohup.out”（工作目录可写时）。<br>• 若工作目录不可写，则写入 $HOME&#x2F;nohup.out。<br>• 多任务并发时务必手动指定不同日志文件，防止混叠。  </li>
-<li>文件描述符“黑洞”<br>如果既不需要输出也不关心错误，可重定向到 &#x2F;dev&#x2F;null：<br>nohup .&#x2F;heavy_calc &gt; &#x2F;dev&#x2F;null 2&gt;&amp;1 &amp;</li>
-</ol>
-<p>五、进阶用法  </p>
-<ol>
-<li>与 Shell job control 交互<br>• jobs -l        查看后台任务<br>• fg %1          把任务拉回前台<br>• bg %1          继续暂停的任务<br>• disown -h %1   让 bash 不再追踪该 job（效果类似 nohup 但可后补）  </li>
-<li>与 cron 区别<br>cron 定时触发；nohup 手动触发。二者可组合：<br>@reboot nohup &#x2F;opt&#x2F;monitor&#x2F;start.sh &gt;&gt; &#x2F;var&#x2F;log&#x2F;monitor.log 2&gt;&amp;1  </li>
-<li>与 setsid 对比<br>setsid 创建新会话，彻底脱离控制终端；nohup 仍留在原会话，只是忽略 SIGHUP。<br>setsid .&#x2F;daemon  </li>
-<li>多命令&#x2F;管道<br>使用子 Shell：<br>nohup sh -c ‘cmd1 | cmd2 &amp;&amp; cmd3’ &gt;pipe.log 2&gt;&amp;1 &amp;  </li>
-<li>环境变量与相对路径<br>在 crontab 或 systemd 中调用 nohup 时，务必写绝对路径或先 cd：<br>0 3 * * * cd &#x2F;data&#x2F;backup &amp;&amp; nohup .&#x2F;backup.sh &gt;backup.log 2&gt;&amp;1</li>
-</ol>
-<p>六、常见问题排查  </p>
-<ol>
-<li>进程还是挂了？<br>• 检查是否收到 SIGTERM（运维批量 killall）。<br>• 用 strace&#x2F;truss 跟踪信号：strace -p PID -e signal。  </li>
-<li>日志没写入？<br>• 确认文件系统未满（df -h）。<br>• 确认重定向语法（&gt;file 2&gt;&amp;1 顺序不能反）。  </li>
-<li>中文&#x2F;彩色日志乱码<br>• 设置 LANG&#x3D;en_US.UTF-8 nohup your_cmd …  </li>
-<li>多台机器并行<br>• ansible、fabric、pssh 均可远程执行 nohup：<br>  ansible webservers -m shell -a “nohup &#x2F;opt&#x2F;deploy.sh &gt;deploy.log 2&gt;&amp;1 &amp;”</li>
-</ol>
-<p>七、完整范例<br>需求：训练一个 50 epoch 的 PyTorch 模型，断网后仍能继续，训练完自动关机。  </p>
-<h2 id="train-sh"><a href="#train-sh" class="headerlink" title="train.sh  "></a>train.sh  </h2><h2 id="bin-bashcd-data-projectsource-venv-bin-activatepython-train-py-–epochs-50-–save-model-ptsudo-shutdown-h-now"><a href="#bin-bashcd-data-projectsource-venv-bin-activatepython-train-py-–epochs-50-–save-model-ptsudo-shutdown-h-now" class="headerlink" title="#!&#x2F;bin&#x2F;bashcd &#x2F;data&#x2F;projectsource venv&#x2F;bin&#x2F;activatepython train.py –epochs 50 –save model.ptsudo shutdown -h now  "></a>#!&#x2F;bin&#x2F;bash<br>cd &#x2F;data&#x2F;project<br>source venv&#x2F;bin&#x2F;activate<br>python train.py –epochs 50 –save model.pt<br>sudo shutdown -h now  </h2><p>启动：<br>nohup .&#x2F;train.sh &gt;train_full.log 2&gt;&amp;1 &amp;  </p>
-<p>八、与 systemd 的取舍<br>• 长期服务请优先 systemd：支持自动重启、资源限制、日志轮转。<br>• 临时&#x2F;一次性&#x2F;无 root 权限任务用 nohup 最轻量。  </p>
-<p>九、一句话总结<br>nohup 不是“后台运行”，而是“让进程对 SIGHUP 免疫”；配合重定向与 &amp;，它提供了在类 Unix 系统中最朴素的任务守护方案。记住：<br>nohup cmd &gt;log 2&gt;&amp;1 &amp;<br>exit  </p>
-<p>任务从此与你无关，却又始终在你掌控的日志里。</p>
+                <h1 id="Vaultwarden-服务器部署指南"><a href="#Vaultwarden-服务器部署指南" class="headerlink" title="Vaultwarden 服务器部署指南"></a>Vaultwarden 服务器部署指南</h1><p>一、部署前准备<br>系统要求：</p>
+<p>Linux 服务器（推荐 Ubuntu&#x2F;Debian）</p>
+<p>至少 512MB RAM（轻量级，但需考虑用户量）</p>
+<p>Docker 环境（推荐方案）或 Rust 编译环境</p>
+<p>二、推荐部署方案：Docker</p>
+<p>创建持久化数据目录</p>
+<p>mkdir -p &#x2F;vw-data&#x2F;{data,logs}<br>拉取官方镜像（原名为 bitwardenrs）</p>
+<p>docker pull vaultwarden&#x2F;server:latest</p>
+<p>将80端口开放即可</p>
+<p>三、关键配置项（环境变量）<br>变量名 作用 示例值</p>
+<p>SIGNUPS_ALLOWED 开放注册 false（建议关闭）<br>DOMAIN 公网访问域名 <a target="_blank" rel="noopener" href="https://vault.example.com/">https://vault.example.com</a><br>DATABASE_URL 数据库路径 &#x2F;data&#x2F;db.sqlite3（默认SQLite）<br>ENABLE_DB_WAL SQLite性能优化 false（避免锁问题）<br>ORG_INVITATIONS_ALLOWED 组织邀请开关 true</p>
+<p>📌 完整变量列表见<a target="_blank" rel="noopener" href="https://github.com/dani-garcia/vaultwarden/wiki">https://github.com/dani-garcia/vaultwarden/wiki</a></p>
+<p>功能限制：</p>
+<p>❌ 不支持单点登录 (SSO)</p>
+<p>⚠️ 群组功能需手动启用且标记为不稳定<br>性能调优：</p>
+<p>超过 10 用户建议禁用 Web 图标代理（DISABLE_ICON_DOWNLOAD&#x3D;true）</p>
+<p>高并发场景切换 MySQL 并启用连接池</p>
+<p>部署问题优先查阅 <a target="_blank" rel="noopener" href="https://github.com/dani-garcia/vaultwarden/issues">https://github.com/dani-garcia/vaultwarden/issues</a> 或 <a target="_blank" rel="noopener" href="https://matrix.to/#/#vaultwarden:matrix.org">https://matrix.to/#/#vaultwarden:matrix.org</a></p>
+<h3 id="务必支持HTTPS"><a href="#务必支持HTTPS" class="headerlink" title="务必支持HTTPS"></a>务必支持HTTPS</h3><p>请必须部署https否则无法正常使用,且此证书必须信任否则客户端拒绝连接.<br>你可以通过两种方式部署https:</p>
+<ul>
+<li>Rocket</li>
+<li>Nginx<br>我比较喜欢简单的,就用rocket.<br>往变量里添加<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">ROCKET_TLS</span>=&#123;certs=<span class="hljs-string">&quot;/path/to/certs.pem&quot;</span>,key=<span class="hljs-string">&quot;/path/to/key.pem&quot;</span>&#125;<br></code></pre></td></tr></table></figure>
+需要在双引号中指定你的证书信息</li>
+</ul>
 <blockquote>
-<p>kimi-k2</p>
+<p>更多详情请看官方<a target="_blank" rel="noopener" href="https://rs.ppgg.in/home">Wiki</a></p>
 </blockquote>
 
                 
@@ -354,6 +339,13 @@
               <div class="post-metas my-3">
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" class="print-no-link">#软件推荐</a>
+      
+    </div>
+  
 </div>
 
 
@@ -362,8 +354,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>nohup</div>
-      <div>https://blog.computerqwq.top/2025/08/10/nohup/</div>
+      <div>vaultwarden</div>
+      <div>https://blog.computerqwq.top/2025/08/11/vaultwarden/</div>
     </div>
     <div class="license-meta">
       
@@ -375,13 +367,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月10日</div>
+          <div>2025年8月11日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年8月10日</div>
+          <div>2025年8月11日</div>
         </div>
       
       
@@ -412,9 +404,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/11/vaultwarden/" title="vaultwarden">
+                      <a href="/2025/08/11/openssl-sheng-cheng-zheng-shu/" title="openssl生成证书">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">vaultwarden</span>
+                        <span class="hidden-mobile">openssl生成证书</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -422,8 +414,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/08/10/streamlink-shi-yong-shou-ce/" title="Streamlink 使用手册">
-                        <span class="hidden-mobile">Streamlink 使用手册</span>
+                      <a href="/2025/08/10/nohup/" title="nohup">
+                        <span class="hidden-mobile">nohup</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

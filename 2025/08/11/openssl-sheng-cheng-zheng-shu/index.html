@@ -19,23 +19,25 @@
   <meta name="author" content="计算机qwq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="下面给出一份“从入门到进阶”的 nohup 使用指南。它既适合第一次听说这个命令的新手，也适合需要排查疑难问题的老手。你可以直接复制到博客或笔记中发布，全部原创、无版权问题。 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&amp;#x3">
+    <meta name="description" content="openssl生成证书直接生成1openssl req -x509 -newkey rsa:2048 -nodes -keyout key.pem -out cert.pem -days 3650 -subj &quot;&#x2F;CN&#x3D;example.com&quot;     参数 意义    openssl req OpenSSL 的证书请求&#x2F;生成工具。   -x509 直接输出「自签名证">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nohup">
-<meta property="og:url" content="https://blog.computerqwq.top/2025/08/10/nohup/index.html">
+<meta property="og:title" content="openssl生成证书">
+<meta property="og:url" content="https://blog.computerqwq.top/2025/08/11/openssl-sheng-cheng-zheng-shu/index.html">
 <meta property="og:site_name" content="计算机">
-<meta property="og:description" content="下面给出一份“从入门到进阶”的 nohup 使用指南。它既适合第一次听说这个命令的新手，也适合需要排查疑难问题的老手。你可以直接复制到博客或笔记中发布，全部原创、无版权问题。 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&amp;#x3">
+<meta property="og:description" content="openssl生成证书直接生成1openssl req -x509 -newkey rsa:2048 -nodes -keyout key.pem -out cert.pem -days 3650 -subj &quot;&#x2F;CN&#x3D;example.com&quot;     参数 意义    openssl req OpenSSL 的证书请求&#x2F;生成工具。   -x509 直接输出「自签名证">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-08-10T05:40:49.000Z">
-<meta property="article:modified_time" content="2025-08-10T05:41:30.988Z">
+<meta property="article:published_time" content="2025-08-11T10:04:07.000Z">
+<meta property="article:modified_time" content="2025-08-11T10:04:21.028Z">
 <meta property="article:author" content="计算机qwq">
+<meta property="article:tag" content="网站">
+<meta property="article:tag" content="域名">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>nohup - 计算机</title>
+  <title>openssl生成证书 - 计算机</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +214,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="nohup"></span>
+            <span id="subtitle" data-typed-text="openssl生成证书"></span>
           
         </div>
 
@@ -228,8 +230,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-10 13:40" pubdate>
-          2025年8月10日 下午
+        <time datetime="2025-08-11 18:04" pubdate>
+          2025年8月11日 晚上
         </time>
       </span>
     
@@ -240,7 +242,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          269 字
         
       </span>
     
@@ -251,7 +253,7 @@
         
         
         
-          9 分钟
+          3 分钟
         
       </span>
     
@@ -297,54 +299,106 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">nohup</h1>
+            <h1 id="seo-header">openssl生成证书</h1>
             
             
               <div class="markdown-body">
                 
-                <p>下面给出一份“从入门到进阶”的 nohup 使用指南。它既适合第一次听说这个命令的新手，也适合需要排查疑难问题的老手。你可以直接复制到博客或笔记中发布，全部原创、无版权问题。</p>
-<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>nohup 使用详解：让进程真正脱离终端</p>
-<p>一、nohup 是什么  </p>
-<ol>
-<li>名称由来<br>nohup &#x3D; “no hang up”，意为“不要挂断”。早期 Unix 通过调制解调器拨号登录，挂断电话线（hang up）会触发 SIGHUP 信号，导致所有子进程被杀死。nohup 的使命就是屏蔽 SIGHUP，使进程在会话结束后继续运行。  </li>
-<li>核心价值<br>• 让耗时任务（备份、训练模型、日志分析）不受 SSH 断开影响<br>• 作为守护进程&#x2F;服务的最简单雏形<br>• 与 &amp;、setsid、disown、tmux&#x2F;screen 等工具对比，nohup 无需额外软件，单条命令即可生效</li>
-</ol>
-<p>二、基本语法<br>nohup COMMAND [ARG]… [&amp;] [&gt;out.log 2&gt;&amp;1]</p>
-<p>三、快速上手 3 步曲  </p>
-<ol>
-<li>登录服务器<br>ssh user@host  </li>
-<li>启动任务<br>nohup python3 long_job.py –epochs 100 &gt;train.log 2&gt;&amp;1 &amp;<br>解释：<br>• &amp; 表示后台运行<br>• &gt;train.log 将标准输出重定向到文件<br>• 2&gt;&amp;1 把标准错误也合并进去  </li>
-<li>安全退出<br>exit 或 Ctrl-D。任务仍在后台跑，日志持续增长。</li>
-</ol>
-<p>四、深入理解信号与文件描述符  </p>
-<ol>
-<li>信号处理<br>nohup 默认屏蔽 SIGHUP，但其他信号（SIGTERM、SIGKILL）依旧可以终止进程。<br>• kill PID      → 发送 SIGTERM，进程可捕获并优雅退出<br>• kill -9 PID   → 发送 SIGKILL，立即杀死，无法捕获  </li>
-<li>日志文件<br>• 如果未手动重定向，nohup 会把输出写入“nohup.out”（工作目录可写时）。<br>• 若工作目录不可写，则写入 $HOME&#x2F;nohup.out。<br>• 多任务并发时务必手动指定不同日志文件，防止混叠。  </li>
-<li>文件描述符“黑洞”<br>如果既不需要输出也不关心错误，可重定向到 &#x2F;dev&#x2F;null：<br>nohup .&#x2F;heavy_calc &gt; &#x2F;dev&#x2F;null 2&gt;&amp;1 &amp;</li>
-</ol>
-<p>五、进阶用法  </p>
-<ol>
-<li>与 Shell job control 交互<br>• jobs -l        查看后台任务<br>• fg %1          把任务拉回前台<br>• bg %1          继续暂停的任务<br>• disown -h %1   让 bash 不再追踪该 job（效果类似 nohup 但可后补）  </li>
-<li>与 cron 区别<br>cron 定时触发；nohup 手动触发。二者可组合：<br>@reboot nohup &#x2F;opt&#x2F;monitor&#x2F;start.sh &gt;&gt; &#x2F;var&#x2F;log&#x2F;monitor.log 2&gt;&amp;1  </li>
-<li>与 setsid 对比<br>setsid 创建新会话，彻底脱离控制终端；nohup 仍留在原会话，只是忽略 SIGHUP。<br>setsid .&#x2F;daemon  </li>
-<li>多命令&#x2F;管道<br>使用子 Shell：<br>nohup sh -c ‘cmd1 | cmd2 &amp;&amp; cmd3’ &gt;pipe.log 2&gt;&amp;1 &amp;  </li>
-<li>环境变量与相对路径<br>在 crontab 或 systemd 中调用 nohup 时，务必写绝对路径或先 cd：<br>0 3 * * * cd &#x2F;data&#x2F;backup &amp;&amp; nohup .&#x2F;backup.sh &gt;backup.log 2&gt;&amp;1</li>
-</ol>
-<p>六、常见问题排查  </p>
-<ol>
-<li>进程还是挂了？<br>• 检查是否收到 SIGTERM（运维批量 killall）。<br>• 用 strace&#x2F;truss 跟踪信号：strace -p PID -e signal。  </li>
-<li>日志没写入？<br>• 确认文件系统未满（df -h）。<br>• 确认重定向语法（&gt;file 2&gt;&amp;1 顺序不能反）。  </li>
-<li>中文&#x2F;彩色日志乱码<br>• 设置 LANG&#x3D;en_US.UTF-8 nohup your_cmd …  </li>
-<li>多台机器并行<br>• ansible、fabric、pssh 均可远程执行 nohup：<br>  ansible webservers -m shell -a “nohup &#x2F;opt&#x2F;deploy.sh &gt;deploy.log 2&gt;&amp;1 &amp;”</li>
-</ol>
-<p>七、完整范例<br>需求：训练一个 50 epoch 的 PyTorch 模型，断网后仍能继续，训练完自动关机。  </p>
-<h2 id="train-sh"><a href="#train-sh" class="headerlink" title="train.sh  "></a>train.sh  </h2><h2 id="bin-bashcd-data-projectsource-venv-bin-activatepython-train-py-–epochs-50-–save-model-ptsudo-shutdown-h-now"><a href="#bin-bashcd-data-projectsource-venv-bin-activatepython-train-py-–epochs-50-–save-model-ptsudo-shutdown-h-now" class="headerlink" title="#!&#x2F;bin&#x2F;bashcd &#x2F;data&#x2F;projectsource venv&#x2F;bin&#x2F;activatepython train.py –epochs 50 –save model.ptsudo shutdown -h now  "></a>#!&#x2F;bin&#x2F;bash<br>cd &#x2F;data&#x2F;project<br>source venv&#x2F;bin&#x2F;activate<br>python train.py –epochs 50 –save model.pt<br>sudo shutdown -h now  </h2><p>启动：<br>nohup .&#x2F;train.sh &gt;train_full.log 2&gt;&amp;1 &amp;  </p>
-<p>八、与 systemd 的取舍<br>• 长期服务请优先 systemd：支持自动重启、资源限制、日志轮转。<br>• 临时&#x2F;一次性&#x2F;无 root 权限任务用 nohup 最轻量。  </p>
-<p>九、一句话总结<br>nohup 不是“后台运行”，而是“让进程对 SIGHUP 免疫”；配合重定向与 &amp;，它提供了在类 Unix 系统中最朴素的任务守护方案。记住：<br>nohup cmd &gt;log 2&gt;&amp;1 &amp;<br>exit  </p>
-<p>任务从此与你无关，却又始终在你掌控的日志里。</p>
-<blockquote>
-<p>kimi-k2</p>
-</blockquote>
+                <h1 id="openssl生成证书"><a href="#openssl生成证书" class="headerlink" title="openssl生成证书"></a>openssl生成证书</h1><h3 id="直接生成"><a href="#直接生成" class="headerlink" title="直接生成"></a>直接生成</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">openssl req -x509 -newkey rsa:2048 -nodes -keyout key.pem -out cert.pem -days 3650 -subj <span class="hljs-string">&quot;/CN=example.com&quot;</span><br></code></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>openssl req</code></td>
+<td>OpenSSL 的证书请求&#x2F;生成工具。</td>
+</tr>
+<tr>
+<td><code>-x509</code></td>
+<td>直接输出「自签名证书」而不是证书请求。</td>
+</tr>
+<tr>
+<td><code>-newkey rsa:2048</code></td>
+<td>当场生成 2048 位 RSA 私钥。</td>
+</tr>
+<tr>
+<td><code>-nodes</code></td>
+<td><strong>no DES</strong>，即私钥 <strong>不加密</strong>（否则每次启动服务器都要输密码）。</td>
+</tr>
+<tr>
+<td><code>-keyout key.pem</code></td>
+<td>把私钥写到 <code>key.pem</code>。</td>
+</tr>
+<tr>
+<td><code>-out cert.pem</code></td>
+<td>把证书写到 <code>cert.pem</code>。</td>
+</tr>
+<tr>
+<td><code>-days 3650</code></td>
+<td>证书有效期 10 年。</td>
+</tr>
+<tr>
+<td><code>-subj &quot;/CN=example.com&quot;</code></td>
+<td>证书主题只写 Common Name 字段，浏览器就把它当成域名。</td>
+</tr>
+</tbody></table>
+<h3 id="算法特点"><a href="#算法特点" class="headerlink" title="算法特点"></a>算法特点</h3><ul>
+<li><strong>RSA</strong>：老、慢、通用；命令 <code>-newkey rsa:2048</code>  </li>
+<li><strong>ECC（P-256）</strong>：新、快、省流量；命令 <code>-newkey ec:prime256v1</code>  </li>
+<li><strong>Ed25519</strong>：最新、最小、最快；命令 <code>-newkey ed25519</code></li>
+</ul>
+<p>想用哪个把对应的 <code>-newkey</code> 换掉就行。</p>
+<h2 id="额外信息"><a href="#额外信息" class="headerlink" title="额外信息"></a>额外信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">openssl req -x509 -newkey rsa:2048 -nodes \<br>  -keyout  example.com.key \<br>  -out     example.com.crt \<br>  -days 3650 \<br>  -subj <span class="hljs-string">&quot;/C=CN/ST=Beijing/L=Beijing/O=MyCompany/OU=IT/CN=example.com/emailAddress=admin@example.com&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>字段解释（一看就懂）  </p>
+<table>
+<thead>
+<tr>
+<th>缩写</th>
+<th>含义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C</td>
+<td>国家</td>
+<td>CN</td>
+</tr>
+<tr>
+<td>ST</td>
+<td>省&#x2F;州</td>
+<td>Beijing</td>
+</tr>
+<tr>
+<td>L</td>
+<td>城市</td>
+<td>Beijing</td>
+</tr>
+<tr>
+<td>O</td>
+<td>组织&#x2F;公司</td>
+<td>MyCompany</td>
+</tr>
+<tr>
+<td>OU</td>
+<td>部门</td>
+<td>IT</td>
+</tr>
+<tr>
+<td>CN</td>
+<td>域名</td>
+<td>example.com</td>
+</tr>
+<tr>
+<td>emailAddress</td>
+<td>邮箱</td>
+<td><a href="mailto:&#x61;&#x64;&#x6d;&#105;&#110;&#64;&#101;&#x78;&#97;&#109;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#x61;&#x64;&#x6d;&#105;&#110;&#64;&#101;&#x78;&#97;&#109;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a></td>
+</tr>
+</tbody></table>
 
                 
               </div>
@@ -353,6 +407,36 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%BD%91%E7%AB%99%E7%9B%B8%E5%85%B3/" class="category-chain-item">网站相关</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%BD%91%E7%AB%99/" class="print-no-link">#网站</a>
+      
+        <a href="/tags/%E5%9F%9F%E5%90%8D/" class="print-no-link">#域名</a>
+      
+    </div>
   
 </div>
 
@@ -362,8 +446,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>nohup</div>
-      <div>https://blog.computerqwq.top/2025/08/10/nohup/</div>
+      <div>openssl生成证书</div>
+      <div>https://blog.computerqwq.top/2025/08/11/openssl-sheng-cheng-zheng-shu/</div>
     </div>
     <div class="license-meta">
       
@@ -375,13 +459,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月10日</div>
+          <div>2025年8月11日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年8月10日</div>
+          <div>2025年8月11日</div>
         </div>
       
       
@@ -412,18 +496,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/11/vaultwarden/" title="vaultwarden">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">vaultwarden</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/08/10/streamlink-shi-yong-shou-ce/" title="Streamlink 使用手册">
-                        <span class="hidden-mobile">Streamlink 使用手册</span>
+                      <a href="/2025/08/11/vaultwarden/" title="vaultwarden">
+                        <span class="hidden-mobile">vaultwarden</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

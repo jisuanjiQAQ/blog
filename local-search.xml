@@ -4,6 +4,52 @@
   
   
   <entry>
+    <title>openssl生成证书</title>
+    <link href="/2025/08/11/openssl-sheng-cheng-zheng-shu/"/>
+    <url>/2025/08/11/openssl-sheng-cheng-zheng-shu/</url>
+    
+    <content type="html"><![CDATA[<h1 id="openssl生成证书"><a href="#openssl生成证书" class="headerlink" title="openssl生成证书"></a>openssl生成证书</h1><h3 id="直接生成"><a href="#直接生成" class="headerlink" title="直接生成"></a>直接生成</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">openssl req -x509 -newkey rsa:2048 -nodes -keyout key.pem -out cert.pem -days 3650 -subj <span class="hljs-string">&quot;/CN=example.com&quot;</span><br></code></pre></td></tr></table></figure><table><thead><tr><th>参数</th><th>意义</th></tr></thead><tbody><tr><td><code>openssl req</code></td><td>OpenSSL 的证书请求&#x2F;生成工具。</td></tr><tr><td><code>-x509</code></td><td>直接输出「自签名证书」而不是证书请求。</td></tr><tr><td><code>-newkey rsa:2048</code></td><td>当场生成 2048 位 RSA 私钥。</td></tr><tr><td><code>-nodes</code></td><td><strong>no DES</strong>，即私钥 <strong>不加密</strong>（否则每次启动服务器都要输密码）。</td></tr><tr><td><code>-keyout key.pem</code></td><td>把私钥写到 <code>key.pem</code>。</td></tr><tr><td><code>-out cert.pem</code></td><td>把证书写到 <code>cert.pem</code>。</td></tr><tr><td><code>-days 3650</code></td><td>证书有效期 10 年。</td></tr><tr><td><code>-subj &quot;/CN=example.com&quot;</code></td><td>证书主题只写 Common Name 字段，浏览器就把它当成域名。</td></tr></tbody></table><h3 id="算法特点"><a href="#算法特点" class="headerlink" title="算法特点"></a>算法特点</h3><ul><li><strong>RSA</strong>：老、慢、通用；命令 <code>-newkey rsa:2048</code>  </li><li><strong>ECC（P-256）</strong>：新、快、省流量；命令 <code>-newkey ec:prime256v1</code>  </li><li><strong>Ed25519</strong>：最新、最小、最快；命令 <code>-newkey ed25519</code></li></ul><p>想用哪个把对应的 <code>-newkey</code> 换掉就行。</p><h2 id="额外信息"><a href="#额外信息" class="headerlink" title="额外信息"></a>额外信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">openssl req -x509 -newkey rsa:2048 -nodes \<br>  -keyout  example.com.key \<br>  -out     example.com.crt \<br>  -days 3650 \<br>  -subj <span class="hljs-string">&quot;/C=CN/ST=Beijing/L=Beijing/O=MyCompany/OU=IT/CN=example.com/emailAddress=admin@example.com&quot;</span><br></code></pre></td></tr></table></figure><p>字段解释（一看就懂）  </p><table><thead><tr><th>缩写</th><th>含义</th><th>示例</th></tr></thead><tbody><tr><td>C</td><td>国家</td><td>CN</td></tr><tr><td>ST</td><td>省&#x2F;州</td><td>Beijing</td></tr><tr><td>L</td><td>城市</td><td>Beijing</td></tr><tr><td>O</td><td>组织&#x2F;公司</td><td>MyCompany</td></tr><tr><td>OU</td><td>部门</td><td>IT</td></tr><tr><td>CN</td><td>域名</td><td>example.com</td></tr><tr><td>emailAddress</td><td>邮箱</td><td><a href="mailto:&#x61;&#x64;&#x6d;&#105;&#110;&#64;&#101;&#x78;&#97;&#109;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#x61;&#x64;&#x6d;&#105;&#110;&#64;&#101;&#x78;&#97;&#109;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a></td></tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>网站相关</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>网站</tag>
+      
+      <tag>域名</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vaultwarden</title>
+    <link href="/2025/08/11/vaultwarden/"/>
+    <url>/2025/08/11/vaultwarden/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Vaultwarden-服务器部署指南"><a href="#Vaultwarden-服务器部署指南" class="headerlink" title="Vaultwarden 服务器部署指南"></a>Vaultwarden 服务器部署指南</h1><p>一、部署前准备<br>系统要求：</p><p>Linux 服务器（推荐 Ubuntu&#x2F;Debian）</p><p>至少 512MB RAM（轻量级，但需考虑用户量）</p><p>Docker 环境（推荐方案）或 Rust 编译环境</p><p>二、推荐部署方案：Docker</p><p>创建持久化数据目录</p><p>mkdir -p &#x2F;vw-data&#x2F;{data,logs}<br>拉取官方镜像（原名为 bitwardenrs）</p><p>docker pull vaultwarden&#x2F;server:latest</p><p>将80端口开放即可</p><p>三、关键配置项（环境变量）<br>变量名 作用 示例值</p><p>SIGNUPS_ALLOWED 开放注册 false（建议关闭）<br>DOMAIN 公网访问域名 <a href="https://vault.example.com/">https://vault.example.com</a><br>DATABASE_URL 数据库路径 &#x2F;data&#x2F;db.sqlite3（默认SQLite）<br>ENABLE_DB_WAL SQLite性能优化 false（避免锁问题）<br>ORG_INVITATIONS_ALLOWED 组织邀请开关 true</p><p>📌 完整变量列表见<a href="https://github.com/dani-garcia/vaultwarden/wiki">https://github.com/dani-garcia/vaultwarden/wiki</a></p><p>功能限制：</p><p>❌ 不支持单点登录 (SSO)</p><p>⚠️ 群组功能需手动启用且标记为不稳定<br>性能调优：</p><p>超过 10 用户建议禁用 Web 图标代理（DISABLE_ICON_DOWNLOAD&#x3D;true）</p><p>高并发场景切换 MySQL 并启用连接池</p><p>部署问题优先查阅 <a href="https://github.com/dani-garcia/vaultwarden/issues">https://github.com/dani-garcia/vaultwarden/issues</a> 或 <a href="https://matrix.to/#/#vaultwarden:matrix.org">https://matrix.to/#/#vaultwarden:matrix.org</a></p><h3 id="务必支持HTTPS"><a href="#务必支持HTTPS" class="headerlink" title="务必支持HTTPS"></a>务必支持HTTPS</h3><p>请必须部署https否则无法正常使用,且此证书必须信任否则客户端拒绝连接.<br>你可以通过两种方式部署https:</p><ul><li>Rocket</li><li>Nginx<br>我比较喜欢简单的,就用rocket.<br>往变量里添加<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">ROCKET_TLS</span>=&#123;certs=<span class="hljs-string">&quot;/path/to/certs.pem&quot;</span>,key=<span class="hljs-string">&quot;/path/to/key.pem&quot;</span>&#125;<br></code></pre></td></tr></table></figure>需要在双引号中指定你的证书信息</li></ul><blockquote><p>更多详情请看官方<a href="https://rs.ppgg.in/home">Wiki</a></p></blockquote>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>软件推荐</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>nohup</title>
     <link href="/2025/08/10/nohup/"/>
     <url>/2025/08/10/nohup/</url>
