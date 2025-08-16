@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Chromium 浏览器伪造 SNI</title>
+    <link href="/2025/08/16/chromium-liu-lan-qi-wei-zao-sni/"/>
+    <url>/2025/08/16/chromium-liu-lan-qi-wei-zao-sni/</url>
+    
+    <content type="html"><![CDATA[<p>“Chromium 浏览器伪造 SNI”指的是一种通过修改 TLS 握手过程中的 <strong>SNI（Server Name Indication）字段</strong>，来绕过网络审查或访问被封锁网站的技术方法。</p><hr><h3 id="✅-什么是-SNI？"><a href="#✅-什么是-SNI？" class="headerlink" title="✅ 什么是 SNI？"></a>✅ 什么是 SNI？</h3><p>SNI 是 TLS 协议的一个扩展，用于在客户端（如浏览器）与服务器建立 HTTPS 连接时，告诉服务器要访问的具体域名。由于这个字段在 TLS 握手阶段是<strong>明文传输</strong>的，因此网络审查系统（如 GFW）可以通过检测 SNI 字段来判断用户是否在访问被封锁的网站，并进行阻断。</p><hr><h3 id="✅-什么是“伪造-SNI”？"><a href="#✅-什么是“伪造-SNI”？" class="headerlink" title="✅ 什么是“伪造 SNI”？"></a>✅ 什么是“伪造 SNI”？</h3><p>伪造 SNI 就是<strong>人为修改浏览器在 TLS 握手中发送的 SNI 字段</strong>，使其不包含真实的目标域名，而是使用一个未被封锁的“替身”域名，从而绕过审查系统的检测。</p><hr><h3 id="✅-Chromium-浏览器如何实现伪造-SNI？"><a href="#✅-Chromium-浏览器如何实现伪造-SNI？" class="headerlink" title="✅ Chromium 浏览器如何实现伪造 SNI？"></a>✅ Chromium 浏览器如何实现伪造 SNI？</h3><p>Chromium（包括 Chrome、Edge 等）支持通过<strong>启动参数</strong>实现 SNI 伪造，主要使用以下三个参数：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">chrome.exe ^<br>--host-rules=<span class="hljs-string">&quot;MAP 真实域名 替身域名&quot;</span> ^<br>--host-resolver-rules=<span class="hljs-string">&quot;MAP 替身域名 IP地址&quot;</span> ^<br>--ignore-certificate-errors<br></code></pre></td></tr></table></figure><ul><li><code>--host-rules</code>：将真实域名映射为一个“替身域名”，伪造 SNI。</li><li><code>--host-resolver-rules</code>：将替身域名解析到一个未被封锁的 IP。</li><li><code>--ignore-certificate-errors</code>：忽略证书不匹配带来的安全警告。</li></ul><hr><h3 id="✅-实际应用举例"><a href="#✅-实际应用举例" class="headerlink" title="✅ 实际应用举例"></a>✅ 实际应用举例</h3><p>假设你要访问 <code>www.google.com</code>，但它被 SNI 阻断：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">chrome.exe ^<br>--host-rules=<span class="hljs-string">&quot;MAP www.google.com g.cn&quot;</span> ^<br>--host-resolver-rules=<span class="hljs-string">&quot;MAP g.cn 109.185.236.240&quot;</span> ^<br>--ignore-certificate-errors<br></code></pre></td></tr></table></figure><p>这样浏览器会向服务器发送 <code>g.cn</code> 作为 SNI，但实际访问的是 <code>www.google.com</code> 的内容。</p><hr><h3 id="✅-工具支持"><a href="#✅-工具支持" class="headerlink" title="✅ 工具支持"></a>✅ 工具支持</h3><p>目前已有多个开源工具可自动生成这些参数，比如：</p><ul><li><a href="https://github.com/SpaceTimee/Sheas-Cealer">Sheas-Cealer</a>（Windows 客户端）</li><li>网页版工具：如 <a href="https://yuzhii0718.eu.org/html/application/snibypass.html">snibypass.html</a> 和 <a href="https://bulianglin.com/archives/snibypass.html">bulianglin.com&#x2F;snibypass</a></li></ul><hr><h3 id="⚠️-注意事项"><a href="#⚠️-注意事项" class="headerlink" title="⚠️ 注意事项"></a>⚠️ 注意事项</h3><ul><li>仅适用于<strong>浏览器层面</strong>，不是全局代理。</li><li>需要找到<strong>未被屏蔽的 IP 地址</strong>。</li><li>需<strong>关闭浏览器进程后再启动参数生效</strong>。</li><li>有安全风险，建议只用于<strong>合法研究或教育用途</strong>。</li></ul><hr>]]></content>
+    
+    
+    <categories>
+      
+      <category>网站相关</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>网站</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>openssl生成证书</title>
     <link href="/2025/08/11/openssl-sheng-cheng-zheng-shu/"/>
     <url>/2025/08/11/openssl-sheng-cheng-zheng-shu/</url>
