@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>QT无法下载部分文件</title>
+    <link href="/2025/08/17/qt-wu-fa-xia-zai-bu-fen-wen-jian/"/>
+    <url>/2025/08/17/qt-wu-fa-xia-zai-bu-fen-wen-jian/</url>
+    
+    <content type="html"><![CDATA[<h1 id="QT无法下载部分文件"><a href="#QT无法下载部分文件" class="headerlink" title="QT无法下载部分文件"></a>QT无法下载部分文件</h1><h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>最近又想使用qt了然后想下载回来,按照之前的步骤安装结果出现了一个问题.<br>无法下载某个软件,然后用上浏览器打开又正常了?奇奇怪怪的.</p><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>然后我又去清华的GitHub看了看发现了问题.<br><img src="/tupian/qt/PixPin_2025-08-17_14-13-38.png" alt="github"><br>问题编号#1936<br>是因为这个qt安装器默认使用的UA是Mozilla&#x2F;5.0,很多镜像站都ban了(包括清华),导致无法下载文件.这个问题已经被反馈到官方上去了QTBUG-129057.<br><img src="/tupian/qt/PixPin_2025-08-17_14-14-30.png" alt="qt"></p><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>换另一个源或者改ua<br>可以用阿里的</p><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>(GitHub问题)[<a href="https://github.com/tuna/issues/issues/1936]">https://github.com/tuna/issues/issues/1936]</a><br>(QTBUG)[<a href="https://bugreports.qt.io/browse/QTBUG-129057]">https://bugreports.qt.io/browse/QTBUG-129057]</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>冷知识</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>警告</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Chromium 浏览器伪造 SNI</title>
     <link href="/2025/08/16/chromium-liu-lan-qi-wei-zao-sni/"/>
     <url>/2025/08/16/chromium-liu-lan-qi-wei-zao-sni/</url>

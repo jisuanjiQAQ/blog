@@ -1,5 +1,6 @@
 # 我的文章  
-### **2025-08** (6)  
+### **2025-08** (7)  
+- 2025-08-17 [QT无法下载部分文件](https://blog.computerqwq.top/2025/08/17/qt-wu-fa-xia-zai-bu-fen-wen-jian/)  
 - 2025-08-16 [Chromium 浏览器伪造 SNI](https://blog.computerqwq.top/2025/08/16/chromium-liu-lan-qi-wei-zao-sni/)  
 - 2025-08-11 [openssl生成证书](https://blog.computerqwq.top/2025/08/11/openssl-sheng-cheng-zheng-shu/)  
 - 2025-08-11 [vaultwarden](https://blog.computerqwq.top/2025/08/11/vaultwarden/)  
