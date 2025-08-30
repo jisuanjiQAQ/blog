@@ -1,3 +1,7 @@
+https://blog.computerqwq.top/about/index.html
+https://blog.computerqwq.top/2025/08/30/zhong-duan-zi-ti-tai-kuan/
+https://blog.computerqwq.top/2025/08/30/linux-she-zhi-zhong-wen/
+https://blog.computerqwq.top/2025/08/30/arch-vmtools-install/
 https://blog.computerqwq.top/2025/08/17/qt-wu-fa-xia-zai-bu-fen-wen-jian/
 https://blog.computerqwq.top/2025/08/16/chromium-liu-lan-qi-wei-zao-sni/
 https://blog.computerqwq.top/2025/08/11/openssl-sheng-cheng-zheng-shu/
@@ -14,7 +18,6 @@ https://blog.computerqwq.top/2025/06/27/peng-pai-os1-0-jie-chu-xi-tong-fen-ji/
 https://blog.computerqwq.top/2025/04/27/llama-cpp-bian-yi/
 https://blog.computerqwq.top/2025/06/16/wiztree-gao-xiao-de-qing-li-gong-ju/
 https://blog.computerqwq.top/2025/06/10/npm-jing-xiang-zhan/
-https://blog.computerqwq.top/about/index.html
 https://blog.computerqwq.top/2025/05/16/nvm-shi-yong/
 https://blog.computerqwq.top/2025/04/21/lun-wo-de-ren-sheng/
 https://blog.computerqwq.top/2025/04/10/windows-he-linux-xi-tong-shi-jian-bu-tong-bu/

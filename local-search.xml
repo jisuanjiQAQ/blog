@@ -4,6 +4,63 @@
   
   
   <entry>
+    <title>终端字体太宽</title>
+    <link href="/2025/08/30/zhong-duan-zi-ti-tai-kuan/"/>
+    <url>/2025/08/30/zhong-duan-zi-ti-tai-kuan/</url>
+    
+    <content type="html"><![CDATA[<p>安装更纱字体</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> pacman -S ttf-sarasa-gothic<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>linux设置中文</title>
+    <link href="/2025/08/30/linux-she-zhi-zhong-wen/"/>
+    <url>/2025/08/30/linux-she-zhi-zhong-wen/</url>
+    
+    <content type="html"><![CDATA[<h3 id="✅-1-装中文字体（Noto-最通用）"><a href="#✅-1-装中文字体（Noto-最通用）" class="headerlink" title="✅ 1. 装中文字体（Noto 最通用）"></a>✅ 1. 装中文字体（Noto 最通用）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> pacman -S noto-fonts noto-fonts-cjk<br></code></pre></td></tr></table></figure><p>如果你用 LXDE&#x2F;XFCE，再补一个图标字体：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> pacman -S ttf-dejavu<br></code></pre></td></tr></table></figure><hr><h3 id="✅-2-启用中文-locale"><a href="#✅-2-启用中文-locale" class="headerlink" title="✅ 2. 启用中文 locale"></a>✅ 2. 启用中文 locale</h3><ol><li>编辑 <code>/etc/locale.gen</code>，去掉下面两行前面的 <code>#</code>：<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">zh_CN</span>.UTF-<span class="hljs-number">8</span> UTF-<span class="hljs-number">8</span><br><span class="hljs-attribute">zh_TW</span>.UTF-<span class="hljs-number">8</span> UTF-<span class="hljs-number">8</span><br></code></pre></td></tr></table></figure></li><li>生成 locale：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> locale-gen<br></code></pre></td></tr></table></figure></li><li>设置系统默认 locale：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> localectl set-locale LANG=zh_CN.UTF-8<br></code></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>arch vmtools install</title>
+    <link href="/2025/08/30/arch-vmtools-install/"/>
+    <url>/2025/08/30/arch-vmtools-install/</url>
+    
+    <content type="html"><![CDATA[<p>安装</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> pacman -S open-vm-tools<br><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">enable</span> --now vmtoolsd<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>QT无法下载部分文件</title>
     <link href="/2025/08/17/qt-wu-fa-xia-zai-bu-fen-wen-jian/"/>
     <url>/2025/08/17/qt-wu-fa-xia-zai-bu-fen-wen-jian/</url>

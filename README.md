@@ -1,5 +1,8 @@
 # 我的文章  
-### **2025-08** (7)  
+### **2025-08** (10)  
+- 2025-08-30 [终端字体太宽](https://blog.computerqwq.top/2025/08/30/zhong-duan-zi-ti-tai-kuan/)  
+- 2025-08-30 [linux设置中文](https://blog.computerqwq.top/2025/08/30/linux-she-zhi-zhong-wen/)  
+- 2025-08-30 [arch vmtools install](https://blog.computerqwq.top/2025/08/30/arch-vmtools-install/)  
 - 2025-08-17 [QT无法下载部分文件](https://blog.computerqwq.top/2025/08/17/qt-wu-fa-xia-zai-bu-fen-wen-jian/)  
 - 2025-08-16 [Chromium 浏览器伪造 SNI](https://blog.computerqwq.top/2025/08/16/chromium-liu-lan-qi-wei-zao-sni/)  
 - 2025-08-11 [openssl生成证书](https://blog.computerqwq.top/2025/08/11/openssl-sheng-cheng-zheng-shu/)  
