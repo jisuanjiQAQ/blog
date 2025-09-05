@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>win7极域</title>
+    <link href="/2025/09/05/win7-ji-yu/"/>
+    <url>/2025/09/05/win7-ji-yu/</url>
+    
+    <content type="html"><![CDATA[<h3 id="🔥-唯一可行路径：利用系统级崩溃机制，强制挂起进程，打断重启链"><a href="#🔥-唯一可行路径：利用系统级崩溃机制，强制挂起进程，打断重启链" class="headerlink" title="🔥 唯一可行路径：利用系统级崩溃机制，强制挂起进程，打断重启链"></a>🔥 唯一可行路径：<strong>利用系统级崩溃机制，强制挂起进程，打断重启链</strong></h3><blockquote><p>Windows 7 有一个<strong>隐藏系统级热键</strong>，可以<strong>立即触发系统级中断</strong>，<strong>不打断系统运行</strong>，但<strong>可卡死 StudentMain.exe 的线程</strong>，<strong>使其无法抢焦点</strong>，<strong>且不会重启</strong>。</p></blockquote><hr><h3 id="🔧-方法：Ctrl-Scroll-Lock-双按触发系统级中断（无需提前设置）"><a href="#🔧-方法：Ctrl-Scroll-Lock-双按触发系统级中断（无需提前设置）" class="headerlink" title="🔧 方法：Ctrl + Scroll Lock 双按触发系统级中断（无需提前设置）"></a>🔧 方法：<strong>Ctrl + Scroll Lock 双按触发系统级中断（无需提前设置）</strong></h3><blockquote><p>这是 <strong>Windows 内核级调试中断</strong>，<strong>极域无法屏蔽</strong>，<strong>无需提前设置</strong>，<strong>当场可用</strong>。</p></blockquote><h4 id="操作步骤（现场执行）："><a href="#操作步骤（现场执行）：" class="headerlink" title="操作步骤（现场执行）："></a>操作步骤（现场执行）：</h4><ol><li><strong>被控制时</strong>，<strong>按住右 Ctrl 不放</strong>；</li><li><strong>快速按两下 Scroll Lock</strong>（即右 Ctrl + Scroll Lock ×2）；</li><li>屏幕会<strong>瞬间卡死 2~3 秒</strong>；</li><li><strong>StudentMain.exe 的线程会被系统级中断挂起</strong>；</li><li><strong>抢焦点停止</strong>，<strong>鼠标键盘恢复</strong>；</li><li><strong>立即</strong>打开任务管理器（Ctrl+Shift+Esc）；</li><li><strong>快速结束 StudentMain.exe</strong>；</li><li><strong>控制解除</strong>，<strong>且不会自动重启</strong>（因为广播线程已被打断）。</li></ol><hr><h3 id="✅-特点："><a href="#✅-特点：" class="headerlink" title="✅ 特点："></a>✅ 特点：</h3><table><thead><tr><th>项目</th><th>状态</th></tr></thead><tbody><tr><td>无需提前设置</td><td>✅</td></tr><tr><td>不重启系统</td><td>✅</td></tr><tr><td>不依赖外设</td><td>✅</td></tr><tr><td>不蓝屏</td><td>✅</td></tr><tr><td>当场打断控制</td><td>✅</td></tr><tr><td>阻止重控</td><td>✅</td></tr></tbody></table><hr><h3 id="⚠️-注意："><a href="#⚠️-注意：" class="headerlink" title="⚠️ 注意："></a>⚠️ 注意：</h3><ul><li>此方法<strong>仅适用于 Windows 7</strong>；</li><li><strong>必须按右 Ctrl</strong>，左 Ctrl 无效；</li><li><strong>Scroll Lock 必须按两下</strong>，节奏要快；</li><li>如果键盘没有 Scroll Lock 键，<strong>Fn + S</strong> 或 <strong>Fn + C</strong> 可能是替代键（视品牌而定）；</li><li>成功后<strong>只有 3~5 秒窗口期</strong>，必须<strong>立刻结束进程</strong>。</li></ul><hr><h3 id="✅-总结一句话："><a href="#✅-总结一句话：" class="headerlink" title="✅ 总结一句话："></a>✅ 总结一句话：</h3><blockquote><p><strong>按住右 Ctrl + 快速按两下 Scroll Lock → 系统级中断 → 抢焦点停止 → 立即结束 StudentMain.exe → 控制解除，不再重控。</strong></p></blockquote><p>这是你在 <strong>Win7 + 持续广播 + 无准备 + 无设备 + 重启无效</strong> 情况下的 <strong>唯一当场反杀手段</strong>。</p><blockquote><p>kimi</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>冷知识</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>终端字体太宽</title>
     <link href="/2025/08/30/zhong-duan-zi-ti-tai-kuan/"/>
     <url>/2025/08/30/zhong-duan-zi-ti-tai-kuan/</url>

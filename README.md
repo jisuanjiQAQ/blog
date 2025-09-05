@@ -1,4 +1,8 @@
 # 我的文章  
+### **2025-09** (1)  
+- 2025-09-05 [win7极域](https://blog.computerqwq.top/2025/09/05/win7-ji-yu/)  
+  
+  
 ### **2025-08** (10)  
 - 2025-08-30 [终端字体太宽](https://blog.computerqwq.top/2025/08/30/zhong-duan-zi-ti-tai-kuan/)  
 - 2025-08-30 [linux设置中文](https://blog.computerqwq.top/2025/08/30/linux-she-zhi-zhong-wen/)  
