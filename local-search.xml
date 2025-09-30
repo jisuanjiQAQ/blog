@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>vcpkg现状</title>
+    <link href="/2025/09/30/vcpkg-xian-zhuang/"/>
+    <url>/2025/09/30/vcpkg-xian-zhuang/</url>
+    
+    <content type="html"><![CDATA[<h2 id="vcpkg-国内使用现状（2025-09）"><a href="#vcpkg-国内使用现状（2025-09）" class="headerlink" title="vcpkg 国内使用现状（2025-09）"></a>vcpkg 国内使用现状（2025-09）</h2><h3 id="1-官方是否支持改源？"><a href="#1-官方是否支持改源？" class="headerlink" title="1. 官方是否支持改源？"></a>1. 官方是否支持改源？</h3><p>否。<br>vcpkg 没有镜像源配置项，所有下载地址写死在 portfile 或工具链里，<strong>官方不提供、不计划提供换源接口</strong>。</p><h3 id="2-资产缓存能做什么？"><a href="#2-资产缓存能做什么？" class="headerlink" title="2. 资产缓存能做什么？"></a>2. 资产缓存能做什么？</h3><ul><li>只缓存<strong>已下载过的压缩包、工具包</strong>  </li><li>不能提前“偷渡”文件，也不能把 GitHub 地址变成国内地址  </li><li>用法：  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 第一次正常下载，同时写入缓存</span><br>X_VCPKG_ASSET_SOURCES=x-azurl,file:///mnt/cache,readwrite \<br>./vcpkg install zlib<br><span class="hljs-comment"># 后续同一版本直接读缓存，无需联网</span><br></code></pre></td></tr></table></figure></li></ul><h3 id="3-国内唯一可靠方案"><a href="#3-国内唯一可靠方案" class="headerlink" title="3. 国内唯一可靠方案"></a>3. 国内唯一可靠方案</h3><p>给终端整机配 <strong>HTTP(S) 代理</strong>，让 vcpkg 走代理访问 GitHub&#x2F;Azure CDN；<br>CI 环境可预跑一遍，把缓存目录 <code>/mnt/cache</code> 整体打包进内网，后续离线使用。</p><h3 id="4-不存在的功能"><a href="#4-不存在的功能" class="headerlink" title="4. 不存在的功能"></a>4. 不存在的功能</h3><ul><li>官方镜像源  </li><li>阿里云&#x2F;清华“一键换源”  </li><li>修改 <code>X_VCPKG_ASSET_SOURCES</code> 实现“加速”</li></ul><p>以上均未在官方文档出现.</p><hr><p><a href="https://learn.microsoft.com/zh-cn/vcpkg/consume/asset-caching?pivots=shell-powershell">https://learn.microsoft.com/zh-cn/vcpkg/consume/asset-caching?pivots=shell-powershell</a></p><p>结论：<strong>vcpkg 在国内无解源，只能代理或离线缓存。</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>冷知识</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>VitePress</title>
     <link href="/2025/09/20/vitepress/"/>
     <url>/2025/09/20/vitepress/</url>

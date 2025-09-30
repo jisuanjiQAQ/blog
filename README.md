@@ -1,5 +1,6 @@
 # 我的文章  
-### **2025-09** (1)  
+### **2025-09** (2)  
+- 2025-09-30 [vcpkg现状](https://blog.computerqwq.top/2025/09/30/vcpkg-xian-zhuang/)  
 - 2025-09-20 [VitePress](https://blog.computerqwq.top/2025/09/20/vitepress/)  
   
   
