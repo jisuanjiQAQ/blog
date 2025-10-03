@@ -1,4 +1,9 @@
 # 我的文章  
+### **2025-10** (2)  
+- 2025-10-03 [软sim](https://blog.computerqwq.top/2025/10/03/ruan-sim/)  
+- 2025-10-03 [红茶esim](https://blog.computerqwq.top/2025/10/03/hong-cha-esim/)  
+  
+  
 ### **2025-09** (2)  
 - 2025-09-30 [vcpkg现状](https://blog.computerqwq.top/2025/09/30/vcpkg-xian-zhuang/)  
 - 2025-09-20 [VitePress](https://blog.computerqwq.top/2025/09/20/vitepress/)  

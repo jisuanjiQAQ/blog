@@ -19,15 +19,15 @@
   <meta name="author" content="计算机qwq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="vcpkg 国内使用现状（2025-09）1. 官方是否支持改源？否。vcpkg 没有镜像源配置项，所有下载地址写死在 portfile 或工具链里，官方不提供、不计划提供换源接口。 2. 资产缓存能做什么？ 只缓存已下载过的压缩包、工具包   不能提前“偷渡”文件，也不能把 GitHub 地址变成国内地址   用法：  1234# 第一次正常下载，同时写入缓存X_VCPKG_ASSET_SOUR">
+    <meta name="description" content="软SIM（SoftSIM）技术详解：原理、应用与前景一、什么是软SIM？软SIM（SoftSIM），又称虚拟SIM（Virtual SIM），是一种通过纯软件方式模拟传统SIM卡功能的技术。它不需要物理SIM卡，也无需嵌入式芯片（如eSIM），而是将SIM卡的核心数据（如IMSI、密钥、鉴权算法等）以软件形式存储在设备的通用存储器中，并通过操作系统或可信环境实现SIM功能。 软SIM最早出现在20">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vcpkg现状">
-<meta property="og:url" content="https://blog.computerqwq.top/2025/09/30/vcpkg-xian-zhuang/index.html">
+<meta property="og:title" content="软sim">
+<meta property="og:url" content="https://blog.computerqwq.top/2025/10/03/ruan-sim/index.html">
 <meta property="og:site_name" content="计算机">
-<meta property="og:description" content="vcpkg 国内使用现状（2025-09）1. 官方是否支持改源？否。vcpkg 没有镜像源配置项，所有下载地址写死在 portfile 或工具链里，官方不提供、不计划提供换源接口。 2. 资产缓存能做什么？ 只缓存已下载过的压缩包、工具包   不能提前“偷渡”文件，也不能把 GitHub 地址变成国内地址   用法：  1234# 第一次正常下载，同时写入缓存X_VCPKG_ASSET_SOUR">
+<meta property="og:description" content="软SIM（SoftSIM）技术详解：原理、应用与前景一、什么是软SIM？软SIM（SoftSIM），又称虚拟SIM（Virtual SIM），是一种通过纯软件方式模拟传统SIM卡功能的技术。它不需要物理SIM卡，也无需嵌入式芯片（如eSIM），而是将SIM卡的核心数据（如IMSI、密钥、鉴权算法等）以软件形式存储在设备的通用存储器中，并通过操作系统或可信环境实现SIM功能。 软SIM最早出现在20">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-09-30T09:59:45.000Z">
-<meta property="article:modified_time" content="2025-09-30T10:02:23.955Z">
+<meta property="article:published_time" content="2025-10-03T10:41:05.000Z">
+<meta property="article:modified_time" content="2025-10-03T10:41:07.163Z">
 <meta property="article:author" content="计算机qwq">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -35,7 +35,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>vcpkg现状 - 计算机</title>
+  <title>软sim - 计算机</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +212,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="vcpkg现状"></span>
+            <span id="subtitle" data-typed-text="软sim"></span>
           
         </div>
 
@@ -228,8 +228,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-09-30 17:59" pubdate>
-          2025年9月30日 下午
+        <time datetime="2025-10-03 18:41" pubdate>
+          2025年10月3日 晚上
         </time>
       </span>
     
@@ -240,7 +240,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          267 字
+          1.2k 字
         
       </span>
     
@@ -251,7 +251,7 @@
         
         
         
-          3 分钟
+          10 分钟
         
       </span>
     
@@ -297,27 +297,89 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">vcpkg现状</h1>
+            <h1 id="seo-header">软sim</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="vcpkg-国内使用现状（2025-09）"><a href="#vcpkg-国内使用现状（2025-09）" class="headerlink" title="vcpkg 国内使用现状（2025-09）"></a>vcpkg 国内使用现状（2025-09）</h2><h3 id="1-官方是否支持改源？"><a href="#1-官方是否支持改源？" class="headerlink" title="1. 官方是否支持改源？"></a>1. 官方是否支持改源？</h3><p>否。<br>vcpkg 没有镜像源配置项，所有下载地址写死在 portfile 或工具链里，<strong>官方不提供、不计划提供换源接口</strong>。</p>
-<h3 id="2-资产缓存能做什么？"><a href="#2-资产缓存能做什么？" class="headerlink" title="2. 资产缓存能做什么？"></a>2. 资产缓存能做什么？</h3><ul>
-<li>只缓存<strong>已下载过的压缩包、工具包</strong>  </li>
-<li>不能提前“偷渡”文件，也不能把 GitHub 地址变成国内地址  </li>
-<li>用法：  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 第一次正常下载，同时写入缓存</span><br>X_VCPKG_ASSET_SOURCES=x-azurl,file:///mnt/cache,readwrite \<br>./vcpkg install zlib<br><span class="hljs-comment"># 后续同一版本直接读缓存，无需联网</span><br></code></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="3-国内唯一可靠方案"><a href="#3-国内唯一可靠方案" class="headerlink" title="3. 国内唯一可靠方案"></a>3. 国内唯一可靠方案</h3><p>给终端整机配 <strong>HTTP(S) 代理</strong>，让 vcpkg 走代理访问 GitHub&#x2F;Azure CDN；<br>CI 环境可预跑一遍，把缓存目录 <code>/mnt/cache</code> 整体打包进内网，后续离线使用。</p>
-<h3 id="4-不存在的功能"><a href="#4-不存在的功能" class="headerlink" title="4. 不存在的功能"></a>4. 不存在的功能</h3><ul>
-<li>官方镜像源  </li>
-<li>阿里云&#x2F;清华“一键换源”  </li>
-<li>修改 <code>X_VCPKG_ASSET_SOURCES</code> 实现“加速”</li>
-</ul>
-<p>以上均未在官方文档出现.</p>
+                <h1 id="软SIM（SoftSIM）技术详解：原理、应用与前景"><a href="#软SIM（SoftSIM）技术详解：原理、应用与前景" class="headerlink" title="软SIM（SoftSIM）技术详解：原理、应用与前景"></a>软SIM（SoftSIM）技术详解：原理、应用与前景</h1><h2 id="一、什么是软SIM？"><a href="#一、什么是软SIM？" class="headerlink" title="一、什么是软SIM？"></a>一、什么是软SIM？</h2><p>软SIM（SoftSIM），又称虚拟SIM（Virtual SIM），是一种<strong>通过纯软件方式模拟传统SIM卡功能</strong>的技术。它不需要物理SIM卡，也无需嵌入式芯片（如eSIM），而是将SIM卡的核心数据（如IMSI、密钥、鉴权算法等）以软件形式存储在设备的通用存储器中，并通过操作系统或可信环境实现SIM功能。</p>
+<p>软SIM最早出现在2015年左右，华为天际通、小米漫游等产品就是其早期应用代表。</p>
 <hr>
-<p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/vcpkg/consume/asset-caching?pivots=shell-powershell">https://learn.microsoft.com/zh-cn/vcpkg/consume/asset-caching?pivots=shell-powershell</a></p>
-<p>结论：<strong>vcpkg 在国内无解源，只能代理或离线缓存。</strong></p>
+<h2 id="二、软SIM的工作原理"><a href="#二、软SIM的工作原理" class="headerlink" title="二、软SIM的工作原理"></a>二、软SIM的工作原理</h2><p>软SIM的核心思想是：<strong>用软件替代硬件SIM卡，实现用户身份识别和网络鉴权</strong>。其基本工作流程如下：</p>
+<ol>
+<li><strong>数据存储</strong>：将SIM卡的关键信息（如IMSI、Ki、OPc等）存储在设备的内存中，通常通过加密保护。</li>
+<li><strong>功能封装</strong>：将SIM卡的各项功能（如鉴权、短信、联系人）封装成服务模块。</li>
+<li><strong>接口调用</strong>：基带芯片或操作系统通过调用软SIM模块提供的接口，完成与网络的交互。</li>
+<li><strong>鉴权过程</strong>：在接入网络时，软SIM模块根据网络下发的随机数（RAND）和本地密钥计算响应值（RES），完成身份验证。</li>
+</ol>
+<p>为了提升安全性，部分方案将软SIM模块运行在<strong>TrustZone</strong>等可信执行环境中，防止数据被篡改或窃取。</p>
+<hr>
+<h2 id="三、软SIM与eSIM的区别"><a href="#三、软SIM与eSIM的区别" class="headerlink" title="三、软SIM与eSIM的区别"></a>三、软SIM与eSIM的区别</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>软SIM（SoftSIM）</th>
+<th>eSIM（嵌入式SIM）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>是否存在硬件</td>
+<td>无硬件，纯软件实现</td>
+<td>有专用芯片（eUICC）</td>
+</tr>
+<tr>
+<td>安全性</td>
+<td>较低，依赖软件保护</td>
+<td>高，具备硬件级安全隔离</td>
+</tr>
+<tr>
+<td>运营商支持</td>
+<td>受限，多为定制合作</td>
+<td>广泛支持，符合GSMA标准</td>
+</tr>
+<tr>
+<td>灵活性</td>
+<td>高，可远程配置和切换</td>
+<td>高，支持远程下载配置文件</td>
+</tr>
+<tr>
+<td>成本</td>
+<td>低，无需额外硬件</td>
+<td>较高，需集成eUICC芯片</td>
+</tr>
+</tbody></table>
+<p>软SIM的最大优势在于<strong>成本低、部署灵活</strong>，但也因缺乏硬件保护而面临更大的安全挑战。</p>
+<hr>
+<h2 id="四、软SIM的应用场景"><a href="#四、软SIM的应用场景" class="headerlink" title="四、软SIM的应用场景"></a>四、软SIM的应用场景</h2><p>尽管面临安全性质疑，软SIM仍在以下场景中展现出独特价值：</p>
+<ol>
+<li><strong>国际漫游服务</strong>：如华为天际通、飞猫卡等，通过软SIM技术为用户提供低成本的国际数据服务。</li>
+<li><strong>物联网设备</strong>：对成本和体积敏感的IoT终端（如智能表计、穿戴设备）可采用软SIM降低硬件复杂度。</li>
+<li><strong>企业设备管理</strong>：企业可为员工设备统一配置软SIM，集中管理通信服务，节省SIM卡采购成本。</li>
+<li><strong>临时通信需求</strong>：如旅游、短期项目等场景，软SIM可快速开通、灵活切换运营商。</li>
+</ol>
+<hr>
+<h2 id="五、软SIM的安全挑战"><a href="#五、软SIM的安全挑战" class="headerlink" title="五、软SIM的安全挑战"></a>五、软SIM的安全挑战</h2><p>软SIM的最大争议在于<strong>安全性</strong>。由于其依赖软件实现，存在以下风险：</p>
+<ul>
+<li><strong>数据泄露风险</strong>：SIM数据存储在通用内存中，可能被恶意软件读取或篡改。</li>
+<li><strong>缺乏硬件隔离</strong>：不像eSIM有专用安全芯片，软SIM难以防范物理攻击。</li>
+<li><strong>运营商信任问题</strong>：多数运营商对软SIM持谨慎态度，担心其无法保障网络安全。</li>
+</ul>
+<p>为缓解这些问题，部分方案采用<strong>TrustZone</strong>、<strong>OTP Fuse</strong>等技术增强安全性，但仍难以完全替代硬件SIM的安全等级。</p>
+<hr>
+<h2 id="六、软SIM的未来展望"><a href="#六、软SIM的未来展望" class="headerlink" title="六、软SIM的未来展望"></a>六、软SIM的未来展望</h2><p>软SIM作为一种轻量级、低成本的SIM替代方案，在<strong>特定场景下具有明显优势</strong>。未来其发展可能呈现以下趋势：</p>
+<ul>
+<li><strong>与eSIM融合</strong>：在低端设备中作为eSIM的补充，提供灵活的SIM部署方案。</li>
+<li><strong>安全机制增强</strong>：借助TEE（可信执行环境）、区块链等技术提升数据保护能力。</li>
+<li><strong>运营商合作深化</strong>：通过定制化合作模式，推动软SIM在特定市场和业务中的落地。</li>
+</ul>
+<p>尽管软SIM难以完全取代传统SIM或eSIM，但在<strong>物联网、跨境通信、临时接入</strong>等领域，仍具备广阔的应用前景。</p>
+<hr>
+<h2 id="七、结语"><a href="#七、结语" class="headerlink" title="七、结语"></a>七、结语</h2><p>软SIM代表了SIM技术“去硬件化”的一次重要尝试。它在带来灵活性和成本优势的同时，也提出了新的安全命题。未来，软SIM能否大规模普及，关键在于<strong>安全性与合规性的突破</strong>，以及<strong>产业链各方的协同推动</strong>。</p>
+<hr>
+<dl><dt><strong>参考文献：</strong><br>: <a target="_blank" rel="noopener" href="http://9m8m.com/1021712.html">SIM卡共享技术原理、应用场景与安全风险探讨</a><br>: <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/650256328">SoftSIM？Virtual SIM？廉价版eSIM？</a><br>: <a target="_blank" rel="noopener" href="https://www.u-blox.com/zh/technologies/isim-latest-innovation-in-sim-technology-explained">iSIM：SIM 卡技术的最新创新解读</a><br>: <a target="_blank" rel="noopener" href="https://patents.google.com/patent/CN106162505B/zh">CN106162505B - 软sim通信方法、装置及终端</a></dt><dd><a target="_blank" rel="noopener" href="https://m.36kr.com/p/1720991645697">飞猫无限用软sim卡技术提供简便的国外上网体验</a></dd></dl><hr>
+<blockquote>
+<p>kimi</p>
+</blockquote>
 
                 
               </div>
@@ -356,8 +418,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>vcpkg现状</div>
-      <div>https://blog.computerqwq.top/2025/09/30/vcpkg-xian-zhuang/</div>
+      <div>软sim</div>
+      <div>https://blog.computerqwq.top/2025/10/03/ruan-sim/</div>
     </div>
     <div class="license-meta">
       
@@ -369,13 +431,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年9月30日</div>
+          <div>2025年10月3日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年9月30日</div>
+          <div>2025年10月3日</div>
         </div>
       
       
@@ -406,18 +468,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/10/03/hong-cha-esim/" title="红茶esim">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">红茶esim</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/09/20/vitepress/" title="VitePress">
-                        <span class="hidden-mobile">VitePress</span>
+                      <a href="/2025/10/03/hong-cha-esim/" title="红茶esim">
+                        <span class="hidden-mobile">红茶esim</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
