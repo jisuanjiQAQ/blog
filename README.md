@@ -1,5 +1,6 @@
 # 我的文章  
-### **2025-10** (2)  
+### **2025-10** (3)  
+- 2025-10-07 [python可执行程序镜像下载](https://blog.computerqwq.top/2025/10/07/python-ke-zhi-xing-cheng-xu-jing-xiang-xia-zai/)  
 - 2025-10-03 [软sim](https://blog.computerqwq.top/2025/10/03/ruan-sim/)  
 - 2025-10-03 [红茶esim](https://blog.computerqwq.top/2025/10/03/hong-cha-esim/)  
   
