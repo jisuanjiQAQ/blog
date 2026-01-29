@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>qt缺少libicu73</title>
+    <link href="/2026/01/29/qt-que-shao-libicu73/"/>
+    <url>/2026/01/29/qt-que-shao-libicu73/</url>
+    
+    <content type="html"><![CDATA[<h1 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h1><p>我的系统ubuntu 24.04.3,qt版本为6.9.3<br><img src="https://i-blog.csdnimg.cn/direct/9bd936d7685740dda093f08c52068869.png" alt="截图"><br>虽然可能是没有安装完全的原因,好像爆内存给我安装程序杀了<br>这里缺少了libicu73非常难搞，你去百度基本上答案也是没有多少全部都是install libicu-dev。然后在我这没什么鸟用。</p><h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>前往<a href="https://github.comunicode-org/icu/releases/tag/release-73-2">https://github.comunicode-org/icu/releases/tag/release-73-2</a> 下载icu解压,把里面的lib全部复制到qt的lib里面,不过因为软链接的缘故,直接复制会断开,我们需要这样.</p><pre><code class="bash">cp -a 你的icu解压目录/usr/local/lib/libicu*.so* 你的qt目录/lib</code></pre><p>就好了</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件开发</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>密码管理工具KeePass 2</title>
     <link href="/2026/01/26/mi-ma-guan-li-gong-ju-keepass-2/"/>
     <url>/2026/01/26/mi-ma-guan-li-gong-ju-keepass-2/</url>

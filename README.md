@@ -1,5 +1,6 @@
 # 我的文章  
-### **2026-01** (2)  
+### **2026-01** (3)  
+- 2026-01-29 [qt缺少libicu73](https://blog.computerqwq.top/2026/01/29/qt-que-shao-libicu73/)  
 - 2026-01-26 [密码管理工具KeePass 2](https://blog.computerqwq.top/2026/01/26/mi-ma-guan-li-gong-ju-keepass-2/)  
 - 2026-01-17 [Visual Studio 2015下载安装](https://blog.computerqwq.top/2026/01/17/visual-studio-2015-xia-zai-an-zhuang/)  
   
