@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>ip网关问题无法访问软路由</title>
+    <link href="/2026/02/06/ip-wang-guan-wen-ti-wu-fa-fang-wen-ruan-lu-you/"/>
+    <url>/2026/02/06/ip-wang-guan-wen-ti-wu-fa-fang-wen-ruan-lu-you/</url>
+    
+    <content type="html"><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>想刷一个openwrt,就拿玩客云去刷.<br>然后现在的固件全是没用DHCP的,全是自己设置的ip.这对我们这种不会手动编译的特别不友好.</p><h2 id="问题方式"><a href="#问题方式" class="headerlink" title="问题方式"></a>问题方式</h2><p>不能显示在路由器后台.</p><h2 id="其它奇怪问题"><a href="#其它奇怪问题" class="headerlink" title="其它奇怪问题"></a>其它奇怪问题</h2><p>在使用openwrt.ai构建成功之后,刷入上去,ip是对的就是访问不了.而且我看到了那个构建日志有点东西构建失败了,我记得我网关也是对的啊.</p><h2 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h2><p>找一台设备设置静态改成对应的ip段但是不要重名,然后访问目标ip就好了.</p><p><a href="https://gh.computerqwq.top/xydche/onecloud-openwrt">成功的镜像</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>openwrt</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>qt缺少libicu73</title>
     <link href="/2026/01/29/qt-que-shao-libicu73/"/>
     <url>/2026/01/29/qt-que-shao-libicu73/</url>

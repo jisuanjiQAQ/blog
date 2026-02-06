@@ -1,4 +1,8 @@
 # 我的文章  
+### **2026-02** (1)  
+- 2026-02-06 [ip网关问题无法访问软路由](https://blog.computerqwq.top/2026/02/06/ip-wang-guan-wen-ti-wu-fa-fang-wen-ruan-lu-you/)  
+  
+  
 ### **2026-01** (3)  
 - 2026-01-29 [qt缺少libicu73](https://blog.computerqwq.top/2026/01/29/qt-que-shao-libicu73/)  
 - 2026-01-26 [密码管理工具KeePass 2](https://blog.computerqwq.top/2026/01/26/mi-ma-guan-li-gong-ju-keepass-2/)  
