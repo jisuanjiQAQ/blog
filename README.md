@@ -1,5 +1,7 @@
 # 我的文章  
-### **2026-02** (1)  
+### **2026-02** (3)  
+- 2026-02-12 [2026hexon部署教程](https://blog.computerqwq.top/2026/02/12/2026hexon-bu-shu-jiao-cheng/)  
+- 2026-02-12 [一些路由器设置选项科普](https://blog.computerqwq.top/2026/02/12/yi-xie-lu-you-qi-she-zhi-xuan-xiang-ke-pu/)  
 - 2026-02-06 [ip网关问题无法访问软路由](https://blog.computerqwq.top/2026/02/06/ip-wang-guan-wen-ti-wu-fa-fang-wen-ruan-lu-you/)  
   
   

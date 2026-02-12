@@ -19,23 +19,24 @@
   <meta name="author" content="计算机qwq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="起因想刷一个openwrt,就拿玩客云去刷.然后现在的固件全是没用DHCP的,全是自己设置的ip.这对我们这种不会手动编译的特别不友好. 问题方式不能显示在路由器后台. 其它奇怪问题在使用openwrt.ai构建成功之后,刷入上去,ip是对的就是访问不了.而且我看到了那个构建日志有点东西构建失败了,我记得我网关也是对的啊. 解决问题找一台设备设置静态改成对应的ip段但是不要重名,然后访问目标ip就">
+    <meta name="description" content="一、2.4G Wi-Fi 设置解析 模式：802.11b&#x2F;g&#x2F;n  含义：这是无线通信协议的混合模式。它同时支持旧式的 802.11b、 802.11g 标准以及更现代的 802.11n 标准。 作用与影响： 兼容性高：可以确保各种新旧设备（如老式打印机、智能手机等）都能连接上这个Wi-Fi。 性能妥协：为了让老设备正常工作，路由器可能会降低整体运行效率。如果所有设备都支持 8">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ip网关问题无法访问软路由">
-<meta property="og:url" content="https://blog.computerqwq.top/2026/02/06/ip-wang-guan-wen-ti-wu-fa-fang-wen-ruan-lu-you/index.html">
+<meta property="og:title" content="一些路由器设置选项科普">
+<meta property="og:url" content="https://blog.computerqwq.top/2026/02/12/yi-xie-lu-you-qi-she-zhi-xuan-xiang-ke-pu/index.html">
 <meta property="og:site_name" content="计算机">
-<meta property="og:description" content="起因想刷一个openwrt,就拿玩客云去刷.然后现在的固件全是没用DHCP的,全是自己设置的ip.这对我们这种不会手动编译的特别不友好. 问题方式不能显示在路由器后台. 其它奇怪问题在使用openwrt.ai构建成功之后,刷入上去,ip是对的就是访问不了.而且我看到了那个构建日志有点东西构建失败了,我记得我网关也是对的啊. 解决问题找一台设备设置静态改成对应的ip段但是不要重名,然后访问目标ip就">
+<meta property="og:description" content="一、2.4G Wi-Fi 设置解析 模式：802.11b&#x2F;g&#x2F;n  含义：这是无线通信协议的混合模式。它同时支持旧式的 802.11b、 802.11g 标准以及更现代的 802.11n 标准。 作用与影响： 兼容性高：可以确保各种新旧设备（如老式打印机、智能手机等）都能连接上这个Wi-Fi。 性能妥协：为了让老设备正常工作，路由器可能会降低整体运行效率。如果所有设备都支持 8">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-02-06T03:12:42.000Z">
-<meta property="article:modified_time" content="2026-02-06T03:25:42.864Z">
+<meta property="article:published_time" content="2026-02-12T12:52:08.000Z">
+<meta property="article:modified_time" content="2026-02-12T12:54:56.197Z">
 <meta property="article:author" content="计算机qwq">
+<meta property="article:tag" content="路由器">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>ip网关问题无法访问软路由 - 计算机</title>
+  <title>一些路由器设置选项科普 - 计算机</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="ip网关问题无法访问软路由"></span>
+            <span id="subtitle" data-typed-text="一些路由器设置选项科普"></span>
           
         </div>
 
@@ -228,8 +229,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2026-02-06 11:12" pubdate>
-          2026年2月6日 上午
+        <time datetime="2026-02-12 20:52" pubdate>
+          2026年2月12日 晚上
         </time>
       </span>
     
@@ -240,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          171 字
+          818 字
         
       </span>
     
@@ -251,7 +252,7 @@
         
         
         
-          2 分钟
+          7 分钟
         
       </span>
     
@@ -297,16 +298,76 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">ip网关问题无法访问软路由</h1>
+            <h1 id="seo-header">一些路由器设置选项科普</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>想刷一个openwrt,就拿玩客云去刷.<br>然后现在的固件全是没用DHCP的,全是自己设置的ip.这对我们这种不会手动编译的特别不友好.</p>
-<h2 id="问题方式"><a href="#问题方式" class="headerlink" title="问题方式"></a>问题方式</h2><p>不能显示在路由器后台.</p>
-<h2 id="其它奇怪问题"><a href="#其它奇怪问题" class="headerlink" title="其它奇怪问题"></a>其它奇怪问题</h2><p>在使用openwrt.ai构建成功之后,刷入上去,ip是对的就是访问不了.而且我看到了那个构建日志有点东西构建失败了,我记得我网关也是对的啊.</p>
-<h2 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h2><p>找一台设备设置静态改成对应的ip段但是不要重名,然后访问目标ip就好了.</p>
-<p><a target="_blank" rel="noopener" href="https://gh.computerqwq.top/xydche/onecloud-openwrt">成功的镜像</a></p>
+                <h3 id="一、2-4G-Wi-Fi-设置解析"><a href="#一、2-4G-Wi-Fi-设置解析" class="headerlink" title="一、2.4G Wi-Fi 设置解析"></a><strong>一、2.4G Wi-Fi 设置解析</strong></h3><ol>
+<li><p><strong>模式：802.11b&#x2F;g&#x2F;n</strong></p>
+<ul>
+<li><strong>含义</strong>：这是无线通信协议的混合模式。它同时支持旧式的 <strong>802.11b</strong>、 <strong>802.11g</strong> 标准以及更现代的 <strong>802.11n</strong> 标准。</li>
+<li><strong>作用与影响</strong>：<ul>
+<li><strong>兼容性高</strong>：可以确保各种新旧设备（如老式打印机、智能手机等）都能连接上这个Wi-Fi。</li>
+<li><strong>性能妥协</strong>：为了让老设备正常工作，路由器可能会降低整体运行效率。如果所有设备都支持 <strong>802.11n</strong>，单独设置为此模式可能获得最佳性能。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Wi-Fi频宽设置：20&#x2F;40 MHz</strong></p>
+<ul>
+<li><strong>含义</strong>：这是无线信号的“车道”宽度。提供了两种选择：<strong>20MHz</strong> 窄车道或 <strong>40MHz</strong> 宽车道。</li>
+<li><strong>作用与影响</strong>：<ul>
+<li><strong>20MHz</strong>：稳定性好，抗干扰能力强，适合环境复杂、多个Wi-Fi信号重叠的区域。</li>
+<li><strong>40MHz</strong>：理论速度翻倍，但更容易受到其他无线信号的干扰，可能降低稳定性。在2.4GHz频段拥挤的环境中，使用40MHz有时反而会降低效率。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>11n 前导间隔设置：短间隔</strong></p>
+<ul>
+<li><strong>含义</strong>：这是802.11n协议中用于分隔数据帧的“前导码”长度。分为“长间隔”和“短间隔”。</li>
+<li><strong>作用与影响</strong>：<ul>
+<li><strong>短间隔</strong>：减少了帧间的等待时间，能提升数据传输效率和网络吞吐量（速度）。</li>
+<li><strong>兼容性注意</strong>：一些非常老旧的无线设备可能只支持“长间隔”。如果家中没有此类设备，保持“短间隔”可以获得更好性能。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="二、5G-Wi-Fi-设置解析"><a href="#二、5G-Wi-Fi-设置解析" class="headerlink" title="二、5G Wi-Fi 设置解析"></a><strong>二、5G Wi-Fi 设置解析</strong></h3><ol>
+<li><p><strong>模式：802.11a&#x2F;n&#x2F;ac&#x2F;ax</strong></p>
+<ul>
+<li><strong>含义</strong>：这是支持更先进协议的混合模式。它涵盖了较旧的 <strong>802.11a&#x2F;n</strong>、主流的 <strong>802.11ac</strong> 以及最新的 <strong>802.11ax</strong>。</li>
+<li><strong>作用与影响</strong>：<ul>
+<li><strong>面向未来</strong>：<strong>802.11ax</strong> 就是 <strong>Wi-Fi 6</strong>，它带来了更高的速度、更好的多设备同时连接能力和能效。</li>
+<li><strong>高性能保障</strong>：此设置允许支持Wi-Fi 5和Wi-Fi 6的设备发挥最大性能，同时向下兼容旧设备。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Wi-Fi频宽设置：20&#x2F;40&#x2F;80 MHz</strong></p>
+<ul>
+<li><strong>含义</strong>：在5GHz频段提供了更宽的车道选择，最高可达 <strong>80MHz</strong>。</li>
+<li><strong>作用与影响</strong>：<ul>
+<li><strong>速度关键</strong>：更宽的频宽是提升Wi-Fi速度的最重要因素之一。<strong>80MHz</strong> 能提供非常高的理论速率，适用于高速下载、4K&#x2F;8K视频流传输和在线游戏。</li>
+<li><strong>环境优势</strong>：5GHz频段相对干净，干扰少，因此使用80MHz通常能稳定获得高性能。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>11ax 前导间隔设置：中间隔</strong></p>
+<ul>
+<li><strong>含义</strong>：这是Wi-Fi 6标准中引入的优化设置，通常有“普通间隔”和“中间隔”等选项。</li>
+<li><strong>作用与影响</strong>：<ul>
+<li><strong>中间隔</strong>：这是一种平衡设置。它在提升多设备传输效率（相比普通间隔）和保持与某些早期Wi-Fi 6设备兼容性之间取得折中。</li>
+<li><strong>性能优化</strong>：如果确定所有连接设备都支持最新的Wi-Fi 6标准，可以尝试设置为更短的间隔以追求极致性能。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>您可以根据自己的主要设备类型和网络需求（如更追求速度还是稳定性）对这些设置进行微调。</p>
 
                 
               </div>
@@ -325,7 +386,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/openwrt/" class="category-chain-item">openwrt</a>
+  <a href="/categories/%E5%86%B7%E7%9F%A5%E8%AF%86/" class="category-chain-item">冷知识</a>
   
   
 
@@ -337,6 +398,13 @@
     </div>
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/" class="print-no-link">#路由器</a>
+      
+    </div>
+  
 </div>
 
 
@@ -345,8 +413,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>ip网关问题无法访问软路由</div>
-      <div>https://blog.computerqwq.top/2026/02/06/ip-wang-guan-wen-ti-wu-fa-fang-wen-ruan-lu-you/</div>
+      <div>一些路由器设置选项科普</div>
+      <div>https://blog.computerqwq.top/2026/02/12/yi-xie-lu-you-qi-she-zhi-xuan-xiang-ke-pu/</div>
     </div>
     <div class="license-meta">
       
@@ -358,13 +426,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2026年2月6日</div>
+          <div>2026年2月12日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2026年2月6日</div>
+          <div>2026年2月12日</div>
         </div>
       
       
@@ -395,9 +463,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2026/02/12/yi-xie-lu-you-qi-she-zhi-xuan-xiang-ke-pu/" title="一些路由器设置选项科普">
+                      <a href="/2026/02/12/2026hexon-bu-shu-jiao-cheng/" title="2026hexon部署教程">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">一些路由器设置选项科普</span>
+                        <span class="hidden-mobile">2026hexon部署教程</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -405,8 +473,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2026/01/29/qt-que-shao-libicu73/" title="qt缺少libicu73">
-                        <span class="hidden-mobile">qt缺少libicu73</span>
+                      <a href="/2026/02/06/ip-wang-guan-wen-ti-wu-fa-fang-wen-ruan-lu-you/" title="ip网关问题无法访问软路由">
+                        <span class="hidden-mobile">ip网关问题无法访问软路由</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
