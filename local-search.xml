@@ -4,6 +4,46 @@
   
   
   <entry>
+    <title>reflector测试镜像源</title>
+    <link href="/2026/03/27/reflector-ce-shi-jing-xiang-yuan/"/>
+    <url>/2026/03/27/reflector-ce-shi-jing-xiang-yuan/</url>
+    
+    <content type="html"><![CDATA[<h3 id="测试镜像"><a href="#测试镜像" class="headerlink" title="测试镜像"></a>测试镜像</h3><p>在命令中添加 <code>--latest &lt;数量&gt;</code>参数，只测试速度最快的前几个候选，这是最有效的方法。</p><p><strong>推荐命令（直接复制使用）：</strong></p><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">reflector <span class="hljs-params">--country</span> China <span class="hljs-params">--latest</span> 5 <span class="hljs-params">--sort</span> rate <span class="hljs-params">--save</span> <span class="hljs-string">/etc/pacman.d/mirrorlist</span><br></code></pre></td></tr></table></figure><ul><li><code>--latest 5</code>：<strong>关键参数</strong>。它让 <code>reflector</code>只从镜像列表中获取<strong>最新的5个镜像</strong>进行速度测试和排序，而不是测试所有几十个中国镜像，耗时将从几分钟缩短到几十秒。</li></ul><h3 id="其他加速和优化技巧"><a href="#其他加速和优化技巧" class="headerlink" title="其他加速和优化技巧"></a>其他加速和优化技巧</h3><ol><li><p><strong>指定协议，避免测试慢速协议</strong>：</p> <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">reflector <span class="hljs-params">--country</span> China <span class="hljs-params">--latest</span> 5 <span class="hljs-params">--protocol</span> https <span class="hljs-params">--sort</span> rate <span class="hljs-params">--save</span> <span class="hljs-string">/etc/pacman.d/mirrorlist</span><br></code></pre></td></tr></table></figure><ul><li><code>--protocol https</code>：只测试 <strong>HTTPS</strong>​ 镜像。避免测试可能较慢或不稳定的 <code>rsync</code>和 <code>http</code>协议镜像，测试过程更快更安全。</li></ul></li><li><p><strong>放宽“新鲜度”要求</strong>：</p><p> 将 <code>--age</code>参数值调大（例如从12小时改为24或48小时），可用的候选镜像会更多，<code>--latest</code>参数能从中选出更优解。</p> <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">reflector <span class="hljs-params">--country</span> China <span class="hljs-params">--age</span> 24 <span class="hljs-params">--latest</span> 5 <span class="hljs-params">--sort</span> rate <span class="hljs-params">--save</span> <span class="hljs-string">/etc/pacman.d/mirrorlist</span><br></code></pre></td></tr></table></figure></li><li><p><strong>设置更合理的超时时间</strong>：</p><p> 如果网络不好，适当延长超时可以避免因个别镜像响应慢而卡住整个测试。</p> <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">reflector <span class="hljs-params">--country</span> China <span class="hljs-params">--latest</span> 5 <span class="hljs-params">--download-timeout</span> 10 <span class="hljs-params">--save</span> <span class="hljs-string">/etc/pacman.d/mirrorlist</span><br></code></pre></td></tr></table></figure></li></ol><h3 id="综合建议（最佳实践）"><a href="#综合建议（最佳实践）" class="headerlink" title="综合建议（最佳实践）"></a>综合建议（最佳实践）</h3><p>对于大多数情况，使用这个组合命令即可在<strong>速度</strong>和<strong>质量</strong>间取得最佳平衡：</p><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">reflector <span class="hljs-params">--country</span> China <span class="hljs-params">--age</span> 24 <span class="hljs-params">--protocol</span> https <span class="hljs-params">--latest</span> 5 <span class="hljs-params">--sort</span> rate <span class="hljs-params">--save</span> <span class="hljs-string">/etc/pacman.d/mirrorlist</span><br></code></pre></td></tr></table></figure><p><strong>这条命令会：</strong></p><ol><li><p>筛选中国地区、24小时内同步过的、使用HTTPS协议的镜像。</p></li><li><p>只取其中最新的5个进行速度测试。</p></li><li><p>按速度排序，并将最快的结果写入配置文件。</p></li></ol><blockquote><p>使用了ai</p></blockquote>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>kmscon使tty下支持中文</title>
+    <link href="/2026/03/27/kmscon-shi-tty-xia-zhi-chi-zhong-wen/"/>
+    <url>/2026/03/27/kmscon-shi-tty-xia-zhi-chi-zhong-wen/</url>
+    
+    <content type="html"><![CDATA[<h3 id="什么是-kmscon？"><a href="#什么是-kmscon？" class="headerlink" title="什么是 kmscon？"></a>什么是 kmscon？</h3><p>kmscon 是一个轻量级、高度可配置的 Linux 命令行会话管理器。它基于内核模式设置（KMS）驱动程序和 Wayland 协议构建，旨在取代传统的 Linux 控制台（如 Linux VT），为用户提供一个美观、高效且功能丰富的交互式终端体验。<br>与依赖 X Window System 的终端模拟器不同，kmscon 直接利用内核的图形功能进行渲染，这使得它在系统维护、嵌入式设备或无图形界面的服务器环境中表现出色。</p><h3 id="工具特性"><a href="#工具特性" class="headerlink" title="工具特性"></a>工具特性</h3><p>因为我目前只在tty下稍微用了一下就讲一点我知道的.<br>它能够在vm虚拟机下的arch tty内使tty支持中文顺利使用上archinstall的中文语言<br>并且在我使用的时候虚拟机可以自由切换鼠标了!<br><del>真是太舒服了</del></p><h4 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h4><p><a href="https://wiki.archlinuxcn.org/wiki/KMSCON">https://wiki.archlinuxcn.org/wiki/KMSCON</a><br><a href="https://github.com/kmscon/kmscon">https://github.com/kmscon/kmscon</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>软件推荐</tag>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2026hexon部署教程</title>
     <link href="/2026/02/12/2026hexon-bu-shu-jiao-cheng/"/>
     <url>/2026/02/12/2026hexon-bu-shu-jiao-cheng/</url>

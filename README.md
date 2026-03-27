@@ -1,4 +1,9 @@
 # 我的文章  
+### **2026-03** (2)  
+- 2026-03-27 [reflector测试镜像源](https://blog.computerqwq.top/2026/03/27/reflector-ce-shi-jing-xiang-yuan/)  
+- 2026-03-27 [kmscon使tty下支持中文](https://blog.computerqwq.top/2026/03/27/kmscon-shi-tty-xia-zhi-chi-zhong-wen/)  
+  
+  
 ### **2026-02** (3)  
 - 2026-02-12 [2026hexon部署教程](https://blog.computerqwq.top/2026/02/12/2026hexon-bu-shu-jiao-cheng/)  
 - 2026-02-12 [一些路由器设置选项科普](https://blog.computerqwq.top/2026/02/12/yi-xie-lu-you-qi-she-zhi-xuan-xiang-ke-pu/)  
