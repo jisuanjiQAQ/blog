@@ -1,4 +1,8 @@
 # 我的文章  
+### **2026-04** (1)  
+- 2026-04-16 [hmcl手动初始化启动软件](https://blog.computerqwq.top/2026/04/16/hmcl-shou-dong-chu-shi-hua-qi-dong-ruan-jian/)  
+  
+  
 ### **2026-03** (2)  
 - 2026-03-27 [reflector测试镜像源](https://blog.computerqwq.top/2026/03/27/reflector-ce-shi-jing-xiang-yuan/)  
 - 2026-03-27 [kmscon使tty下支持中文](https://blog.computerqwq.top/2026/03/27/kmscon-shi-tty-xia-zhi-chi-zhong-wen/)  

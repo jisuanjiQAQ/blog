@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>hmcl手动初始化启动软件</title>
+    <link href="/2026/04/16/hmcl-shou-dong-chu-shi-hua-qi-dong-ruan-jian/"/>
+    <url>/2026/04/16/hmcl-shou-dong-chu-shi-hua-qi-dong-ruan-jian/</url>
+    
+    <content type="html"><![CDATA[<h1 id="完整叙述"><a href="#完整叙述" class="headerlink" title="完整叙述"></a>完整叙述</h1><p>本文章讲的是在完全离线的情况下,在完全无网络的情况下去初始化hmcl.<br>仅适用于Windows.</p><h2 id="文件准备"><a href="#文件准备" class="headerlink" title="文件准备"></a>文件准备</h2><p><code>.openijfx</code> <code>.hmcl已初始化的文件</code> <code>java17+</code></p><blockquote><p>openijfx是hmcl自动下载的,看起来会生成在用户文件夹即Users\用户名,<br>可能还会存在appdata\Roaming貌似,我没有能力解析代码.<br>值得一提的是貌似hmcl对openijfx貌似并不严格的校验文件夹名<br>本人没能力解析代码,文章可能存在错别字信息错误等问题</p></blockquote><h2 id="开始初始化"><a href="#开始初始化" class="headerlink" title="开始初始化"></a>开始初始化</h2><p>把已经被hmcl初始化好的<code>.hmcl</code>复制到启动器所在目录,再将openjavafx的bin或者hmcl所初始化的<code>.openijfx</code>复制到前面讲的用户文件夹.<br>确保你的.openijfx是这样的格式</p><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-title">.openijfx</span><br>cache<br><span class="hljs-code">    ├─17.0.15</span><br><span class="hljs-code">    └─21.0.8+2</span><br><span class="hljs-code">        └─amd64</span><br></code></pre></td></tr></table></figure><p>17.0.15是相对的版本号,你可能需要遵循一些规范?我并不清楚.<br>在版本号文件夹内或版本号内的架构名内放置对应的openjavafx的bin文件.<br>当然我比较推荐你直接复制已经初始化好的,这样子很保险</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>reflector测试镜像源</title>
     <link href="/2026/03/27/reflector-ce-shi-jing-xiang-yuan/"/>
     <url>/2026/03/27/reflector-ce-shi-jing-xiang-yuan/</url>
