@@ -1,4 +1,8 @@
 # 我的文章  
+### **2026-05** (1)  
+- 2026-05-17 [kde后台索引导致系统卡顿](https://blog.computerqwq.top/2026/05/17/kde-hou-tai-suo-yin-dao-zhi-xi-tong-qia-dun/)  
+  
+  
 ### **2026-04** (1)  
 - 2026-04-16 [hmcl手动初始化启动软件](https://blog.computerqwq.top/2026/04/16/hmcl-shou-dong-chu-shi-hua-qi-dong-ruan-jian/)  
   
@@ -101,10 +105,9 @@
 - 2025-02-02 [github部署的网页cdn404](https://blog.computerqwq.top/2025/02/02/github-bu-shu-de-wang-ye-cdn404/)  
   
   
-### **2025-01** (3)  
+### **2025-01** (2)  
 - 2025-01-20 [answer编译](https://blog.computerqwq.top/2025/01/20/answer-bian-yi/)  
 - 2025-01-19 [安装gvm](https://blog.computerqwq.top/2025/01/19/an-zhuang-gvm/)  
-- 2025-01-16 [请勿随意更新项目基层](https://blog.computerqwq.top/2025/01/16/qing-wu-sui-yi-geng-xin-xiang-mu-ji-ceng/)  
   
   
 ### **2024-12** (1)  

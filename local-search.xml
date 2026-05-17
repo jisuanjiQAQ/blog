@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>kde后台索引导致系统卡顿</title>
+    <link href="/2026/05/17/kde-hou-tai-suo-yin-dao-zhi-xi-tong-qia-dun/"/>
+    <url>/2026/05/17/kde-hou-tai-suo-yin-dao-zhi-xi-tong-qia-dun/</url>
+    
+    <content type="html"><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>我是一个喜欢方便的人，喜欢把文件放在桌面（包括项目）</p><h2 id="问题发生"><a href="#问题发生" class="headerlink" title="问题发生"></a>问题发生</h2><p>有一次开机，我莫名奇妙觉得电脑好像很卡。<br>然后打开资源监视器，看到后台服务的io写入和读取都很高。我就发现不对了。<br>然后安装otop sysstat使用sudo iotop -oP -d 1看到是kde的baloo给我读写爆了。</p><h2 id="结决方法"><a href="#结决方法" class="headerlink" title="结决方法"></a>结决方法</h2><p>使用命令把它关闭,然后注销登录或者重启.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">balooctl6 <span class="hljs-built_in">disable</span><br></code></pre></td></tr></table></figure><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p><a href="https://wiki.archlinux.org.cn/title/Baloo">https://wiki.archlinux.org.cn/title/Baloo</a></p></blockquote>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>hmcl手动初始化启动软件</title>
     <link href="/2026/04/16/hmcl-shou-dong-chu-shi-hua-qi-dong-ruan-jian/"/>
     <url>/2026/04/16/hmcl-shou-dong-chu-shi-hua-qi-dong-ruan-jian/</url>
@@ -1168,31 +1187,6 @@
     <tags>
       
       <tag>gvm</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>请勿随意更新项目基层</title>
-    <link href="/2025/01/16/qing-wu-sui-yi-geng-xin-xiang-mu-ji-ceng/"/>
-    <url>/2025/01/16/qing-wu-sui-yi-geng-xin-xiang-mu-ji-ceng/</url>
-    
-    <content type="html"><![CDATA[<h1 id="更新基层一定要备份！"><a href="#更新基层一定要备份！" class="headerlink" title="更新基层一定要备份！"></a>更新基层一定要备份！</h1><p>在使用hexo时，我不想把文件存储在本地了，上传到了GitHub上面自动部署。<br>可是tmd，GitHub貌似有主题限制，主题无法识别，无法构建。<br>然后GitHub上机器人自动给我更新软件包，我就合并了。<br>没想到，结果下载回本地时，无法安装模块依赖了！<br>这是nodejs的版本问题，可是我就想使用目前的版本。<br>服了，还好git有版本管理不然就死了。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>网站相关</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>警告</tag>
       
     </tags>
     
