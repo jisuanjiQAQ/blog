@@ -1,4 +1,8 @@
 # 我的文章  
+### **2026-06** (1)  
+- 2026-06-18 [git代理设置](https://blog.computerqwq.top/2026/06/18/git-dai-li-she-zhi/)  
+  
+  
 ### **2026-05** (1)  
 - 2026-05-17 [kde后台索引导致系统卡顿](https://blog.computerqwq.top/2026/05/17/kde-hou-tai-suo-yin-dao-zhi-xi-tong-qia-dun/)  
   
