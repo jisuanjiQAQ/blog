@@ -1,4 +1,8 @@
 # 我的文章  
+### **2026-07** (1)  
+- 2026-07-17 [arch下的强制进入tty](https://blog.computerqwq.top/2026/07/17/arch-xia-de-qiang-zhi-jin-ru-tty/)  
+  
+  
 ### **2026-06** (1)  
 - 2026-06-18 [git代理设置](https://blog.computerqwq.top/2026/06/18/git-dai-li-she-zhi/)  
   

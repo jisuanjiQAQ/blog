@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>arch下的强制进入tty</title>
+    <link href="/2026/07/17/arch-xia-de-qiang-zhi-jin-ru-tty/"/>
+    <url>/2026/07/17/arch-xia-de-qiang-zhi-jin-ru-tty/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>适用于systemd作为初始化系统的发行版与大部分Linux</p></blockquote><p>systemd.unit&#x3D;multi-user.target 进入文本模式<br>nomodeset 作用：禁用内核显卡驱动初始化</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>开机出现GRUB菜单时：</p><ol><li>选中你要启动的内核，按 <strong>e</strong> 进入编辑模式</li><li>找到以 <code>linux</code> &#x2F; <code>linux16</code> 开头的那一行（内核参数行）</li><li>在该行<strong>最末尾</strong>添加参数</li><li>按 <strong>Ctrl+X</strong> 或 <strong>F10</strong> 启动系统</li></ol><blockquote><p>豆包</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>冷知识</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>git代理设置</title>
     <link href="/2026/06/18/git-dai-li-she-zhi/"/>
     <url>/2026/06/18/git-dai-li-she-zhi/</url>

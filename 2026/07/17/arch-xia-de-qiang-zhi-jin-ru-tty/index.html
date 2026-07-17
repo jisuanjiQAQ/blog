@@ -19,15 +19,15 @@
   <meta name="author" content="计算机qwq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="以下端口号仅为演示,请按实际修改http代理 1git config --global http.proxy &quot;http:&#x2F;&#x2F;127.0.0.1:10808&quot;  1git config --global https.proxy &quot;http:&#x2F;&#x2F;127.0.0.1:10808&quot;  socks5 1git config --global http.proxy &amp;">
+    <meta name="description" content="适用于systemd作为初始化系统的发行版与大部分Linux  systemd.unit&#x3D;multi-user.target 进入文本模式nomodeset 作用：禁用内核显卡驱动初始化 使用开机出现GRUB菜单时：  选中你要启动的内核，按 e 进入编辑模式 找到以 linux &#x2F; linux16 开头的那一行（内核参数行） 在该行最末尾添加参数 按 Ctrl+X 或 F1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git代理设置">
-<meta property="og:url" content="https://blog.computerqwq.top/2026/06/18/git-dai-li-she-zhi/index.html">
+<meta property="og:title" content="arch下的强制进入tty">
+<meta property="og:url" content="https://blog.computerqwq.top/2026/07/17/arch-xia-de-qiang-zhi-jin-ru-tty/index.html">
 <meta property="og:site_name" content="计算机">
-<meta property="og:description" content="以下端口号仅为演示,请按实际修改http代理 1git config --global http.proxy &quot;http:&#x2F;&#x2F;127.0.0.1:10808&quot;  1git config --global https.proxy &quot;http:&#x2F;&#x2F;127.0.0.1:10808&quot;  socks5 1git config --global http.proxy &amp;">
+<meta property="og:description" content="适用于systemd作为初始化系统的发行版与大部分Linux  systemd.unit&#x3D;multi-user.target 进入文本模式nomodeset 作用：禁用内核显卡驱动初始化 使用开机出现GRUB菜单时：  选中你要启动的内核，按 e 进入编辑模式 找到以 linux &#x2F; linux16 开头的那一行（内核参数行） 在该行最末尾添加参数 按 Ctrl+X 或 F1">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-06-18T11:59:43.000Z">
-<meta property="article:modified_time" content="2026-06-18T12:00:27.644Z">
+<meta property="article:published_time" content="2026-07-17T09:53:25.000Z">
+<meta property="article:modified_time" content="2026-07-17T09:57:13.153Z">
 <meta property="article:author" content="计算机qwq">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary_large_image">
@@ -36,7 +36,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>git代理设置 - 计算机</title>
+  <title>arch下的强制进入tty - 计算机</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="git代理设置"></span>
+            <span id="subtitle" data-typed-text="arch下的强制进入tty"></span>
           
         </div>
 
@@ -229,8 +229,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2026-06-18 19:59" pubdate>
-          2026年6月18日 晚上
+        <time datetime="2026-07-17 17:53" pubdate>
+          2026年7月17日 下午
         </time>
       </span>
     
@@ -241,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          95 字
+          106 字
         
       </span>
     
@@ -298,29 +298,25 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">git代理设置</h1>
+            <h1 id="seo-header">arch下的强制进入tty</h1>
             
             
               <div class="markdown-body">
                 
-                <p>以下端口号仅为演示,请按实际修改<br>http代理</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global http.proxy <span class="hljs-string">&quot;http://127.0.0.1:10808&quot;</span><br></code></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global https.proxy <span class="hljs-string">&quot;http://127.0.0.1:10808&quot;</span><br></code></pre></td></tr></table></figure>
-<hr>
-<p>socks5</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global http.proxy <span class="hljs-string">&quot;socks5://127.0.0.1:1080&quot;</span><br></code></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global https.proxy <span class="hljs-string">&quot;socks5://127.0.0.1:1080&quot;</span><br></code></pre></td></tr></table></figure>
-<hr>
-<p>取消(http为例子)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global --<span class="hljs-built_in">unset</span> http.proxy<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global --<span class="hljs-built_in">unset</span> https.proxy<br></code></pre></td></tr></table></figure>
-<hr>
-<p>查看所有配置以查看代理设置情况</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --list<br></code></pre></td></tr></table></figure>
-<p>按q即可退出</p>
+                <blockquote>
+<p>适用于systemd作为初始化系统的发行版与大部分Linux</p>
+</blockquote>
+<p>systemd.unit&#x3D;multi-user.target 进入文本模式<br>nomodeset 作用：禁用内核显卡驱动初始化</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>开机出现GRUB菜单时：</p>
+<ol>
+<li>选中你要启动的内核，按 <strong>e</strong> 进入编辑模式</li>
+<li>找到以 <code>linux</code> &#x2F; <code>linux16</code> 开头的那一行（内核参数行）</li>
+<li>在该行<strong>最末尾</strong>添加参数</li>
+<li>按 <strong>Ctrl+X</strong> 或 <strong>F10</strong> 启动系统</li>
+</ol>
+<blockquote>
+<p>豆包</p>
+</blockquote>
 
                 
               </div>
@@ -328,6 +324,27 @@
             <hr/>
             <div>
               <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%86%B7%E7%9F%A5%E8%AF%86/" class="category-chain-item">冷知识</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
   
   
     <div class="post-meta">
@@ -345,8 +362,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>git代理设置</div>
-      <div>https://blog.computerqwq.top/2026/06/18/git-dai-li-she-zhi/</div>
+      <div>arch下的强制进入tty</div>
+      <div>https://blog.computerqwq.top/2026/07/17/arch-xia-de-qiang-zhi-jin-ru-tty/</div>
     </div>
     <div class="license-meta">
       
@@ -358,13 +375,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2026年6月18日</div>
+          <div>2026年7月17日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2026年6月18日</div>
+          <div>2026年7月17日</div>
         </div>
       
       
@@ -395,18 +412,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2026/07/17/arch-xia-de-qiang-zhi-jin-ru-tty/" title="arch下的强制进入tty">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">arch下的强制进入tty</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2026/05/17/kde-hou-tai-suo-yin-dao-zhi-xi-tong-qia-dun/" title="kde后台索引导致系统卡顿">
-                        <span class="hidden-mobile">kde后台索引导致系统卡顿</span>
+                      <a href="/2026/06/18/git-dai-li-she-zhi/" title="git代理设置">
+                        <span class="hidden-mobile">git代理设置</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
