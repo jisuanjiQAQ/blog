@@ -1,5 +1,7 @@
 # 我的文章  
-### **2026-07** (1)  
+### **2026-07** (3)  
+- 2026-07-23 [linux查看系统信息](https://blog.computerqwq.top/2026/07/23/linux-cha-kan-xi-tong-xin-xi/)  
+- 2026-07-23 [systemd-nspawn](https://blog.computerqwq.top/2026/07/23/systemd-nspawn/)  
 - 2026-07-17 [arch下的强制进入tty](https://blog.computerqwq.top/2026/07/17/arch-xia-de-qiang-zhi-jin-ru-tty/)  
   
   

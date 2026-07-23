@@ -19,15 +19,15 @@
   <meta name="author" content="计算机qwq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="适用于systemd作为初始化系统的发行版与大部分Linux  systemd.unit&#x3D;multi-user.target 进入文本模式nomodeset 作用：禁用内核显卡驱动初始化 使用开机出现GRUB菜单时：  选中你要启动的内核，按 e 进入编辑模式 找到以 linux &#x2F; linux16 开头的那一行（内核参数行） 在该行最末尾添加参数 按 Ctrl+X 或 F1">
+    <meta name="description" content="1. 安装工具1sudo pacman -S debootstrap debian-archive-keyring  2. 构建 Debian 根目录1234# 创建容器目录sudo mkdir -p &#x2F;var&#x2F;lib&#x2F;machines&#x2F;debian# 拉取debian基础系统，清华源加速sudo debootstrap bookworm &#x2F;var&#x2F;lib&#x2F;machines&#x2F;debian http">
 <meta property="og:type" content="article">
-<meta property="og:title" content="arch下的强制进入tty">
-<meta property="og:url" content="https://blog.computerqwq.top/2026/07/17/arch-xia-de-qiang-zhi-jin-ru-tty/index.html">
+<meta property="og:title" content="systemd-nspawn">
+<meta property="og:url" content="https://blog.computerqwq.top/2026/07/23/systemd-nspawn/index.html">
 <meta property="og:site_name" content="计算机">
-<meta property="og:description" content="适用于systemd作为初始化系统的发行版与大部分Linux  systemd.unit&#x3D;multi-user.target 进入文本模式nomodeset 作用：禁用内核显卡驱动初始化 使用开机出现GRUB菜单时：  选中你要启动的内核，按 e 进入编辑模式 找到以 linux &#x2F; linux16 开头的那一行（内核参数行） 在该行最末尾添加参数 按 Ctrl+X 或 F1">
+<meta property="og:description" content="1. 安装工具1sudo pacman -S debootstrap debian-archive-keyring  2. 构建 Debian 根目录1234# 创建容器目录sudo mkdir -p &#x2F;var&#x2F;lib&#x2F;machines&#x2F;debian# 拉取debian基础系统，清华源加速sudo debootstrap bookworm &#x2F;var&#x2F;lib&#x2F;machines&#x2F;debian http">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-07-17T09:53:25.000Z">
-<meta property="article:modified_time" content="2026-07-17T09:57:13.153Z">
+<meta property="article:published_time" content="2026-07-23T12:21:00.000Z">
+<meta property="article:modified_time" content="2026-07-23T12:21:09.555Z">
 <meta property="article:author" content="计算机qwq">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary_large_image">
@@ -36,7 +36,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>arch下的强制进入tty - 计算机</title>
+  <title>systemd-nspawn - 计算机</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="arch下的强制进入tty"></span>
+            <span id="subtitle" data-typed-text="systemd-nspawn"></span>
           
         </div>
 
@@ -229,8 +229,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2026-07-17 17:53" pubdate>
-          2026年7月17日 下午
+        <time datetime="2026-07-23 20:21" pubdate>
+          2026年7月23日 晚上
         </time>
       </span>
     
@@ -241,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          106 字
+          243 字
         
       </span>
     
@@ -252,7 +252,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -298,53 +298,39 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">arch下的强制进入tty</h1>
+            <h1 id="seo-header">systemd-nspawn</h1>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>适用于systemd作为初始化系统的发行版与大部分Linux</p>
-</blockquote>
-<p>systemd.unit&#x3D;multi-user.target 进入文本模式<br>nomodeset 作用：禁用内核显卡驱动初始化</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>开机出现GRUB菜单时：</p>
-<ol>
-<li>选中你要启动的内核，按 <strong>e</strong> 进入编辑模式</li>
-<li>找到以 <code>linux</code> &#x2F; <code>linux16</code> 开头的那一行（内核参数行）</li>
-<li>在该行<strong>最末尾</strong>添加参数</li>
-<li>按 <strong>Ctrl+X</strong> 或 <strong>F10</strong> 启动系统</li>
-</ol>
-<blockquote>
-<p>豆包</p>
-</blockquote>
+                <h3 id="1-安装工具"><a href="#1-安装工具" class="headerlink" title="1. 安装工具"></a>1. 安装工具</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> pacman -S debootstrap debian-archive-keyring<br></code></pre></td></tr></table></figure>
 
+<h3 id="2-构建-Debian-根目录"><a href="#2-构建-Debian-根目录" class="headerlink" title="2. 构建 Debian 根目录"></a>2. 构建 Debian 根目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 创建容器目录</span><br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">mkdir</span> -p /var/lib/machines/debian<br><span class="hljs-comment"># 拉取debian基础系统，清华源加速</span><br><span class="hljs-built_in">sudo</span> debootstrap bookworm /var/lib/machines/debian https://mirrors.tuna.tsinghua.edu.cn/debian/<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-首次启动（拉起完整-systemd）"><a href="#3-首次启动（拉起完整-systemd）" class="headerlink" title="3. 首次启动（拉起完整 systemd）"></a>3. 首次启动（拉起完整 systemd）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> systemd-nspawn -M debian -b<br></code></pre></td></tr></table></figure>
+<p>如果没有设置密码则去掉-b以进入shell设置<br>进入容器后执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">passwd root<br><span class="hljs-comment"># 可选添加普通用户</span><br>adduser yourname<br></code></pre></td></tr></table></figure>
+
+<p>容器内执行 <code>poweroff</code> 正常关闭；紧急退出快捷键 <code>Ctrl+]]]</code></p>
+<h2 id="目录挂载示例（持久化数据）"><a href="#目录挂载示例（持久化数据）" class="headerlink" title="目录挂载示例（持久化数据）"></a>目录挂载示例（持久化数据）</h2><p>启动命令追加挂载参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> systemd-nspawn -M debian -b \<br>--<span class="hljs-built_in">bind</span>=/home/xxx/work:/work<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>容器内<strong>使用宿主机内核</strong>，Debian 无法安装、加载独立内核模块；<br>如果你后续需要操作特殊硬件驱动、更换内核，只能分区装双系统。</p>
+</blockquote>
+<h2 id="可选优化点"><a href="#可选优化点" class="headerlink" title="可选优化点"></a>可选优化点</h2><ol>
+<li><p>限制 CPU &#x2F; 内存，启动参数追加：<code>--memory=4G --cpus=2</code></p>
+</li>
+<li><p>开机自启：<code>machinectl enable debian</code></p>
+</li>
+</ol>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看状态</span><br>machinectl list<br><span class="hljs-comment"># 后台启动</span><br>machinectl start debian<br><span class="hljs-comment"># 登入终端</span><br>machinectl shell debian<br><span class="hljs-comment"># 停止容器</span><br>machinectl stop debian<br></code></pre></td></tr></table></figure>
                 
               </div>
             
             <hr/>
             <div>
               <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%86%B7%E7%9F%A5%E8%AF%86/" class="category-chain-item">冷知识</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
   
   
     <div class="post-meta">
@@ -362,8 +348,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>arch下的强制进入tty</div>
-      <div>https://blog.computerqwq.top/2026/07/17/arch-xia-de-qiang-zhi-jin-ru-tty/</div>
+      <div>systemd-nspawn</div>
+      <div>https://blog.computerqwq.top/2026/07/23/systemd-nspawn/</div>
     </div>
     <div class="license-meta">
       
@@ -375,13 +361,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2026年7月17日</div>
+          <div>2026年7月23日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2026年7月17日</div>
+          <div>2026年7月23日</div>
         </div>
       
       
@@ -412,9 +398,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2026/07/23/systemd-nspawn/" title="systemd-nspawn">
+                      <a href="/2026/07/23/linux-cha-kan-xi-tong-xin-xi/" title="linux查看系统信息">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">systemd-nspawn</span>
+                        <span class="hidden-mobile">linux查看系统信息</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -422,8 +408,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2026/06/18/git-dai-li-she-zhi/" title="git代理设置">
-                        <span class="hidden-mobile">git代理设置</span>
+                      <a href="/2026/07/17/arch-xia-de-qiang-zhi-jin-ru-tty/" title="arch下的强制进入tty">
+                        <span class="hidden-mobile">arch下的强制进入tty</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
