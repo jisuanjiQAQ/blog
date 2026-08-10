@@ -1,4 +1,9 @@
 # 我的文章  
+### **2026-08** (2)  
+- 2026-08-10 [补充:nixos的cd环境下开启ssh](https://blog.computerqwq.top/2026/08/10/bu-chong-nixos-de-cd-huan-jing-xia-kai-qi-ssh/)  
+- 2026-08-10 [最小化安装nixos传统启动](https://blog.computerqwq.top/2026/08/10/zui-xiao-hua-an-zhuang-nixos-chuan-tong-qi-dong/)  
+  
+  
 ### **2026-07** (3)  
 - 2026-07-23 [linux查看系统信息](https://blog.computerqwq.top/2026/07/23/linux-cha-kan-xi-tong-xin-xi/)  
 - 2026-07-23 [systemd-nspawn](https://blog.computerqwq.top/2026/07/23/systemd-nspawn/)  

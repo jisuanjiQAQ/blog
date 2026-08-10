@@ -1,3 +1,5 @@
+https://blog.computerqwq.top/2026/08/10/bu-chong-nixos-de-cd-huan-jing-xia-kai-qi-ssh/
+https://blog.computerqwq.top/2026/08/10/zui-xiao-hua-an-zhuang-nixos-chuan-tong-qi-dong/
 https://blog.computerqwq.top/2026/07/23/linux-cha-kan-xi-tong-xin-xi/
 https://blog.computerqwq.top/2026/07/23/systemd-nspawn/
 https://blog.computerqwq.top/2026/07/17/arch-xia-de-qiang-zhi-jin-ru-tty/
