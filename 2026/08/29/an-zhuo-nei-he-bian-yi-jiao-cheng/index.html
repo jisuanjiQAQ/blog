@@ -19,15 +19,15 @@
   <meta name="author" content="计算机qwq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="有线网络1234# 查看网卡IPip a# DHCP自动获取IP（一般已经自动获取）dhclient eth0 WiFi无线网络12nmtui# 图形化选择WiFi、输入密码连接，操作简单  方式1：密码登录SSH1. 设置root密码（默认无密码禁止SSH登录root）12345# 直接给root设密码sudo passwd root# 或者直接切root再设置sudo -ipasswd 2.">
+    <meta name="description" content="安卓内核编译教程寻找合适的clang在内核目录找到build.config.common 123456789101112BRANCH&#x3D;android-4.19-stableKMI_GENERATION&#x3D;0LLVM&#x3D;1DEPMOD&#x3D;depmodCLANG_PREBUILT_BIN&#x3D;prebuilts-master&#x2F;clang&#x2F;host&#x2F;linux-x86&#x2F;clang-r416183b&#x2F;binBUIL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="补充:nixos的cd环境下开启ssh">
-<meta property="og:url" content="https://blog.computerqwq.top/2026/08/10/bu-chong-nixos-de-cd-huan-jing-xia-kai-qi-ssh/index.html">
+<meta property="og:title" content="安卓内核编译教程">
+<meta property="og:url" content="https://blog.computerqwq.top/2026/08/29/an-zhuo-nei-he-bian-yi-jiao-cheng/index.html">
 <meta property="og:site_name" content="计算机">
-<meta property="og:description" content="有线网络1234# 查看网卡IPip a# DHCP自动获取IP（一般已经自动获取）dhclient eth0 WiFi无线网络12nmtui# 图形化选择WiFi、输入密码连接，操作简单  方式1：密码登录SSH1. 设置root密码（默认无密码禁止SSH登录root）12345# 直接给root设密码sudo passwd root# 或者直接切root再设置sudo -ipasswd 2.">
+<meta property="og:description" content="安卓内核编译教程寻找合适的clang在内核目录找到build.config.common 123456789101112BRANCH&#x3D;android-4.19-stableKMI_GENERATION&#x3D;0LLVM&#x3D;1DEPMOD&#x3D;depmodCLANG_PREBUILT_BIN&#x3D;prebuilts-master&#x2F;clang&#x2F;host&#x2F;linux-x86&#x2F;clang-r416183b&#x2F;binBUIL">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-08-10T03:24:22.000Z">
-<meta property="article:modified_time" content="2026-08-10T03:25:35.371Z">
+<meta property="article:published_time" content="2026-08-29T10:43:47.000Z">
+<meta property="article:modified_time" content="2026-08-29T10:44:01.907Z">
 <meta property="article:author" content="计算机qwq">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary_large_image">
@@ -36,7 +36,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>补充:nixos的cd环境下开启ssh - 计算机</title>
+  <title>安卓内核编译教程 - 计算机</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="补充:nixos的cd环境下开启ssh"></span>
+            <span id="subtitle" data-typed-text="安卓内核编译教程"></span>
           
         </div>
 
@@ -229,8 +229,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2026-08-10 11:24" pubdate>
-          2026年8月10日 上午
+        <time datetime="2026-08-29 18:43" pubdate>
+          2026年8月29日 晚上
         </time>
       </span>
     
@@ -241,7 +241,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          203 字
+          304 字
         
       </span>
     
@@ -252,7 +252,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -298,36 +298,27 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">补充:nixos的cd环境下开启ssh</h1>
+            <h1 id="seo-header">安卓内核编译教程</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="有线网络"><a href="#有线网络" class="headerlink" title="有线网络"></a>有线网络</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看网卡IP</span><br>ip a<br><span class="hljs-comment"># DHCP自动获取IP（一般已经自动获取）</span><br>dhclient eth0<br></code></pre></td></tr></table></figure>
-<h3 id="WiFi无线网络"><a href="#WiFi无线网络" class="headerlink" title="WiFi无线网络"></a>WiFi无线网络</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">nmtui<br><span class="hljs-comment"># 图形化选择WiFi、输入密码连接，操作简单</span><br></code></pre></td></tr></table></figure>
+                <h1 id="安卓内核编译教程"><a href="#安卓内核编译教程" class="headerlink" title="安卓内核编译教程"></a>安卓内核编译教程</h1><h2 id="寻找合适的clang"><a href="#寻找合适的clang" class="headerlink" title="寻找合适的clang"></a>寻找合适的clang</h2><p>在内核目录找到<code>build.config.common</code></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">BRANCH</span>=android-<span class="hljs-number">4.19</span>-stable<br><span class="hljs-attr">KMI_GENERATION</span>=<span class="hljs-number">0</span><br><br><span class="hljs-attr">LLVM</span>=<span class="hljs-number">1</span><br><span class="hljs-attr">DEPMOD</span>=depmod<br><span class="hljs-attr">CLANG_PREBUILT_BIN</span>=prebuilts-master/clang/host/linux-x86/clang-r416183b/bin<br><span class="hljs-attr">BUILDTOOLS_PREBUILT_BIN</span>=build/build-tools/path/linux-x86<br><br><span class="hljs-attr">EXTRA_CMDS</span>=<span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-attr">STOP_SHIP_TRACEPRINTK</span>=<span class="hljs-number">1</span><br><span class="hljs-attr">IN_KERNEL_MODULES</span>=<span class="hljs-number">1</span><br><span class="hljs-attr">DO_NOT_STRIP_MODULES</span>=<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+<p>如此我们找到了,它需要的是clang-r416183b,我们需要去谷歌上找到对应的.</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">https:<span class="hljs-regexp">//</span>android.googlesource.com<span class="hljs-regexp">/platform/</span>prebuilts<span class="hljs-regexp">/clang/</span>host<span class="hljs-regexp">/linux-x86/</span>+archive<span class="hljs-regexp">/android12-release/</span>clang-r416183b.tar.gz<br></code></pre></td></tr></table></figure>
+<p>但clang本身并不自带交叉编译器,我们需要再下一个.</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">https:<span class="hljs-regexp">//</span>android.googlesource.com<span class="hljs-regexp">/platform/</span>prebuilts<span class="hljs-regexp">/gcc/</span>linux-x86<span class="hljs-regexp">/aarch64/</span>aarch64-linux-android-<span class="hljs-number">4.9</span><span class="hljs-regexp">/+/</span>refs<span class="hljs-regexp">/heads/</span>android12-release<br></code></pre></td></tr></table></figure>
 
-<h2 id="方式1：密码登录SSH"><a href="#方式1：密码登录SSH" class="headerlink" title="方式1：密码登录SSH"></a>方式1：密码登录SSH</h2><h3 id="1-设置root密码（默认无密码禁止SSH登录root）"><a href="#1-设置root密码（默认无密码禁止SSH登录root）" class="headerlink" title="1. 设置root密码（默认无密码禁止SSH登录root）"></a>1. 设置root密码（默认无密码禁止SSH登录root）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 直接给root设密码</span><br><span class="hljs-built_in">sudo</span> passwd root<br><span class="hljs-comment"># 或者直接切root再设置</span><br><span class="hljs-built_in">sudo</span> -i<br>passwd<br></code></pre></td></tr></table></figure>
-<h3 id="2-启动SSH服务"><a href="#2-启动SSH服务" class="headerlink" title="2. 启动SSH服务"></a>2. 启动SSH服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> systemctl start sshd<br><span class="hljs-comment"># 设置开机自启（Live环境重启失效，装机用不用都行）</span><br><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">enable</span> sshd<br></code></pre></td></tr></table></figure>
-<h3 id="3-放行防火墙（可能需要）"><a href="#3-放行防火墙（可能需要）" class="headerlink" title="3. 放行防火墙（可能需要）"></a>3. 放行防火墙（可能需要）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> iptables -A INPUT -p tcp --dport 22 -j ACCEPT<br></code></pre></td></tr></table></figure>
-<h3 id="4-查看本机IP"><a href="#4-查看本机IP" class="headerlink" title="4. 查看本机IP"></a>4. 查看本机IP</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ip a<br></code></pre></td></tr></table></figure>
-
-
-<h2 id="需要"><a href="#需要" class="headerlink" title="需要"></a>需要</h2><blockquote>
-<p>此为qemu,以及ssh需要视环境修改</p>
-</blockquote>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dos"># 网络：用户模式 + 端口转发 主机<span class="hljs-number">2222</span>端口映射虚拟机<span class="hljs-number">22</span>(SSH)<br>-<span class="hljs-built_in">net</span> user,hostfwd=tcp::<span class="hljs-number">2222</span>-:<span class="hljs-number">22</span> \<br>-<span class="hljs-built_in">net</span> virtio-<span class="hljs-built_in">net</span>-pci<br></code></pre></td></tr></table></figure>
-
-<p>最后</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">ssh</span> nixos<span class="hljs-variable">@localhost</span> -p <span class="hljs-number">2222</span><br></code></pre></td></tr></table></figure>
-<p>删掉旧的密钥</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">ssh<span class="hljs-punctuation">-</span>keygen <span class="hljs-punctuation">-</span>R &#x27;[localhost]:<span class="hljs-number">2222</span>&#x27;<br></code></pre></td></tr></table></figure>
-<p>临时连接</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros">ssh -o <span class="hljs-attribute">StrictHostKeyChecking</span>=<span class="hljs-literal">no</span> -o <span class="hljs-attribute">UserKnownHostsFile</span>=/dev/null nixos@localhost -p 2222<br><br></code></pre></td></tr></table></figure>
-
+<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs q">bc bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick<br>lib32ncurses5-<span class="hljs-built_in">dev</span> lib32readline-<span class="hljs-built_in">dev</span> lib32z1-<span class="hljs-built_in">dev</span> libelf-<span class="hljs-built_in">dev</span> liblz4-tool libncurses5 libncurses5-<span class="hljs-built_in">dev</span><br>libsdl1<span class="hljs-number">.2</span>-<span class="hljs-built_in">dev</span> libssl-<span class="hljs-built_in">dev</span> libxml2 libxml2-utils lzop pngcrush rsync<br>schedtool squashfs-tools xsltproc<br>zip zlib1g-<span class="hljs-built_in">dev</span><br></code></pre></td></tr></table></figure>
+<p>这是需要的依赖,debian系列的为例.你需要使用apt安装他们</p>
 <blockquote>
-<p>豆包</p>
+<p>基于<a target="_blank" rel="noopener" href="https://github.com/feichaixiaobai/Android-kernel-make-teach/discussions/1">https://github.com/feichaixiaobai/Android-kernel-make-teach/discussions/1</a></p>
 </blockquote>
-
+<h2 id="需要的变量参数"><a href="#需要的变量参数" class="headerlink" title="需要的变量参数"></a>需要的变量参数</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-built_in">export</span> <span class="hljs-attribute">PATH</span>=<span class="hljs-string">&quot;/XXXXXX/bin:<span class="hljs-variable">$PATH</span>&quot;</span> 把clang跟交叉编译器填进去<br><span class="hljs-built_in">export</span> <span class="hljs-attribute">ARCH</span>=arm64<br><span class="hljs-built_in">export</span> <span class="hljs-attribute">SUBARCH</span>=arm64<br><span class="hljs-built_in">export</span> <span class="hljs-attribute">CROSS_COMPILE</span>=aarch64-linux-gnu- 需要根据交叉编译工具链下的bin内相似的文件名修改<br></code></pre></td></tr></table></figure>
+<p>一般编译这种需要LLVM的则需要编译参数<code>LLVM=1 LLVM_IAS=1</code></p>
+<h2 id="多重配置文件"><a href="#多重配置文件" class="headerlink" title="多重配置文件"></a>多重配置文件</h2><p>如果内核的配置文件带有基础配置文件以及多项定制文件则需要一起make如:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vendor/sdm660-perf_defconfig vendor/oppo/sdm660-common.config vendor/oppo/R11s.config<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -351,8 +342,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>补充:nixos的cd环境下开启ssh</div>
-      <div>https://blog.computerqwq.top/2026/08/10/bu-chong-nixos-de-cd-huan-jing-xia-kai-qi-ssh/</div>
+      <div>安卓内核编译教程</div>
+      <div>https://blog.computerqwq.top/2026/08/29/an-zhuo-nei-he-bian-yi-jiao-cheng/</div>
     </div>
     <div class="license-meta">
       
@@ -364,13 +355,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2026年8月10日</div>
+          <div>2026年8月29日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2026年8月10日</div>
+          <div>2026年8月29日</div>
         </div>
       
       
@@ -401,18 +392,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2026/08/29/an-zhuo-nei-he-bian-yi-jiao-cheng/" title="安卓内核编译教程">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">安卓内核编译教程</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2026/08/10/zui-xiao-hua-an-zhuang-nixos-chuan-tong-qi-dong/" title="最小化安装nixos传统启动">
-                        <span class="hidden-mobile">最小化安装nixos传统启动</span>
+                      <a href="/2026/08/10/bu-chong-nixos-de-cd-huan-jing-xia-kai-qi-ssh/" title="补充:nixos的cd环境下开启ssh">
+                        <span class="hidden-mobile">补充:nixos的cd环境下开启ssh</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
